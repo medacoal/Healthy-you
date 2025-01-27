@@ -12,7 +12,7 @@ const Trusted = () => {
     <div className="flex flex-wrap items-center gap-4 md:grid-cols-2 gap-4">
       <img
         src="/src/assets/Group.png"
-        alt="tega"
+        alt="tegarr"
         // className="h-12 md:h-16 object-contain"
       />
       <img
