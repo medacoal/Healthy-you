@@ -19,9 +19,9 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen px-10 ">
+    <div className="flex flex-col lg:flex-row min-h-screen  md:px-8 lg:container mx-auto ">
       {/* Left Section - Form */}
-      <div className="flex-1 flex flex-col justify-center  items-center  px-5 py md:px-5 py-5 bg-white lg: items-start ">
+      <div className="flex-1 flex flex-col justify-center  items-center    bg-white lg:items-start ">
         <div className="w-full max-w-md">
           <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center lg:text-left">
             Register Now
@@ -130,9 +130,9 @@ const Register = () => {
 
             {/* OR Divider */}
             <div className="flex items-center gap-3">
-              <hr className="border w-full" />
+              <hr className="border-[#147C84] w-full" />
               <span className="text-gray-500">or</span>
-              <hr className="border w-full" />
+              <hr className="border-[#147C84] w-full  " />
             </div>
 
             {/* Google Signup */}
@@ -144,7 +144,7 @@ const Register = () => {
               <img src={google} alt="Google" className="w-6" />
               Continue with Google
             </button>
-            <span className="text-sm flex justify-center">
+            <span className="text-sm flex justify-center text-[16px] text-center">
                 Already have an account?{" "}
                 <a href="/login" className="text-[#147C84]">Login</a> 
               </span>
