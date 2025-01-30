@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../../assets/images/2149856264 1.png"
-import Wrapper from "../reasurable/Wrapper";
+import Wrapper from "./reasurable/Wrapper";
 
 const Expert = () => {
   return (

@@ -57,7 +57,7 @@ const Get = () => {
           <h1 className='md:text-[52px] text-5xl pb-3 font-semibold text-center md:text-start'>
             Get In <em className='font-[Playfair Display] text-[#157c86]'>Touch</em>
           </h1>
-          <h2 className='md:w-[400px]'>Fill up the form and our team will get back to you within 24 hours.</h2>
+          <h2 className='md:w-[400px] '>Fill up the form and our team will get back to you within 24 hours.</h2>
           </div>
 
           <div className='flex gap-10 pt-3 pb-5'>
@@ -113,10 +113,10 @@ const Get = () => {
           </div>
        </div>
         
-        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] p-6 w-[600px] rounded-md text-[#0E575C]'>
-          <div className='flex justify-between pb-3'>
+        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-6 md:w-[600px] rounded-md text-[#0E575C]'>
+          <div className='flex justify-between pb-3 gap-2 '>
             <div>
-              <label>Full Name</label>
+              <label>Full Name</label> 
               <input type='text' name='name' value={formData.name} onChange={handleChange} className='w-full bg-white p-2 rounded text-[#2632388F]' placeholder='Enter your name' />
               {errors.name && <p className='text-red-500 text-sm'>{errors.name}</p>}
             </div>
