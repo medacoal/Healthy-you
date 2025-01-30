@@ -7,9 +7,9 @@ import torrent from "../../assets/teva_pharmaceuticals_logo.svg.png"
 import pharmax from "../../assets/phamax_digital_logo.png.png"
 const Trusted = () => {
   return (
-    <div className="px-24 ">
+    <div className="container mx-auto ">
     <h1 className="text-xl font-semibold mb-4">Trusted By:</h1>
-    <div className="flex flex-wrap items-center gap-4 md:grid-cols-2 gap-4">
+    <div className="flex flex-wrap items-center space-x-8  md:grid-cols-2 gap-4 ">
       <img
         src="/src/assets/Group.png"
         alt="tegarr"

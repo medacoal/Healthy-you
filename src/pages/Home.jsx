@@ -6,7 +6,7 @@ import Services from '../components/HomeComponents/Services';
 import Consult from '../components/HomeComponents/Consult';
 const Home = () => {
   return (
-    <div>
+    <div className='container mx-auto'>
      <Expert/>
     <Trusted/>
     <Meet/>
