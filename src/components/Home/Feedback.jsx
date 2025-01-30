@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Wrapper from "../reasurable/Wrapper";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import john from "../../assets/images/Ellipse 1 (1).png";
-import alex from "../../assets/images/Ellipse 2 (1).png";
+import alex from "../../assets/images/Ellipse 2.png";
 import emily from "../../assets/images/Ellipse 3 (1).png";
 import micheal from "../../assets/images/Ellipse 1.png";
-import elijah from "../../assets/images/Ellipse 2.png";
+import elijah from  "../../assets/images/Ellipse 4 (3).png"
 import david from "../../assets/images/Ellipse 3.png";
 
 const Testimonials = () => {
@@ -100,8 +100,8 @@ const Testimonials = () => {
 
   return (
     <Wrapper>
-      <div className="text-[#000000] pt-10 font-[Roboto] px-2">
-        <div className="font-Axiforma md:text-5xl text-4xl pb-5 text-center">
+      <div className="text-[#000000] font-[Axiforma] pt-10  px-2">
+        <div className=" md:text-5xl text-4xl pb-5 text-center">
           <h1 className="font-semibold">
             Our Patients
             <span className="font-serif italic font-medium"> Feedback</span>

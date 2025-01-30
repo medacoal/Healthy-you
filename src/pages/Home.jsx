@@ -4,7 +4,7 @@ import Feedback from '../components/Home/Feedback';
 import Lastest from '../components/Home/Lastest';
 import People from '../components/Home/People';
 import Wellness from '../components/Home/Wellness';
-import Footer from '../components/Home/Footer';
+import Footer from '../components/reasurable/Footer';
 
 
 const Home = () => {

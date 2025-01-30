@@ -33,7 +33,7 @@ const Wellness = () => {
   return (
     <Wrapper>
       <div className="px-2">
-      <div className="bg-[#0C4C51] text-white rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
+      <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start">
           <h1 className="Font-Axiforma lg:text-[34px] text-2xl w-[300px] lg:w-[600px] text-center md:text-start font-bold">
@@ -54,11 +54,11 @@ const Wellness = () => {
                 placeholder="Enter email address"
                 value={email}
                 onChange={handleEmailChange}
-                className="py-2 w-full text-black md:px-4 rounded-md "
+                className="py-2 w-full text-[#838383] bg-white md:px-4 rounded-md "
                 style={{ outline: "none" }}
               />
               <button
-                className="rounded-md w-[100px] text-center text-white bg-[#147C84] hover:cursor-pointer hover:bg-[#0C4C51] lg:px-7 py-2 absolute right-0"
+                className="rounded-md w-[100px] text-center text-white bg-[#147C84] cursor-pointer hover:bg-[#0C4C51] lg:px-7 py-2 absolute right-0"
                 onClick={handleSubmit}
               >
                 Submit

@@ -5,13 +5,13 @@ import Wrapper from "../reasurable/Wrapper";
 const Expert = () => {
   return (
    <Wrapper>
-     <section className="py-10 px-2">
+     <section className="py-10 px-2 text-[#000000] font-[Axiforma]">
       <div className="flex flex-col-reverse md:flex-row items-center ">
         {/* Text  */}
         <div className=" space-y-4 mt-10">
         <h1 className="lg:text-6xl lg:w-[600px] text-4xl font-bold">
-  Expert Healthcare, just a{" "}
-  <span className="italic font-[600] text-[#174949] ">click away</span> 
+  Expert Healthcare, Just a{" "}
+  <span className="italic font-[600] text-[#174949] ">Click Away</span> 
 </h1>
 
           <p className="text-lg font py-6 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
