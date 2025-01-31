@@ -20,7 +20,7 @@ const Services = () => {
     <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
       <div className="text-[#6ca59e] mb-4">
       <img
-        src="/src/assets/vector1.png"
+        src={vector1}
         alt="rated1"
         className="w-full h-full object-cover"
       />
@@ -34,7 +34,7 @@ const Services = () => {
       <div className="text-[#6ca59e] mb-4">
         {/* Icon */}
         <img
-        src="/src/assets/vector2.png"
+        src={vector2}
         alt="rated1"
         className="w-full h-full object-cover"
       />
@@ -48,7 +48,7 @@ const Services = () => {
       <div className="text-[#6ca59e] mb-4">
         {/* Icon */}
         <img
-        src="/src/assets/vector3.png"
+        src={vector3}
         alt="rated1"
         className="w-full h-full object-cover"
       />
@@ -62,7 +62,7 @@ const Services = () => {
       <div className="text-[#6ca59e] mb-4">
         {/* Icon */}
         <img
-        src="/src/assets/Group 1000002438.png"
+        src={vector4}
         alt="rated1"
         className="w-full h-full object-cover"
       />
@@ -76,7 +76,7 @@ const Services = () => {
       <div className="text-[#6ca59e] mb-4">
         {/* Icon */}
         <img
-        src="/src/assets/vector5.png"
+        src={vector5}
         alt="rated1"
         className="w-full h-full object-cover"
       />
@@ -90,7 +90,7 @@ const Services = () => {
       <div className="text-[#6ca59e] mb-4">
         {/* Icon */}
         <img
-        src="/src/assets/vector6.png"
+        src={vector6}
         alt="rated1"
         className="w-full h-full object-cover"
       />

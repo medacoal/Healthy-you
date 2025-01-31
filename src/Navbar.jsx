@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../src/assets/icons/Frame 1171278601.png";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const Navbar = () => {
   };
 
   return (
+
     <nav className="sticky top-0 z-50 bg-white shadow-md text-[#000000] font-[Axiforma]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
@@ -47,7 +49,9 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 ">
+
+          <div className="hidden md:flex space-x-6">
+
             <a href="/" onClick={(e) => handleNavigation(e, "/")} className="hover:text-[#065757] px-3 py-2">
               Home
             </a>

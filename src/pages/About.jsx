@@ -1,10 +1,21 @@
 import React from 'react';
-
+import HeroAbout from '../components/AboutComponents/HeroAbout';
+import WhyChoose from '../components/AboutComponents/WhyChoose'
+import Trusted from '../components/HomeComponents/Trusted'
+import OurValues from '../components/AboutComponents/OurValues'
+import Services from '../components/HomeComponents/Services';
+import Meet from '../components/HomeComponents/Meet';
+import Footer from '../components/Footer';
 const About = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home Page!</p>
+    <div className='container mx-auto'>
+     <HeroAbout/>
+     <WhyChoose/>
+     <Trusted/>
+     <OurValues/>
+     <Services/>
+     <Meet/>
+     <Footer/>
     </div>
   );
 };
