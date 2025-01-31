@@ -9,7 +9,7 @@ const Trusted = () => {
   return (
     <div className="px-24 ">
     <h1 className="text-xl font-semibold mb-4">Trusted By:</h1>
-    <div className="flex flex-wrap items-center gap-4 md:grid-cols-2 gap-4">
+    <div className="flex flex-wrap items-center gap-4 md:grid-cols-2 ">
       <img
         src="/src/assets/Group.png"
         alt="tegarr"
