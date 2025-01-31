@@ -15,7 +15,7 @@ const Register = () => {
 
   const password = watch("password");
 
- 
+ 8
   const [showPassword, setShowPassword] = useState(false);
 
   return (
