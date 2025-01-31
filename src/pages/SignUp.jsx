@@ -108,7 +108,7 @@ const Register = () => {
               {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword.message}</p>}
             </div>
 
-            {/* Terms Checkbox */}
+            {/* Terms Check box */}
             <div className="flex items-center gap-2">
               <input type="checkbox" {...register("terms", { required: "You must agree to the terms" })} />
               <span className="text-sm">
