@@ -47,7 +47,7 @@ const Expert = () => {
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="/src/assets/2149856264 1.png"
+            src={image}
             alt="image"
             className="max-w-full h-auto rounded-md shadow-md"
           />

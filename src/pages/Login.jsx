@@ -111,7 +111,7 @@ const Login = () => {
             </button>
 
             <span className="text-sm flex justify-center  text-[16px] text-center">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <a href="/SignUp" className="text-[#147C84]">
                 {" "}
                 Sign up
