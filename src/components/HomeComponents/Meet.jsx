@@ -17,7 +17,7 @@ const Meet = () => {
     {/* Image */}
     <div className="w-full h-auto">
       <img
-        src="/src/assets/rated1.png"
+        src={rated1}
         alt="rated1"
         className="w-full h-full object-cover"
       />
@@ -53,7 +53,7 @@ const Meet = () => {
     {/* Image */}
     <div className="w-full h-auto">
       <img
-        src="/src/assets/rated2.png"
+        src={rated2}
         alt="rated2"
         className="w-full h-full object-cover"
       />
@@ -89,7 +89,7 @@ const Meet = () => {
     {/* Image */}
     <div className="w-full h-auto">
       <img
-        src="/src/assets/rated3.png"
+        src={rated3}
         alt="rated3"
         className="w-full h-full object-cover"
       />
