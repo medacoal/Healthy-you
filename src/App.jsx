@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
+
 const App = () => {
   return (
     <Router>
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </main>
+     
     </Router>
   );
 };
