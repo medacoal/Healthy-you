@@ -1,9 +1,15 @@
 import Expert from '../components/Expert'
+import Consult from '../components/HomeComponents/Consult';
+import Services from '../components/HomeComponents/Services';
+import Trusted from '../components/HomeComponents/Trusted';
 const Home = () => {
   return (
     <div className='container mx-auto'>
      <Expert/>
-accept all changes    
+    <Trusted/>
+    <Services/>
+    <Consult/>
+
     </div>
   );
 };
