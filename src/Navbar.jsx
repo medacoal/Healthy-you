@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import logo from "../src/assets/icons/Frame 1171278601.png";
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,28 +51,28 @@ const Navbar = () => {
 
           <div className="hidden md:flex space-x-6">
 
-            <a href="/" onClick={(e) => handleNavigation(e, "/")} className="hover:text-[#065757] px-3 py-2">
+            <Link to="/" onClick={(e) => handleNavigation(e, "/")} className="hover:text-[#065757] px-3 py-2">
               Home
-            </a>
-            <a href="/about" onClick={(e) => handleNavigation(e, "/about")} className="hover:text-[#065757] px-3 py-2">
+            </Link>
+            <Link to="/about" onClick={(e) => handleNavigation(e, "/about")} className="hover:text-[#065757] px-3 py-2">
               About
-            </a>
-            <a href="/FindDoctor" onClick={(e) => handleNavigation(e, "/FindDoctor")} className="hover:text-[#065757] px-3 py-2">
+            </Link>
+            <Link to="/finddoctor" onClick={(e) => handleNavigation(e, "/FindDoctor")} className="hover:text-[#065757] px-3 py-2">
               Find Doctor
-            </a>
-            <a href="/Blog" onClick={(e) => handleNavigation(e, "/Blog")} className="hover:text-[#065757] px-3 py-2">
+            </Link>
+            <Link to="/blog" onClick={(e) => handleNavigation(e, "/Blog")} className="hover:text-[#065757] px-3 py-2">
               Blog
-            </a>
-            <a href="/contact" onClick={(e) => handleNavigation(e, "/contact")} className="hover:text-[#065757] px-3 py-2">
+            </Link>
+            <Link href="/contact" onClick={(e) => handleNavigation(e, "/contact")} className="hover:text-[#065757] px-3 py-2">
               Contact Us
-            </a>
+            </Link>
           </div>
 
                 <div className="hidden md:flex space-x-4">
             <a href="/login" className="hover:bg-[#174949] text-[#174949] hover:text-white px-4 py-2 rounded">
               Login
             </a>
-            <a href="/SignUp" className="hover:bg-[#174949] text-[#174949] hover:text-white px-4 py-2 rounded">
+            <a href="/signUp" className="hover:bg-[#174949] text-[#174949] hover:text-white px-4 py-2 rounded">
               Sign Up
             </a>
           </div>
