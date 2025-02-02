@@ -12,7 +12,7 @@ const Contact = () => {
         description="Have questions or need assistance? Reach out to us anytime. At Healthy You, we’re here to provide support and ensure you get the care you deserve."
       />
       <Get />
-      <Map />
+      {/* <Map /> */}
       <Wellness />
       <Footer />
     </div>
