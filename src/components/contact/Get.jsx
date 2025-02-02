@@ -57,7 +57,7 @@ const Get = () => {
           <h1 className='md:text-[52px] text-5xl pb-3 font-semibold text-center md:text-start'>
             Get In <em className='font-[Playfair Display] text-[#157c86]'>Touch</em>
           </h1>
-          <h2 className='md:w-[400px] '>Fill up the form and our team will get back to you within 24 hours.</h2>
+          <h2 className='lg:w-[400px] w-full'>Fill up the form and our team will get back to you within 24 hours.</h2>
           </div>
 
           <div className='flex gap-10 pt-3 pb-5'>
@@ -106,14 +106,14 @@ const Get = () => {
             <img src={line} alt=''/>
           </div>
           <div className='flex gap-2 items-center '>
-            <img src={twitterIcon} alt=''/>
-            <img src={companyIcon} alt=''/>
-            <img src={linkedinIcon} alt=''/>
-            <img src={facebookIcon} alt=''/>
+            <img src={twitterIcon} alt='' className='cursor-pointer'/>
+            <img src={companyIcon} alt='' className='cursor-pointer'/>
+            <img src={linkedinIcon} alt='' className='cursor-pointer'/>
+            <img src={facebookIcon} alt='' className='cursor-pointer'/>
           </div>
        </div>
         
-        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-6 md:w-[600px] rounded-md text-[#0E575C]'>
+        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-6 lg:w-[600px] rounded-md text-[#0E575C]'>
           <div className='flex justify-between pb-3 gap-2 '>
             <div>
               <label>Full Name</label> 

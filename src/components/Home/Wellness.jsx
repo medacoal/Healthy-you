@@ -54,7 +54,7 @@ const Wellness = () => {
                 placeholder="Enter email address"
                 value={email}
                 onChange={handleEmailChange}
-                className="py-2 w-full text-[#838383] bg-white md:px-4 rounded-md "
+                className="py-2 w-full text-[#838383] bg-white md:px-4 rounded-md px-4"
                 style={{ outline: "none" }}
               />
               <button
@@ -67,7 +67,7 @@ const Wellness = () => {
 
             {/* Error or Success Message */}
             <div className="mt-2">
-              {error && <p className="text-red-500 text-sm">{error}</p>}
+              {error && <p className="text-red-500 text-sm px-3">{error}</p>}
               {success && (
                 <p className="text-green-500 text-sm">
                   Email submitted successfully!

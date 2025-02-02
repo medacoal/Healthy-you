@@ -19,7 +19,7 @@ const Lastest = () => {
 
         <div className='grid md:grid-cols-3 gap-4 font-General Sans'>
          <div className='hover:border rounded-lg md:w-[300px] lg:w-[400px] shadow-lg p-2 cursor-pointer'>
-        <div className='w-f'>
+        <div className='w-full'>
         <img src={workout} alt='' className='w-[400px] '/>
         <h1 className=' font-medium text-xl lg:w-[383.12px] md:w-[250px] text-[#2E2E2E] pt-3 '>TThe Benefits of Mindfulness Meditation for Stress and Anxiety</h1>
         </div>

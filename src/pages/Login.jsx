@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
-import bgy from "../assets/2149856264 1.png";
+import bgy from "../assets/images/2149856264 1.png"
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
 
