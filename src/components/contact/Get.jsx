@@ -51,7 +51,7 @@ const Get = () => {
 
   return (
     <Wrapper>
-      <div className='grid md:grid-cols-2 gap-8 pt-16 px-2'>
+      <div className='grid md:grid-cols-2 gap-8 pt-16 px-2 container mx-auto'>
         <div>
           <div>
           <h1 className='md:text-[52px] text-5xl pb-3 font-semibold text-center md:text-start'>

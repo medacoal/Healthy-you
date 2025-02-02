@@ -32,7 +32,7 @@ const Wellness = () => {
 
   return (
     <Wrapper>
-      <div className="px-2">
+      <div className="container mx-auto">
       <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start">
