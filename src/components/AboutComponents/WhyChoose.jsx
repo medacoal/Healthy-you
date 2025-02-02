@@ -2,6 +2,7 @@ import React from 'react'
 // import { FaHeartbeat } from 'react-icons/fa';
 import sampleImage from '../../assets/image.png';
 import Icon1 from '../../assets/vector5.png'
+import Icon3 from '../../assets/vector4.png'
 import Icon2 from '../../assets/vector2.png';
 import Icon4 from '../../assets/vector6.png';
 
@@ -67,7 +68,7 @@ const WhyChoose = () => {
     <div className="flex  flex-col gap-10 items-start space-x-4">
     <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
   <img
-    src={Icon1}
+    src={Icon3}
     alt="Icon"
     className="w-10 h-10 brightness-0 invert"
   />
