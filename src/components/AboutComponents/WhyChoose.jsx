@@ -7,7 +7,7 @@ import Icon4 from '../../assets/vector6.png';
 
 const WhyChoose = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <section className="max-w-7xl container mx-auto px-4 sm:px-6 lg:px-8 py-6">
   <div className="flex flex-col md:flex-row items-center">
     
     {/* Left Section - Icon, Heading, Paragraph */}

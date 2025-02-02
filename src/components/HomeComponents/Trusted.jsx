@@ -9,7 +9,7 @@ const Trusted = () => {
   return (
     <div className="container mx-auto ">
     <h1 className="text-xl font-semibold mb-4">Trusted By:</h1>
-    <div className="flex flex-wrap items-center space-x-8  md:grid-cols-2  ">
+    <div className="flex flex-wrap items-center space-x-12.5   ">
       <img
         src={tega}
         alt="tegarr"

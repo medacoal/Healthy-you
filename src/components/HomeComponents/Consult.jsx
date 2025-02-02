@@ -1,8 +1,8 @@
 import React from 'react'
-import ConsultImg from '../../assets/images/2149856264 1.png'
+import ConsultImg from '../../assets/images/2151696299 1.png'
 const Consult = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section className="w-full mx-auto px-4 sm:px-6 lg:px-8  py-8">
   <div className="flex flex-col md:flex-row items-center md:items-start">
     {/* Image Section */}
     <div className="md:w-1/2 flex justify-center md:justify-start">

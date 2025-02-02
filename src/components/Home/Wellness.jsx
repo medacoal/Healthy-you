@@ -32,7 +32,7 @@ const Wellness = () => {
 
   return (
     <Wrapper>
-      <div className="px-2">
+      <div className="container mx-auto">
       <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start">
@@ -54,7 +54,7 @@ const Wellness = () => {
                 placeholder="Enter email address"
                 value={email}
                 onChange={handleEmailChange}
-                className="py-2 w-full text-[#838383] bg-white md:px-4 rounded-md "
+                className="py-2 w-full text-[#838383] bg-white md:px-4 rounded-md px-4"
                 style={{ outline: "none" }}
               />
               <button
@@ -67,7 +67,7 @@ const Wellness = () => {
 
             {/* Error or Success Message */}
             <div className="mt-2">
-              {error && <p className="text-red-500 text-sm">{error}</p>}
+              {error && <p className="text-red-500 text-sm px-3">{error}</p>}
               {success && (
                 <p className="text-green-500 text-sm">
                   Email submitted successfully!
@@ -83,3 +83,5 @@ const Wellness = () => {
 };
 
 export default Wellness;
+
+
