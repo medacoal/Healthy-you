@@ -1,6 +1,5 @@
-import React from 'react';
 import Get from '../components/contact/Get';
-import Map from '../components/contact/Map';
+// import Map from '../components/contact/Map';
 import Footer from "../components/reasurable/Footer";
 import Wellness from '../components/Home/Wellness';
 import Jumbotron from "../components/reasurable/jumbotrun"

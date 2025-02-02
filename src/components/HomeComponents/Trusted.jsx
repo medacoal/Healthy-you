@@ -7,36 +7,36 @@ import torrent from "../../assets/teva_pharmaceuticals_logo.svg.png"
 import pharmax from "../../assets/phamax_digital_logo.png.png"
 const Trusted = () => {
   return (
-    <div className="px-24 ">
+    <div className="container mx-auto ">
     <h1 className="text-xl font-semibold mb-4">Trusted By:</h1>
-    <div className="flex flex-wrap items-center gap-4 md:grid-cols-2 gap-4">
+    <div className="flex flex-wrap items-center space-x-8  md:grid-cols-2  ">
       <img
-        src="/src/assets/Group.png"
+        src={tega}
         alt="tegarr"
         // className="h-12 md:h-16 object-contain"
       />
       <img
-        src="/src/assets/pharmarack_logo.png.png"
+        src={pharmarack}
         alt="pharmarack"
         // className="h-12 md:h-16 object-contain"
       />
       <img
-        src="/src/assets/medibank_private_health_insurance_logo.svg.png"
+        src={medi}
         alt="medi"
         // className="h-12 md:h-16 object-contain"
       />
       <img
-        src="/src/assets/pharmeasy_logo.png.png"
+        src={take}
         alt="take"
         // className="h-12 md:h-16 object-contain"
       />
       <img
-        src="/src/assets/teva_pharmaceuticals_logo.svg.png"
+        src={torrent}
         alt="torrent"
         // className="h-12 md:h-16 object-contain"
       />
       <img
-        src="/src/assets/phamax_digital_logo.png.png"
+        src={pharmax}
         alt="pharmax"
         // className="h-12 md:h-16 object-contain"
       />

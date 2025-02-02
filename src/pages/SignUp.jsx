@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
+<<<<<<< HEAD
 import bgy from "../assets/images/2149856264 1.png"
+=======
+import bgy from "../assets/images/2149856264 1.png";
+>>>>>>> 4a055f6bb63721748ef207fb110f8c2f3323ec4c
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
 
@@ -15,7 +19,7 @@ const Register = () => {
 
   const password = watch("password");
 
- 
+ 8
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -108,7 +112,7 @@ const Register = () => {
               {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword.message}</p>}
             </div>
 
-            {/* Terms Checkbox */}
+            {/* Terms Check box */}
             <div className="flex items-center gap-2">
               <input type="checkbox" {...register("terms", { required: "You must agree to the terms" })} />
               <span className="text-sm">

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
+<<<<<<< HEAD
 import bgy from "../assets/images/2149856264 1.png"
+=======
+import bgy from "../assets/images/2149856264 1.png";
+>>>>>>> 4a055f6bb63721748ef207fb110f8c2f3323ec4c
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
 
@@ -111,7 +115,7 @@ const Login = () => {
             </button>
 
             <span className="text-sm flex justify-center  text-[16px] text-center">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <a href="/SignUp" className="text-[#147C84]">
                 {" "}
                 Sign up
