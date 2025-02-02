@@ -9,7 +9,7 @@ const Jumbotron = (props) => {
   return (
     <div className="h-[300px] bg-[#0E575C] md:bg-cover md:bg-no-repeat" style={{ backgroundImage: `url(${line})` }}>
       {/* <Wrapper className=""> */}
-        <div className="w-full h-full flex flex-col justify-center items-center">
+        <div className="w-full h-full flex flex-col justify-center items-center container mx-auto">
           <div className="text-center w-full md:max-w-[43%] mx-auto font-[Axiforma] text-[#FFFFFFF2]">
             <h1 className="text-3xl md:text-4xl font-bold">
               {title}

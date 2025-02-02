@@ -1,11 +1,11 @@
 import React from "react";
 import image from "../assets/images/2149856264 1.png"
-import Wrapper from "./reasurable/Wrapper";
+// import Wrapper from "./reasurable/Wrapper";
 
 const Expert = () => {
   return (
-   <Wrapper>
-     <section className="py-10 px-2 text-[#000000] font-[Axiforma]">
+   
+     <section className="py-10  text-[#000000] font-[Axiforma]">
       <div className="flex flex-col-reverse md:flex-row items-center ">
         {/* Text  */}
         <div className=" space-y-4 mt-10">
@@ -56,7 +56,7 @@ const Expert = () => {
         </div>
       </div>
     </section>
-   </Wrapper>
+   
   );
 };
 

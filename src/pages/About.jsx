@@ -2,19 +2,21 @@ import HeroAbout from '../components/AboutComponents/HeroAbout';
 import WhyChoose from '../components/AboutComponents/WhyChoose';
 import Trusted from '../components/HomeComponents/Trusted';
 import OurValues from '../components/AboutComponents/OurValues';
-import Services from '../components/HomeComponents/Services';
-import Meet from '../components/HomeComponents/Meet';
-import Footer from '../components/Footer';
+import Wellness from '../components/Home/Wellness';
+import People from '../components/Home/People';
+import Testimonials from '../components/Home/Feedback';
 const About = () => {
   return (
-    <div className='container mx-auto'>
+    <div className=''>
      <HeroAbout/>
      <WhyChoose/>
      <Trusted/>
      <OurValues/>
-     <Services/>
-     <Meet/>
-     <Footer/>
+    
+     <Testimonials/>
+     <People/>
+     <Wellness/>
+   
     </div>
   );
 };
