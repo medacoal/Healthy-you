@@ -64,14 +64,14 @@ const WhyChoose = () => {
     </div>
 
     {/* Third Block */}
-    <div className="flex items-start space-x-4">
-      <div className="w-10 h-10 bg-[#174949] rounded-full flex items-center justify-center">
-        <img
-          src="/src/assets/vector5.png"
-          alt="Icon"
-          className="w-6 h-6 filter brightness-0 invert"
-        />
-      </div>
+    <div className="flex  flex-col gap-10 items-start space-x-4">
+    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+  <img
+    src={Icon1}
+    alt="Icon"
+    className="w-10 h-10 brightness-0 invert"
+  />
+</div>
       <div>
         <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-1">
           Convenient Appointments
