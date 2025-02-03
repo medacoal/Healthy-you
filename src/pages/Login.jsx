@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  md:px-8 lg:container mx-auto">
+    <div className="flex flex-col lg:flex-row min-h-screen  md:px-8 lg:container mx-auto">
       <div className="flex-1 flex flex-col justify-center  items-center    bg-white lg:items-start ">
         <div className="w-full max-w-md">
           <h1 className="font-bold text-3xl md:text-4xl mb-4 text-center lg:text-left">
