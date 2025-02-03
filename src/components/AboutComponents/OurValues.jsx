@@ -11,7 +11,7 @@ const OurValues = () => {
         <span className="italic font-[600] text-[#174949] ml-2">Values</span>
       </h1>
 
-  {/* Values Grid */}
+
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {/* Box 1 */}
     <div className=" bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
