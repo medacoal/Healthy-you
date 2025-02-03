@@ -19,7 +19,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen  md:px-8 lg:container mx-auto ">
+    <div className="flex flex-col lg:flex-row   md:px-8 lg:container mx-auto ">
       {/* Left Section - Form */}
       <div className="flex-1 flex flex-col justify-center  items-center    bg-white lg:items-start ">
         <div className="w-full max-w-md">
@@ -153,7 +153,7 @@ const Register = () => {
       </div>
 
       {/* Right Section - Image */}
-      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-screen">
+      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
         <div className="absolute top-6 left-6 ">
          <Link to='/' className="flex items-center gap-3"> 
          <img src={logo} alt="Logo" className="w-10" />
