@@ -1,10 +1,10 @@
 import React from 'react'
 // import { FaHeartbeat } from 'react-icons/fa';
 import sampleImage from '../../assets/image.png';
-import Icon1 from '../../assets/vector5.png'
-import Icon3 from '../../assets/vector4.png'
-import Icon2 from '../../assets/vector2.png';
-import Icon4 from '../../assets/vector6.png';
+import Icon1 from '../../assets/Vector5.png'
+import Icon3 from '../../assets/Vector4.png'
+import Icon2 from '../../assets/Vector2.png';
+import Icon4 from '../../assets/Vector6.png';
 
 const WhyChoose = () => {
   return (
