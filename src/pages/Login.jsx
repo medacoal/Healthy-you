@@ -4,7 +4,6 @@ import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -20,7 +19,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row   md:px-8 lg:container mx-auto">
+    <div className="flex flex-col lg:flex-row  md:px-8 lg:container mx-auto">
       <div className="flex-1 flex flex-col justify-center  items-center    bg-white lg:items-start ">
         <div className="w-full max-w-md">
           <h1 className="font-bold text-3xl md:text-4xl mb-4 text-center lg:text-left">
@@ -123,11 +122,9 @@ const Login = () => {
       </div>
 
       <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
-        <div className="absolute top-6 left-6 ">
-          <Link to='/' className="flex items-center gap-3">
+        <div className="absolute top-6 left-6 flex items-center">
           <img src={logo} alt="Logo" className="w-10" />
-          <h1 className="font-bold text-lg">Healthy You</h1></Link>
-          
+          <h1 className="font-bold text-lg">Healthy You</h1>
         </div>
         <img
           src={bgy}
