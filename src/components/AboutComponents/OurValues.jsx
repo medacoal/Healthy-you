@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import Icon1 from '../../assets/Frame 1171278617.png';
+import Icon2 from '../../assets/Frame 1171278618.png';
+import Icon3 from '../../assets/Frame 1171278618 (1).png'
 const OurValues = () => {
     return (
 
@@ -8,14 +11,14 @@ const OurValues = () => {
         <span className="italic font-[600] text-[#174949] ml-2">Values</span>
       </h1>
 
-  {/* Values Grid */}
+
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {/* Box 1 */}
-    <div className="border border bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
+    <div className=" bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
       <div className="flex items-center justify-center mx-auto mb-6">
         {/* Icon */}
         <img
-        src="/src/assets/Frame 1171278617.png"
+        src={Icon1}
         alt="rated1"
         className="w-auto h-auto object-cover"
       />
@@ -29,11 +32,11 @@ const OurValues = () => {
     </div>
 
     {/* Box 2 */}
-    <div className="border border bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
+    <div className=" bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
     <div className="flex items-center justify-center mx-auto mb-6">
         {/* Icon */}
         <img
-        src="/src/assets/Frame 1171278618.png"
+        src={Icon2}
         alt="rated1"
         className="w-auto h-auto object-cover"
       />
@@ -47,11 +50,11 @@ const OurValues = () => {
     </div>
 
     {/* Box 3 */}
-    <div className="border border bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
+    <div className=" bg-[#e8f2f3] rounded-2xl p-8 text-center shadow-sm">
     <div className="flex items-center justify-center mx-auto mb-6">
         {/* Icon */}
         <img
-        src="/src/assets/Frame 1171278618 (1).png"
+        src={Icon3}
         alt="rated1"
         className="w-auto h-auto object-cover"
       />

@@ -1,10 +1,14 @@
 import React from 'react'
 // import { FaHeartbeat } from 'react-icons/fa';
 import sampleImage from '../../assets/image.png';
+import Icon1 from '../../assets/Vector5.png'
+import Icon3 from '../../assets/Vector4.png'
+import Icon2 from '../../assets/Vector2.png';
+import Icon4 from '../../assets/Vector6.png';
 
 const WhyChoose = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <section className="max-w-7xl container mx-auto px-4 sm:px-6 lg:px-8 py-6">
   <div className="flex flex-col md:flex-row items-center">
     
     {/* Left Section - Icon, Heading, Paragraph */}
@@ -14,19 +18,19 @@ const WhyChoose = () => {
         Why 
         <span className="italic font-[600] text-[#174949] ml-2">Choose Us</span>
       </h1>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <section className="max-w-7xl mx-auto  py-10">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
 
     {/* First Block */}
     
     {/* First Block */}
-    <div className="flex items-start space-x-4">
-    <div className="w-20 h-20 bg-[#174949] rounded-full flex items-center justify-center overflow-hidden">
+    <div className="flex flex-col gap-10 items-start space-x-4">
+    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
   <img
-    src="/src/assets/vector5.png"
+    src={Icon1}
     alt="Icon"
-    className="w-10 h-10 filter brightness-0 invert"
+    className="w-10 h-10 brightness-0 invert"
   />
 </div>
 
@@ -42,14 +46,14 @@ const WhyChoose = () => {
 
 
     {/* Second Block */}
-    <div className="flex items-start space-x-4">
-      <div className="w-10 h-10 bg-[#174949] rounded-full flex items-center justify-center">
-        <img
-          src="/src/assets/vector5.png"
-          alt="Icon"
-          className="w-6 h-6 filter brightness-0 invert"
-        />
-      </div>
+    <div className="flex  flex-col gap-10 items-start space-x-4">
+    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+  <img
+    src={Icon2}
+    alt="Icon"
+    className="w-10 h-10 brightness-0 invert"
+  />
+</div>
       <div>
         <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-1">
           Comprehensive Care
@@ -61,14 +65,14 @@ const WhyChoose = () => {
     </div>
 
     {/* Third Block */}
-    <div className="flex items-start space-x-4">
-      <div className="w-10 h-10 bg-[#174949] rounded-full flex items-center justify-center">
-        <img
-          src="/src/assets/vector5.png"
-          alt="Icon"
-          className="w-6 h-6 filter brightness-0 invert"
-        />
-      </div>
+    <div className="flex  flex-col gap-10 items-start space-x-4">
+    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+  <img
+    src={Icon3}
+    alt="Icon"
+    className="w-10 h-10 brightness-0 invert"
+  />
+</div>
       <div>
         <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-1">
           Convenient Appointments
@@ -80,14 +84,14 @@ const WhyChoose = () => {
     </div>
 
     {/* Fourth Block */}
-    <div className="flex items-start space-x-4">
-      <div className="w-10 h-10 bg-[#174949] rounded-full flex items-center justify-center">
-        <img
-          src="/src/assets/vector5.png"
-          alt="Icon"
-          className="w-6 h-6 filter brightness-0 invert"
-        />
-      </div>
+    <div className="flex flex-col gap-10 items-start space-x-4">
+    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+  <img
+    src={Icon4}
+    alt="Icon"
+    className="w-10 h-10 brightness-0 invert"
+  />
+</div>
       <div>
         <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-1">
           Trusted Expertise

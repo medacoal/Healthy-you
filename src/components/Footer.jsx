@@ -7,7 +7,7 @@ import x from "../assets/twitter.png"
 const Footer = () => {
   return (
     <div className='bg-[#E8F2F3] py-10 mt-10'>
-            <div className='grid md:grid-cols-2 text-center md:text-start '>
+            <div className='container mx-auto grid md:grid-cols-2 text-center md:text-start '>
               <div className='ml-10'>
               <div className='flex gap-3 pb-3 justify-center md:justify-start'>
                 <img src={logo} alt=''/>
