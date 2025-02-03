@@ -122,7 +122,7 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-screen">
+      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
         <div className="absolute top-6 left-6 ">
           <Link to='/' className="flex items-center gap-3">
           <img src={logo} alt="Logo" className="w-10" />
