@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Blog = () => {
-  return (
-    <div className='container mx-auto'>
+  return <div></div>;
+};
 
-    </div>
-  )
-}
-
-export default Blog
+export default Blog;
