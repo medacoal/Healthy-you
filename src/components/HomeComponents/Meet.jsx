@@ -125,7 +125,7 @@ const Meet = () => {
     {/* Image */}
     <div className="w-full h-auto">
       <img
-        src="/src/assets/rated1.png"
+        src={rated1}
         alt="rated1"
         className="w-full h-full object-cover"
       />

@@ -13,7 +13,7 @@ const HeroAbout = () => {
             About <span className="italic font-medium">Us</span>
           </h1>
         </div>
-        <p className="text-xl font-extralight text-white text-center w-7/12">Healthy You connects you with expert doctors for personalized care, anytime, anywhere. No stress, just quality healthcare made simple for you</p>
+        <p className="text-lg font-semibold text-white text-center w-7/12">Healthy You connects you with expert doctors for personalized care, anytime, anywhere. No stress, just quality healthcare made simple for you</p>
       </div>
     </div>
   );
