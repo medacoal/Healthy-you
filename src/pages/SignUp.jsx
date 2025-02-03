@@ -4,6 +4,7 @@ import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const {
@@ -187,9 +188,10 @@ const Register = () => {
 
       {/* Right Section - Image */}
       <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
-        <div className="absolute top-6 left-6 flex items-center">
+        <div className="absolute top-6 left-6 ">
+        <Link to='/' className="flex items-center gap-3">
           <img src={logo} alt="Logo" className="w-10" />
-          <h1 className="font-bold text-lg">Healthy You</h1>
+          <h1 className="font-bold text-lg">Healthy You</h1></Link>
         </div>
         <img
           src={bgy}
