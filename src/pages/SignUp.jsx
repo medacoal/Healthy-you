@@ -5,17 +5,36 @@ import bgy from "../assets/images/2149856264 1.png";
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
 import { Link } from "react-router-dom";
-
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+  const { signup } = useAuth();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-
   const password = watch("password");
   const [showPassword, setShowPassword] = useState(false);
+  const onSubmit = async (data) => {
+    try {
+      const res = await signup(data);
+      console.log(res);
+      
+      // Show success toast
+      toast.success("Registration Successful! Redirecting...");
+  
+      // Redirect after a short delay
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
+    } catch (err) {
+      console.error(err);
+      toast.error(err.message || "Registration failed. Please try again.");
+    }
+  };
 
   return (
     <div className="flex flex-col lg:flex-row  md:px-8 lg:container mx-auto">
@@ -29,7 +48,7 @@ const Register = () => {
             Join us now by filling in your details below
           </p>
           <form
-            onSubmit={handleSubmit((data) => console.log(data))}
+            onSubmit={handleSubmit(onSubmit)}
             className="space-y-4 md:space-y-5"
           >
             {/* Full Name */}
@@ -39,12 +58,12 @@ const Register = () => {
               </label>
               <input
                 type="text"
-                {...register("name", { required: "Name is required" })}
+                {...register("fullName", { required: "Full Name is required" })}
                 placeholder="Enter your full name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg"
               />
-              {errors.name && (
-                <p className="text-red-500 text-sm">{errors.name.message}</p>
+              {errors.fullName && (
+                <p className="text-red-500 text-sm">{errors.fullName.message}</p>
               )}
             </div>
 
