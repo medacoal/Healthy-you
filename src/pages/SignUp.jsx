@@ -7,6 +7,9 @@ import frame from "../assets/Frame.svg";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Register = () => {
   const { signup } = useAuth();
   const navigate = useNavigate();
