@@ -1,8 +1,8 @@
 import Get from '../components/contact/Get';
-// import Map from '../components/contact/Map';
 import Footer from "../components/reasurable/Footer";
-import Wellness from '../components/Home/Wellness';
+import Wellness from '../components/HomeComponents/Wellness';
 import Jumbotron from "../components/reasurable/jumbotrun"
+import LocationMap from '../components/contact/LocationMap';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
         description="Have questions or need assistance? Reach out to us anytime. At Healthy You, we’re here to provide support and ensure you get the care you deserve."
       />
       <Get />
-      <Map />
+      <LocationMap/>
       <Wellness />
       <Footer />
     </div>

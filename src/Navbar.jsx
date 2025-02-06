@@ -29,10 +29,10 @@ const Navbar = () => {
 
   const handleLogoClick = () => {
     if (location.pathname === "/") {
-      window.location.reload(); // Refresh the page if already on home
+      window.location.reload(); 
     } else {
-      navigate("/"); // Navigate to home
-      setTimeout(() => window.location.reload(), 100); // Delay refresh for smooth transition
+      navigate("/");
+      setTimeout(() => window.location.reload(), 100); 
     }
   };
 
@@ -41,9 +41,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white shadow-md text-[#000000] font-[Axiforma]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 ">
             <button onClick={handleLogoClick}>
-              <img src={logo} alt="Logo" className="h-10 w-auto" />
+              <img src={logo} alt="Logo" className="h-10 w-auto cursor-pointer"/>
             </button>
           </div>
 

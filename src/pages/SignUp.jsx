@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
-<<<<<<< HEAD
-import bgy from "../assets/images/2149856264 1.png"
-=======
-import bgy from "../assets/images/2149856264 1.png";
->>>>>>> 4a055f6bb63721748ef207fb110f8c2f3323ec4c
+import bgy from "../assets/images/2149856264 1.png"; // Keeping the correct import
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
 
@@ -19,13 +15,12 @@ const Register = () => {
 
   const password = watch("password");
 
- 8
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen  md:px-8 lg:container mx-auto ">
       {/* Left Section - Form */}
-      <div className="flex-1 flex flex-col justify-center  items-center    bg-white lg:items-start ">
+      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start ">
         <div className="w-full max-w-md">
           <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center lg:text-left">
             Register Now
