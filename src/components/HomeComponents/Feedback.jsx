@@ -100,7 +100,7 @@ const Testimonials = () => {
 
   return (
     <Wrapper>
-      <div className="text-[#000000] font-[Axiforma] pt-10  px-2">
+      <div className="text-[#000000] font-[Axiforma] pt-10  px-2 container mx-auto">
         <div className=" md:text-5xl text-4xl pb-5 text-center">
           <h1 className="font-semibold">
             Our Patients

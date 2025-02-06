@@ -1,26 +1,55 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
+<<<<<<< HEAD
 import bgy from "../assets/images/2149856264 1.png"; // Keeping one valid import
+=======
+import bgy from "../assets/images/2149856264 1.png";
+>>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
 import google from "../assets/google.svg";
-import frame from "../assets/Frame.svg";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { FiEye, FiEyeOff } from "react-icons/fi";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
+  const { login } = useAuth();
+  const navigate = useNavigate();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
+  const [loginError, setLoginError] = useState("");
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+
+
+const onSubmit = async (data) => {
+  try {
+    setLoginError("");
+    const res = await login(data.email, data.password);
+    console.log(res);
+
+    // Show success toast
+    toast.success("Login Successful!");
+
+    // Redirect after a short delay
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
+  } catch (err) {
+    setLoginError("Login failed. Please check your credentials.");
+    console.error(err);
+    toast.error(err.message || "Login failed.");
+  }
+};
 
   return (
+<<<<<<< HEAD
     <div className="flex flex-col lg:flex-row min-h-screen  md:px-8 lg:container mx-auto">
       <div className="flex-1 flex flex-col justify-center  items-center bg-white lg:items-start">
+=======
+    <div className="flex flex-col lg:flex-row md:px-8 lg:container mx-auto">
+      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start">
+>>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
         <div className="w-full max-w-md">
           <h1 className="font-bold text-3xl md:text-4xl mb-4 text-center lg:text-left">
             Welcome Back
@@ -28,11 +57,12 @@ const Login = () => {
           <p className="mb-6 text-center lg:text-left">
             Join us now by filling in your details below
           </p>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="space-y-4 md:space-y-5"
-          >
-            {/* Email */}
+
+          {loginError && (
+            <p className="text-red-500 text-center mb-4">{loginError}</p>
+          )}
+
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-5">
             <div>
               <label className="block text-base md:text-lg font-semibold">
                 Email
@@ -47,14 +77,15 @@ const Login = () => {
                   },
                 })}
                 placeholder="Enter your email address"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg"
+                className={`w-full px-4 py-3 border ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                } rounded-lg`}
               />
               {errors.email && (
                 <p className="text-red-500 text-sm">{errors.email.message}</p>
               )}
             </div>
 
-            {/* Password */}
             <div className="relative">
               <label className="block text-base md:text-lg font-semibold">
                 Password
@@ -69,19 +100,20 @@ const Login = () => {
                   },
                 })}
                 placeholder="Enter your password"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg"
+                className={`w-full px-4 py-3 border ${
+                  errors.password ? "border-red-500" : "border-gray-300"
+                } rounded-lg`}
               />
-              {/* Eye Icon for Toggle */}
-              <img
+              <button
+                type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="w-5 h-5 absolute top-10 right-4 cursor-pointer"
-                src={frame}
-                alt="Toggle Password"
-              />
+                className="absolute top-10 right-4 cursor-pointer"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? <FiEyeOff /> : <FiEye />}
+              </button>
               {errors.password && (
-                <p className="text-red-500 text-sm">
-                  {errors.password.message}
-                </p>
+                <p className="text-red-500 text-sm">{errors.password.message}</p>
               )}
             </div>
 
@@ -110,21 +142,23 @@ const Login = () => {
               Continue with Google
             </button>
 
-            <span className="text-sm flex justify-center  text-[16px] text-center">
+            <span className="text-sm flex justify-center text-[16px] text-center">
               Don&apos;t have an account?{" "}
-              <a href="/SignUp" className="text-[#147C84]">
+              <Link to="/SignUp" className="text-[#147C84]">
                 {" "}
                 Sign up
-              </a>
+              </Link>
             </span>
           </form>
         </div>
       </div>
 
-      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-screen">
-        <div className="absolute top-6 left-6 flex items-center">
-          <img src={logo} alt="Logo" className="w-10" />
-          <h1 className="font-bold text-lg">Healthy You</h1>
+      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
+        <div className="absolute top-6 left-6">
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Logo" className="w-10" />
+            <h1 className="font-bold text-lg">Healthy You</h1>
+          </Link>
         </div>
         <img
           src={bgy}
