@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
-<<<<<<< HEAD
-import bgy from "../assets/images/2149856264 1.png"; // Keeping the correct import
-=======
 import bgy from "../assets/images/2149856264 1.png";
->>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
 import google from "../assets/google.svg";
 import frame from "../assets/Frame.svg";
 import { Link } from "react-router-dom";
@@ -24,10 +20,6 @@ const Register = () => {
     formState: { errors },
   } = useForm();
   const password = watch("password");
-<<<<<<< HEAD
-
-=======
->>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
   const [showPassword, setShowPassword] = useState(false);
   const onSubmit = async (data) => {
     try {
@@ -50,11 +42,7 @@ const Register = () => {
   return (
     <div className="flex flex-col lg:flex-row  md:px-8 lg:container mx-auto">
       {/* Left Section - Form */}
-<<<<<<< HEAD
-      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start ">
-=======
       <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start">
->>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
         <div className="w-full max-w-md">
           <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center lg:text-left">
             Register Now

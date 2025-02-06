@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
-<<<<<<< HEAD
-import bgy from "../assets/images/2149856264 1.png"; // Keeping one valid import
-=======
 import bgy from "../assets/images/2149856264 1.png";
->>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
 import google from "../assets/google.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
@@ -43,13 +39,8 @@ const onSubmit = async (data) => {
 };
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col lg:flex-row min-h-screen  md:px-8 lg:container mx-auto">
-      <div className="flex-1 flex flex-col justify-center  items-center bg-white lg:items-start">
-=======
     <div className="flex flex-col lg:flex-row md:px-8 lg:container mx-auto">
       <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start">
->>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0
         <div className="w-full max-w-md">
           <h1 className="font-bold text-3xl md:text-4xl mb-4 text-center lg:text-left">
             Welcome Back

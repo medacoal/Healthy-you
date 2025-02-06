@@ -7,9 +7,20 @@ const Blogcard = () => {
   return (
     <Wrapper>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10 px-2">
-        {blogCardDb && blogCardDb.map((item, index) => (
-          <Link to={``} key={index}>
-            <div className='justify-between rounded-2xl hover:border border-[#147C84] p-1'>
+        {blogCardDb.map((item, index) => (
+          <div
+            key={index}
+            className={`justify-between rounded-2xl hover:border border-[#147C84] p-1 hover:shadow-lg ${
+              item.heading === "Healthy Eating on a Budget: Tips and Strategies" ? '' : ''
+            }`}
+          >
+            {item.heading === "Healthy Eating on a Budget: Tips and Strategies" ? (
+              <Link to="/healthy-eating">
+                <div>
+                  <img src={item.image} alt="icon" className='w-full' />
+                </div>
+              </Link>
+            ) : (
               <div>
                 <img src={item.image} alt="icon" className='w-full' />
               </div>

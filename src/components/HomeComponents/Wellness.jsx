@@ -32,11 +32,7 @@ const Wellness = () => {
 
   return (
     <Wrapper>
-<<<<<<< HEAD:src/components/HomeComponents/Wellness.jsx
-      <div className="px-">
-=======
-      <div className="container mx-auto">
->>>>>>> e44b4aa7ceed7bf1dd28dc68350cad34d99721c0:src/components/Home/Wellness.jsx
+      <div className="">
       <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start">
