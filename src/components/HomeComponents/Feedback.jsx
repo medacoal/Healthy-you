@@ -8,7 +8,7 @@ import micheal from "../../assets/images/Ellipse 1.png";
 import elijah from  "../../assets/images/Ellipse 4 (3).png"
 import david from "../../assets/images/Ellipse 3.png";
 
-const Testimonials = () => {
+const Feedback = () => {
   const testimonials = [
     
     {
@@ -100,15 +100,15 @@ const Testimonials = () => {
 
   return (
     <Wrapper>
-      <div className="text-[#000000] font-[Axiforma] pt-10  px-2 container mx-auto">
-        <div className=" md:text-5xl text-4xl pb-5 text-center">
+      <div className="text-[#000000] font-[Axiforma]  px-2 container mx-auto py-10">
+        <div className=" md:text-5xl text-4xl  text-center md:text-start">
           <h1 className="font-semibold">
             Our Patients
             <span className="font-serif italic font-medium"> Feedback</span>
           </h1>
         </div>
 
-        <div className="relative py-14">
+        <div className="relative pt-24">
           <div className="flex justify-center items-center">
             {/* Cards */}
             <div
@@ -166,4 +166,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Feedback;

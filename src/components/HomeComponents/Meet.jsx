@@ -2,10 +2,12 @@ import React from 'react'
 import rated1 from "../../assets/rated1.png"
 import rated2 from "../../assets/rated2.png"
 import rated3 from "../../assets/rated3.png"
+import Wrapper from '../reasurable/Wrapper'
 
 const Meet = () => {
   return (
-    <div className='mt-10'>
+   <Wrapper>
+     <div className='py-5 px-2 font-[Axiforma]'>
         <h1 className="text-5xl font-bold text-center mb-10">
   Meet Our Top
   <span className="italic font-[600] text-[#174949] "> Rated Doctors</span> 
@@ -159,6 +161,7 @@ const Meet = () => {
 
 
     </div>
+   </Wrapper>
     
   )
 }

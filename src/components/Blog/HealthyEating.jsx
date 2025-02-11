@@ -4,7 +4,6 @@ import linked from "../../assets/icons/Vector (41).png";
 import twitter from "../../assets/icons/Vector (43).png";
 import healthy from "../../assets/images/eating.png";
 import pic from "../../assets/images/stainless.png";
-import Footer from "../../components/Footer";
 import Wellness from "../../components/HomeComponents/Wellness";
 
 const HealthyEating = () => {
@@ -177,7 +176,6 @@ const HealthyEating = () => {
       </div>  
     </div>
     <Wellness />
-    <Footer />
    </div>
   );
 };

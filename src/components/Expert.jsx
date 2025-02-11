@@ -1,23 +1,24 @@
 import React from "react";
 import image from "../assets/images/2149856264 1.png"
+import Wrapper from "./reasurable/Wrapper";
 // import Wrapper from "./reasurable/Wrapper";
 
 const Expert = () => {
   return (
-   
-     <section className="py-10  text-[#000000] font-[Axiforma]">
+   <Wrapper>
+    <section className="pt-10 px-2 text-[#000000] font-[Axiforma]">
       <div className="flex flex-col-reverse md:flex-row items-center ">
         {/* Text  */}
-        <div className=" space-y-4 mt-10">
+        <div className=" space-y-6  px-">
         <h1 className="lg:text-6xl lg:w-[600px] text-4xl font-bold">
   Expert Healthcare, Just a{" "}
   <span className="italic font-[600] text-[#174949] ">Click Away</span> 
 </h1>
 
-          <p className="text-lg font py-6 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
+          <p className="text-lg font py-4 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
           <div className="flex items-center space-x-8">
   {/* Book an Appointment */}
-  <div className="bg-[#174949] text-white px-6 py-3 rounded-lg shadow-md">
+  <div className="bg-[#174949] text-white px-6 py-3 rounded-lg shadow-md cursor-pointer">
     Book an Appointment
   </div>
 
@@ -43,7 +44,6 @@ const Expert = () => {
     Years helping patients online
   </div>
 </div>
-
         </div>
 
         {/* Image Section */}
@@ -51,11 +51,12 @@ const Expert = () => {
           <img
             src={image}
             alt="image"
-            className="max-w-full h-auto rounded-md shadow-md"
+            className="max-w-full h-auto rounded-2xl"
           />
         </div>
       </div>
     </section>
+   </Wrapper>
    
   );
 };
