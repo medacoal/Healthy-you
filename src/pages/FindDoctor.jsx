@@ -1,11 +1,9 @@
-
+import DoctorProfile from "../components/DoctorsProfile/DoctorProfile"
 
 const TalkToDoctor = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home Page!
-      </p>
+      <DoctorProfile/>
     </div>
   );
 };
