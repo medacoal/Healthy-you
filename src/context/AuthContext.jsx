@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
     token: "",
   });
 
-  axios.defaults.baseURL = "https://healthy-you-be.onrender.com/api";
+  axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_API_URL;
 
   // Update axios headers when auth changes
   useEffect(() => {
