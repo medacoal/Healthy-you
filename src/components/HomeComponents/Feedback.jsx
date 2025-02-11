@@ -5,12 +5,11 @@ import john from "../../assets/images/Ellipse 1 (1).png";
 import alex from "../../assets/images/Ellipse 2.png";
 import emily from "../../assets/images/Ellipse 3 (1).png";
 import micheal from "../../assets/images/Ellipse 1.png";
-import elijah from  "../../assets/images/Ellipse 4 (3).png"
+import elijah from "../../assets/images/Ellipse 4 (3).png";
 import david from "../../assets/images/Ellipse 3.png";
 
 const Testimonials = () => {
   const testimonials = [
-    
     {
       id: 2,
       text: "i’ve tried several wellness websites, but this one stands out for it’s user friendly interface and excerllent customer.",
@@ -18,18 +17,18 @@ const Testimonials = () => {
       image: alex,
     },
     {
-        id: 1,
-        text: "HealthyYou service is outstanding! I had an appointment and they responded quickly and help with prescriptions.",
-        name: "Anthonia Ruben",
-        image: john,
-      },
+      id: 1,
+      text: "HealthyYou service is outstanding! I had an appointment and they responded quickly and help with prescriptions.",
+      name: "Anthonia Ruben",
+      image: john,
+    },
     {
       id: 3,
       text: "Security is my top, and I feel safe using this exchange. Their two-factor authentication gives me peace.",
       name: "Udeogu Stella.",
       image: emily,
     },
-   
+
     {
       id: 5,
       text: "I appreciate the transport fee structure. No hidden charges, just straightforwardpayments.",
@@ -37,11 +36,11 @@ const Testimonials = () => {
       image: david,
     },
     {
-        id: 4,
-        text: "I’ve used many wellness websites, but none compare to this one. It’s intuitive exceeds my expectations.",
-        name: "Joy Samson",
-        image: micheal,
-      },
+      id: 4,
+      text: "I’ve used many wellness websites, but none compare to this one. It’s intuitive exceeds my expectations.",
+      name: "Joy Samson",
+      image: micheal,
+    },
     {
       id: 6,
       text: "i’ve tried several wellness websites, but this one stands out for it’s user friendly interface and excerllent customer.",
@@ -90,10 +89,7 @@ const Testimonials = () => {
   };
 
   const getVisibleTestimonials = () => {
-    return testimonials.slice(
-      currentIndex,
-      currentIndex + visibleCount
-    );
+    return testimonials.slice(currentIndex, currentIndex + visibleCount);
   };
 
   const visibleTestimonials = getVisibleTestimonials();
@@ -128,7 +124,9 @@ const Testimonials = () => {
                   />
                   <div className="text-center mt-12">
                     <p className="text-lg">"{testimonial.text}"</p>
-                    <h1 className="pt-2 text-lg font-bold">{testimonial.name}</h1>
+                    <h1 className="pt-2 text-lg font-bold">
+                      {testimonial.name}
+                    </h1>
                   </div>
                 </div>
               ))}
