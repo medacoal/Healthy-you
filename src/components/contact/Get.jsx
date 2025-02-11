@@ -10,6 +10,7 @@ import twitterIcon from "../../assets/icons/Vector (38).png";
 import linkedinIcon from "../../assets/icons/Vector (40).png";
 import companyIcon from "../../assets/icons/Frame 1171275662.png";
 import facebookIcon from "../../assets/icons/Vector (39).png";
+import axios from 'axios';
 
 const Get = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -40,12 +41,22 @@ const Get = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log("Form submitted successfully", formData);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      try {
+        const response = await axios.post('/contact', {
+          fullName: formData.name,
+          email: formData.email,
+          phoneNumber: formData.phone,
+          message: formData.message,
+        });
+        console.log("Response:", response.data);
+        setSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     }
   };
 

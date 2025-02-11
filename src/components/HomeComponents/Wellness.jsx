@@ -32,8 +32,8 @@ const Wellness = () => {
 
   return (
     <Wrapper>
-      <div className="">
-      <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
+      <div className="px-2 py-10">
+      <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start">
           <h1 className="Font-Axiforma lg:text-[34px] text-2xl w-[300px] lg:w-[600px] text-center md:text-start font-bold">
