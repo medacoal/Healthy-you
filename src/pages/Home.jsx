@@ -7,7 +7,8 @@ import Meet from '../components/HomeComponents/Meet';
 import Wellness from '../components/HomeComponents/Wellness'
 import People from '../components/HomeComponents/People'
 import Lastest from '../components/HomeComponents/Lastest'
-// import Testimonials from '../components/Home/Feedback';
+import Feedback from '../components/HomeComponents/Feedback';
+
 const Home = () => {
   return (
     <div className='container mx-auto space-y-20'>
@@ -16,7 +17,7 @@ const Home = () => {
     <Meet/>
     <Services/>
     <Consult/>
-    {/* <Testimonials/> */}
+    <Feedback/>
     <Lastest/>
     <People/>
     <Wellness/>

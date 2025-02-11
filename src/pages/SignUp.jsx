@@ -9,6 +9,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Wrapper from "../components/reasurable/Wrapper";
 
 const Register = () => {
   const { signup } = useAuth();
@@ -40,11 +41,17 @@ const Register = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  md:px-8 lg:container mx-auto">
-      {/* Left Section - Form */}
-      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start">
-        <div className="w-full max-w-md">
-          <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center lg:text-left">
+    <div className="grid lg:grid-cols-2 container mx-auto  items-center">
+      <Wrapper>
+        <div className="py-5 px-3 lg:hidden">
+                  <Link to="/" className="flex items-center gap-3">
+                    <img src={logo} alt="Logo" className="w-10" />
+                    <h1 className="font-bold text-lg">Healthy You</h1>
+                  </Link>
+                </div>
+      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start px-3">
+        <div className="w-full max-w-lg">
+          <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center">
             Register Now
           </h1>
           <p className="mb-6 text-[18px] text-center lg:text-left">
@@ -54,7 +61,6 @@ const Register = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-4 md:space-y-5"
           >
-            {/* Full Name */}
             <div>
               <label className="block text-base md:text-lg font-semibold">
                 Full Name
@@ -207,20 +213,21 @@ const Register = () => {
           </form>
         </div>
       </div>
+      </Wrapper>
 
-      {/* Right Section - Image */}
-      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
-        <div className="absolute top-6 left-6 ">
-        <Link to='/' className="flex items-center gap-3">
+      <div className="hidden lg:block relative h-screen">
+      <div className="absolute top-6 left-6">
+        <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Logo" className="w-10" />
-          <h1 className="font-bold text-lg">Healthy You</h1></Link>
-        </div>
-        <img
-          src={bgy}
-          alt="Background"
-          className="w-full h-full object-cover rounded-lg"
-        />
+          <h1 className="font-bold text-lg">Healthy You</h1>
+        </Link>
       </div>
+      <img
+        src={bgy}
+        alt="Background"
+        className="w-full h-full object-cover rounded-l-2xl"
+      />
+    </div>
     </div>
   );
 };

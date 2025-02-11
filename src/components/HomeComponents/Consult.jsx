@@ -1,38 +1,44 @@
 import React from 'react'
 import ConsultImg from '../../assets/images/2151696299 1.png'
+import Wrapper from '../reasurable/Wrapper'
 const Consult = () => {
   return (
-    <section className="w-full mx-auto px-4 sm:px-6 lg:px-8  py-8">
-  <div className="flex flex-col md:flex-row items-center md:items-start">
+    <Wrapper>
+      <section className="px-2 font-[Axiforma]">
+  <div className=" grid md:grid-cols-2 items-center gap-5 lg:gap-0">
     {/* Image Section */}
-    <div className="md:w-1/2 flex justify-center md:justify-start">
+    <div className="justify-center">
       <img
         src={ConsultImg}
         alt="image"
-        className="max-w-full h-auto rounded-md shadow-md"
+        className=" rounded-md"
       />
     </div>
 
     {/* Text Section */}
-    <div className="md:w-1/2 text-left space-y-4 mt-10 md:mt-0">
-      <h1 className="text-5xl font-bold">
+    <div className="space-y-5 pt-5 md:pt-0">
+      <div className='lg:w-[650px] text-center lg:text-start'>
+      <h1 className="lg:text-6xl text-3xl font-bold">
       Consult with our Expert and 
         <span className="italic font-[600] text-[#174949]"> Professional Doctors</span>
       </h1>
-
-      <p className="text-lg font py-6">
+      </div>
+<div className='text-xl lg:w-[590px] text-[#474747]'>  
+<p className=" font py-5">
       Get personalized medical advice from highly skilled and experienced doctors across various specialties. Whether you need a quick consultation, a detailed diagnosis, or ongoing care.
       </p>
-
-      <p className='text-lg '>
+      <p>
       Experience compassionate and confidential care tailored to your needs, all from the comfort of your home.
       </p>
-
+</div>
+<div className="bg-[#147C84] w-[199px] h-[54px] text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84] border-2">
+    Book an Appointment
+  </div>
     </div>
   </div>
 </section>
+    </Wrapper>
 
   )
 }
-
 export default Consult

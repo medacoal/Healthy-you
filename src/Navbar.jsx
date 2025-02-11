@@ -37,19 +37,18 @@ const Navbar = () => {
   };
 
   return (
-
-    <nav className="sticky top-0 z-50 bg-white shadow-md text-[#000000] font-[Axiforma]">
+    <nav className="sticky top-0 z-50 bg-white shadow-md text-[#000000] font-[Axiforma] container mx-auto">
       <div className="container mx-auto ">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 ">
             <button onClick={handleLogoClick}>
-              <img src={logo} alt="Logo" className="h-10 w-auto cursor-pointer"/>
+              <img src={logo} alt="Logo" className="h-10 w-auto cursor-pointer px-4"/>
             </button>
           </div>
 
           {/* Desktop Menu */}
 
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex lg:space-x-6">
 
             <Link to="/" onClick={(e) => handleNavigation(e, "/")} className="hover:text-[#065757] px-3 py-2">
               Home
@@ -78,7 +77,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden px-4">
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-gray-800 focus:outline-none">
               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -89,7 +88,7 @@ const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white shadow-lg rounded-lg py-3">
+          <div className="md:hidden bg-white shadow-lg rounded-lg py-3 ">
             <a href="/" onClick={(e) => { handleNavigation(e, "/"); setIsOpen(false); }} className="block px-4 py-2 hover:bg-[#E8F2F3]">
               Home
             </a>

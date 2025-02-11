@@ -7,7 +7,8 @@ import x from "../../assets/icons/twitter.png"
 
 const Footer = () => {
   return (
-    <div className='bg-[#E8F2F3] font-[Axiforma]  py-10 mt-10 px-2'>
+   <div className='mx-auto container'>
+     <div className='bg-[#E8F2F3] font-[Axiforma]  py-10 mt-10 px-2'>
         <Wrapper>
             <div className='grid md:grid-cols-2  '>
               <div>
@@ -52,6 +53,7 @@ const Footer = () => {
             </div>
         </Wrapper>
     </div>
+   </div>
   )
 }
 
