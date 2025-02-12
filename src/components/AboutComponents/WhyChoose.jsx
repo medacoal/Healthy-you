@@ -5,37 +5,34 @@ import Icon1 from '../../assets/Vector5.png'
 import Icon3 from '../../assets/Vector4.png'
 import Icon2 from '../../assets/Vector2.png';
 import Icon4 from '../../assets/Vector6.png';
+import Wrapper from '../reasurable/Wrapper';
 
 const WhyChoose = () => {
   return (
-    <section className="max-w-7xl container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-  <div className="flex flex-col md:flex-row items-center">
+    <Wrapper>
+      <section className=" container mx-auto px-2 py-10">
+  <div className="flex flex-col md:flex-row items-center justify-between">
     
-    {/* Left Section - Icon, Heading, Paragraph */}
-    <div className="md:w-1/2 text-left">
+    <div className="text-left items-center">
       {/* Title */}
-      <h1 className="text-4xl font-bold leading-tight mb-2">
+      <h1 className="text-4xl font-bold leading-tight ">
         Why 
         <span className="italic font-[600] text-[#174949] ml-2">Choose Us</span>
       </h1>
-      <section className="max-w-7xl mx-auto  py-10">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
+      <section className=" mx-auto  py-10 lg:w-[752px] lg:h-[527.99px] lg:pt-24 ">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-5">
 
-    {/* First Block */}
-    
-    {/* First Block */}
-    <div className="flex flex-col gap-10 items-start space-x-4">
-    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+    <div className="flex flex-col gap-6 items-start text-center md:text-start">
+    <div className="w-16 h-16 bg-[#174949] flex items-center justify-center mx-auto md:mx-0 rounded-full">
   <img
     src={Icon1}
     alt="Icon"
-    className="w-10 h-10 brightness-0 invert"
+    className="w-8 h-8 brightness-0 invert "
   />
 </div>
-
       <div>
-        <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-2">
+        <h3 className="text-xl font-semibold text-[#174949] mb-2">
           Experience medical professionals
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed">
@@ -46,16 +43,16 @@ const WhyChoose = () => {
 
 
     {/* Second Block */}
-    <div className="flex  flex-col gap-10 items-start space-x-4">
-    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+    <div className="flex flex-col gap-6 items-start text-center md:text-start">
+    <div className="w-16 h-16 bg-[#174949] flex items-center justify-center mx-auto md:mx-0 rounded-full">
   <img
     src={Icon2}
     alt="Icon"
-    className="w-10 h-10 brightness-0 invert"
+    className="w-8 h-8 brightness-0 invert"
   />
 </div>
       <div>
-        <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-1">
+        <h3 className="text-xl font-semibold text-[#174949] mb-1">
           Comprehensive Care
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed">
@@ -65,12 +62,12 @@ const WhyChoose = () => {
     </div>
 
     {/* Third Block */}
-    <div className="flex  flex-col gap-10 items-start space-x-4">
-    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+    <div className="flex  flex-col gap-6 items-start text-center md:text-start">
+    <div className="w-16 h-16 bg-[#174949] flex items-center justify-center rounded-full  mx-auto md:mx-0">
   <img
     src={Icon3}
     alt="Icon"
-    className="w-10 h-10 brightness-0 invert"
+    className="w-8 h-8 brightness-0 invert"
   />
 </div>
       <div>
@@ -84,16 +81,16 @@ const WhyChoose = () => {
     </div>
 
     {/* Fourth Block */}
-    <div className="flex flex-col gap-10 items-start space-x-4">
-    <div className="w-20 h-20 bg-[#174949] flex items-center justify-center rounded-full  p-2.5">
+    <div className="flex flex-col gap-6 items-start text-center md:text-start">
+    <div className="w-16 h-16 bg-[#174949] flex items-center justify-center rounded-full  mx-auto md:mx-0">
   <img
     src={Icon4}
     alt="Icon"
-    className="w-10 h-10 brightness-0 invert"
+    className="w-8 h-8 brightness-0 invert"
   />
 </div>
       <div>
-        <h3 className="text-xl font-semibold text-[#174949] leading-snug mb-1">
+        <h3 className="text-xl font-semibold text-[#174949] mb-1">
           Trusted Expertise
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed">
@@ -107,17 +104,17 @@ const WhyChoose = () => {
     </div>
 
    {/* Right Section - Image */}
-<div className="md:w-1/2 flex justify-end mt-6 md:mt-0">
+<div className="mt-6 md:mt-0">
   <img
     src={sampleImage}
     alt="Healthcare"
-    className="max-w-full h-auto rounded-md shadow-md"
+    className=" rounded-md"
   />
 </div>
 
   </div>
 </section>
-
+    </Wrapper>
   )
 }
  export default WhyChoose;

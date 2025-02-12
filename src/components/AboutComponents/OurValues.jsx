@@ -2,10 +2,12 @@ import React from 'react';
 import Icon1 from '../../assets/Frame 1171278617.png';
 import Icon2 from '../../assets/Frame 1171278618.png';
 import Icon3 from '../../assets/Frame 1171278618 (1).png'
+import Wrapper from '../reasurable/Wrapper';
 const OurValues = () => {
     return (
-
-<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<Wrapper>
+  
+<section className="px-2 py-12 font-[Axiforma]">
   <h1 className="text-4xl font-bold text-center mb-12">
         Our
         <span className="italic font-[600] text-[#174949] ml-2">Values</span>
@@ -68,7 +70,7 @@ const OurValues = () => {
     </div>
   </div>
 </section>
-
+</Wrapper>
 )
 }
 

@@ -5,9 +5,11 @@ import vector3 from '../../assets/Vector3.png'
 import vector4 from '../../assets/Vector4.png'
 import vector5 from '../../assets/Vector5.png'
 import vector6 from '../../assets/Vector6.png'
+import Wrapper from '../reasurable/Wrapper'
 const Services = () => {
   return (
-    <div>
+   <Wrapper>
+     <div className='px-2 font-[Axiforma]'>
 <h1 className="text-5xl font-bold text-center mt-10">
   Explore Our
   <span className="italic font-[600] text-[#174949] "> Services</span> 
@@ -102,6 +104,7 @@ const Services = () => {
 </div>
 
     </div>
+   </Wrapper>
   )
 }
 
