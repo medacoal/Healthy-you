@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import logo from "../src/assets/icons/Frame 1171278601.png";
+import logo from "../src/assets/icons/Vector 1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +42,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 ">
             <button onClick={handleLogoClick}>
-              <img src={logo} alt="Logo" className="h-10 w-auto cursor-pointer px-4"/>
+              <div className="flex gap-3 px-4">
+              <img src={logo} alt="Logo" className=" cursor-pointer "/>
+              <h1 className="text-[#232323] text-2xl font-bold">Healty You</h1>
+              </div>
             </button>
           </div>
 
