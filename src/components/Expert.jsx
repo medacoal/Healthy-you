@@ -8,8 +8,15 @@ const Expert = () => {
    <Wrapper>
     <section className="pt-10 px-2 text-[#000000] font-[Axiforma]">
       <div className="flex flex-col-reverse md:flex-row items-center ">
+      <div className="mt-6 md:hidden">
+          <img
+            src={image}
+            alt="image"
+            className="max-w-full h-auto rounded-2xl"
+          />
+        </div>
         {/* Text  */}
-        <div className=" space-y-6  px-">
+        <div className="">
         <h1 className="lg:text-6xl lg:w-[600px] text-4xl font-bold">
   Expert Healthcare, Just a{" "}
   <span className="italic font-[600] text-[#174949] ">Click Away</span> 
@@ -47,7 +54,7 @@ const Expert = () => {
         </div>
 
         {/* Image Section */}
-        <div className="md:w-2/3 flex justify-center md:justify-end">
+        <div className="md:w-2/3 lg:flex justify-center md:justify-end hidden md:block">
           <img
             src={image}
             alt="image"

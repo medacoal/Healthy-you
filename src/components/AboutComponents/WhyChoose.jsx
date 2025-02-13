@@ -12,6 +12,14 @@ const WhyChoose = () => {
     <Wrapper>
       <section className=" container mx-auto px-2 py-10">
   <div className="flex flex-col md:flex-row items-center justify-between">
+  <div className="mb-6 md:hidden">
+  <img
+    src={sampleImage}
+    alt="Healthcare"
+    className=" rounded-md"
+  />
+</div>
+
     
     <div className="text-left items-center">
       {/* Title */}
@@ -104,7 +112,7 @@ const WhyChoose = () => {
     </div>
 
    {/* Right Section - Image */}
-<div className="mt-6 md:mt-0">
+<div className="mt-6 md:mt-0 hidden md:block">
   <img
     src={sampleImage}
     alt="Healthcare"
