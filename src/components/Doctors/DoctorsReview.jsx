@@ -102,7 +102,7 @@ const DoctorsReview = () => {
               </p>
             </div>
           </div>
-          <div className="text-sm md:text-[16px] font-bold pt-6 lg:w-[1137.34px]">
+          <div className="text-sm md:text-[16px] font-bold pt-6 lg:w-[1101px]">
             <p>
               I think we might benefit from a more structured approach at times,
               perhaps with set goals or topics for each session. This could help us

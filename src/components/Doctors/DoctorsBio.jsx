@@ -6,7 +6,7 @@ const DoctorBio = () => {
   return (
     <div className="px-4 sm:px-8 md:px-20">
       {/* Buttons Section */}
-      <div className="flex flex-wrap gap-2 justify-between md:justify-start sm:gap-4 mb-6 sm:mb-8">
+      <div className="flex flex-col md:flex-row gap-2 justify-between md:justify-start sm:gap-4 mb-6 sm:mb-8">
         <button className="bg-[#E8F2F3] text-[#147C84] font-semibold py-1 px-3 rounded-lg text-sm sm:text-base">
           Doctor
         </button>
@@ -108,7 +108,7 @@ const DoctorBio = () => {
         <h1 className="font-semibold text-lg sm:text-[14px] mb-4">
           Speciality
         </h1>
-        <div className="flex flex-col lg:flex-row gap-2 sm:gap-3 mx-auto ">
+        <div className="flex flex-wrap flex-col md:flex-row gap-3 justify-center md:justify-start lg:justify-between md:gap-4 mb-8">
           {[
             "Diagnosis",
             "Collaboration",
