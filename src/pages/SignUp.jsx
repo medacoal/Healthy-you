@@ -22,23 +22,29 @@ const Register = () => {
   } = useForm();
   const password = watch("password");
   const [showPassword, setShowPassword] = useState(false);
-  const onSubmit = async (data) => {
-    try {
-      const res = await signup(data);
-      console.log(res);
-      
-      // Show success toast
-      toast.success("Registration Successful! Redirecting...");
-  
-      // Redirect after a short delay
-      setTimeout(() => {
-        navigate("/login");
-      }, 2000);
-    } catch (err) {
-      console.error(err);
-      toast.error(err.message || "Registration failed. Please try again.");
-    }
-  };
+  const [loading, setLoading] = useState(false); // Loading state
+
+const onSubmit = async (data) => {
+  try {
+    setLoading(true); // Start loading
+    const res = await signup(data);
+    console.log(res);
+    
+    // Show success toast
+    toast.success("Registration Successful! Redirecting...");
+
+    // Redirect after a short delay
+    setTimeout(() => {
+      navigate("/login");
+      setLoading(false); // Stop loading after redirection
+    }, 2000);
+  } catch (err) {
+    console.error(err);
+    toast.error(err.message || "Registration failed. Please try again.");
+    setLoading(false); // Stop loading on error
+  }
+};
+
 
   return (
     <div className="grid lg:grid-cols-2 container mx-auto  items-center">
@@ -183,11 +189,12 @@ const Register = () => {
 
             {/* Submit Button */}
             <button
-              type="submit"
-              className="w-full bg-[#147C84] hover:bg-lime-950 text-white py-3 rounded-lg text-base md:text-lg cursor-pointer"
-            >
-              Sign up
-            </button>
+  type="submit"
+  className="w-full bg-[#147C84] hover:bg-lime-950 text-white py-3 rounded-lg text-base md:text-lg cursor-pointer disabled:opacity-50"
+  disabled={loading} // Disable button while signing up
+>
+  {loading ? "Signing up..." : "Sign up"}
+</button>
 
             {/* OR Divider */}
             <div className="flex items-center gap-3">

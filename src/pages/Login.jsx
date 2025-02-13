@@ -16,28 +16,30 @@ const Login = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
 
-
-
-const onSubmit = async (data) => {
-  try {
-    setLoginError("");
-    const res = await login(data.email, data.password);
-    console.log(res);
-
-    // Show success toast
-    toast.success("Login Successful!");
-
-    // Redirect after a short delay
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
-  } catch (err) {
-    setLoginError("Login failed. Please check your credentials.");
-    console.error(err);
-    toast.error(err.message || "Login failed.");
-  }
-};
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true); // Start loading
+      setLoginError("");
+      
+      const res = await login(data.email, data.password);
+      console.log(res);
+  
+      toast.success("Login Successful!");
+  
+      setTimeout(() => {
+        navigate("/");
+        setLoading(false); // Stop loading after redirection
+      }, 2000);
+    } catch (err) {
+      setLoginError("Login failed. Please check your credentials.");
+      console.error(err);
+      toast.error(err.message || "Login failed.");
+      setLoading(false); // Stop loading on error
+    }
+  };
+  
 
   return (
    
@@ -122,11 +124,13 @@ const onSubmit = async (data) => {
             </a>
 
             <button
-              type="submit"
-              className="w-full bg-[#147C84] text-white py-3 rounded-lg text-base md:text-lg hover:bg-[#0F5A5F] transition duration-300 cursor-pointer"
-            >
-              Continue
-            </button>
+  type="submit"
+  className="w-full bg-[#147C84] text-white py-3 rounded-lg text-base md:text-lg hover:bg-[#0F5A5F] transition duration-300 cursor-pointer disabled:opacity-50"
+  disabled={loading} // Disable button while logging in
+>
+  {loading ? "Logging in..." : "Continue"}
+</button>
+
 
             <div className="flex items-center gap-3">
               <hr className="border-[#147C84] w-full" />
