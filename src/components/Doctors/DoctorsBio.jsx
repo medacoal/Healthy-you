@@ -108,7 +108,7 @@ const DoctorBio = () => {
         <h1 className="font-semibold text-lg sm:text-[14px] mb-4">
           Speciality
         </h1>
-        <div className="flex flex-wrap flex-col md:flex-row gap-3 justify-center md:justify-start lg:justify-between md:gap-4 mb-8">
+        <div className="flex flex-wrap flex-col md:flex-row gap-3 justify-center md:justify-start lg:justify-between">
           {[
             "Diagnosis",
             "Collaboration",
