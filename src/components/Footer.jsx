@@ -15,7 +15,7 @@ const Footer = () => {
               <div className=''>
               <div className="flex gap-3">
                            <img src={logo} alt="Logo" className=" cursor-pointer "/>
-                           <h1 className="text-[#232323] text-2xl font-bold">Healty You</h1>
+                           <h1 className="text-[#232323] text-2xl font-bold">HealthyYou</h1>
                            </div>
                <h1 className=' font-medium lg:w-[429px]'>Health care refers to the efforts that medical professionals make to restore our physical and mental well-being.</h1>
                <div className='flex gap-2 pt-3'>
