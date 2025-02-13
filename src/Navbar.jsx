@@ -44,7 +44,7 @@ const Navbar = () => {
             <button onClick={handleLogoClick}>
               <div className="flex gap-3 px-4">
               <img src={logo} alt="Logo" className=" cursor-pointer "/>
-              <h1 className="text-[#232323] text-2xl font-bold">Healty You</h1>
+              <h1 className="text-[#232323] text-2xl font-bold">HealthyYou</h1>
               </div>
             </button>
           </div>
