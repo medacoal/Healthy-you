@@ -5,11 +5,12 @@ import twitter from "../../assets/icons/Vector (43).png";
 import healthy from "../../assets/images/eating.png";
 import pic from "../../assets/images/stainless.png";
 import Wellness from "../../components/HomeComponents/Wellness";
+import Related from "./Related";
 
 const HealthyEating = () => {
   return (
-   <div className='container mx-auto'>
-     <div className="container mx-auto px-5 md:px-10 font-[Axiforma]">
+   <div className='container mx-auto pt-16'>
+     <div className=" px-5 md:px-10 font-[Axiforma]">
       <div className="py-10">
         <p className="text-gray-500 text-sm :text-lg md:text-xl lg:text-2xl mb-10 sm:mb-10 font-semibold">
           Home / Blog / Healthy eating on a budget: tips and strategies.
@@ -31,21 +32,24 @@ const HealthyEating = () => {
                 </span>
               )
             )}
-            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-[20px] mt-1.5">
+            <p className="text-gray-600 md:text-lg lg:text-[20px] mt-1.5 hidden md:block">
               May 1, 2024 | Augustine Dabby
             </p>
           </div>
-          <div className="flex gap-3  sm:gap-3 mb-4">
+          <div className="flex gap-2 mb-4">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-[20px] mt-1.5 md:hidden ">
+              May 1, 2024 | Augustine Dabby
+            </p>
             <p className="font-bold text-sm sm:text-base md:text-lg lg:text-[20px] mt-1">
               Share:
             </p>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 flex items-center  justify-center rounded-full border-1 border-[#147C84] cursor-pointer">
+            <button className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full border border-[#147C84] cursor-pointer">
               <img src={linked} alt="" className="" />
             </button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10 flex items-center  justify-center rounded-full border-1 border-[#147C84] cursor-pointer">
+            <button className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full border border-[#147C84] cursor-pointer">
               <img src={facebook} alt="" />
             </button>
-            <button className="w-8 h-8 sm:w-10 sm:h-10  flex items-center  justify-center rounded-full border-1 border-[#147C84] cursor-pointer">
+            <button className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full border border-[#147C84] cursor-pointer">
               <img src={twitter} alt="" />
             </button>
           </div>
@@ -175,6 +179,7 @@ const HealthyEating = () => {
         </div>   
       </div>  
     </div>
+    <Related/>
     <Wellness />
    </div>
   );

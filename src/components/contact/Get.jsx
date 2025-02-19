@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Wrapper from '../reasurable/Wrapper';
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import phoneIcon from "../../assets/icons/call-incoming.png";
 import emailIcon from "../../assets/icons/directbox-default-2.png";
 import igIcon from "../../assets/icons/instagram (1).png";
@@ -16,7 +15,7 @@ const Get = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [showPhone, setShowPhone] = useState(false);
+  const [showPhone,] = useState(false);
 
   const validate = () => {
     let newErrors = {};
@@ -65,8 +64,8 @@ const Get = () => {
       <div className='grid md:grid-cols-2 gap-8 pt-16 px-2 container mx-auto'>
         <div>
           <div>
-          <h1 className='md:text-[52px] text-5xl pb-3 font-semibold text-center md:text-start'>
-            Get In <em className='font-[Playfair Display] text-[#157c86]'>Touch</em>
+          <h1 className='md:text-[52px] text-3xl pb-3 font-semibold text-[#157c86]'>
+            Get In Touch
           </h1>
           <h2 className='lg:w-[400px] w-full'>Fill up the form and our team will get back to you within 24 hours.</h2>
           </div>
@@ -124,7 +123,7 @@ const Get = () => {
           </div>
        </div>
         
-        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-6 lg:w-[600px] rounded-md text-[#0E575C]'>
+        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-5 p-3 lg:w-[600px] rounded-md text-[#0E575C]'>
           <div className='flex justify-between pb-3 gap-2 '>
             <div>
               <label>Full Name</label> 
@@ -141,9 +140,6 @@ const Get = () => {
             <label>Phone Number</label>
             <div className='flex  bg-white w-full items-center p-2 text-[#2632388F] rounded'>
               <input type={showPhone ? 'text' : 'password'} name='phone' value={formData.phone} onChange={handleChange} className='w-full outline-none' placeholder='Enter your Phone number' />
-              <button type="button" onClick={() => setShowPhone(!showPhone)} className='ml-2'>
-                {showPhone ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
-              </button>
             </div>
             {errors.phone && <p className='text-red-500 text-sm'>{errors.phone}</p>}
           </div>

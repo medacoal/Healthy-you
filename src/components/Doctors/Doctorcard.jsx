@@ -20,7 +20,7 @@ const Doctorcard = () => {
     <Wrapper>
       {/* Filter Buttons */}
       <div className="py-8 px-2 font-[Axiforma] flex md:flex-row justify-between flex-col gap-5">
-        <div className="flex flex-wrap md:flex-row gap-2 md:gap-5">
+        <div className="flex-1 space-y-2 md:flex-row space-x-1 md:gap-5">
           <button className="bg-[#147C84] text-[#FFFFFF] rounded-lg border w-[52px] h-[35px]">
             All
           </button>

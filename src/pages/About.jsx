@@ -8,7 +8,7 @@ import People from '../components/HomeComponents/People';
 import Testimonials from '../components/HomeComponents/Feedback';
 const About = () => {
   return (
-    <div className='mx-auto container'>
+    <div className='mx-auto container pt-16'>
      <HeroAbout/>
      <WhyChoose/>
      <Trustedby/>

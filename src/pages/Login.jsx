@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
    
-     <div className="grid lg:grid-cols-2 container items-center font-[Axiforma]">
+     <div className="grid lg:grid-cols-2 items-center font-[Axiforma] mx-auto container">
       <Wrapper>
          <div className="py-5 px-3 lg:hidden">
           <Link to="/" className="flex items-center gap-3">

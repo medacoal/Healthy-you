@@ -18,7 +18,7 @@ const OurMission = () => {
 
     {/* Text Section */}
     <div className=" justify-center lg:pt-0">
-      <h1 className="text-5xl font-bold">
+      <h1 className="md:text-5xl text-2xl font-bold">
      Our Mission
       </h1>
 
