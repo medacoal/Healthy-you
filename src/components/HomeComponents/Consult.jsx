@@ -31,7 +31,7 @@ const Consult = () => {
       Experience compassionate and confidential care tailored to your needs, all from the comfort of your home.
       </p>
 </div>
-<div className="bg-[#147C84] mx-auto md:mx-0 w-[199px] h-[54px] text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84] border-2">
+<div className="bg-[#147C84] mx-auto md:mx-0 w-[199px] h-[50px] text-white p-3 text-center rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84] border-2">
     Book an Appointment
   </div>
     </div>
