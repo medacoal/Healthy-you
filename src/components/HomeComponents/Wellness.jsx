@@ -38,17 +38,17 @@ const Wellness = () => {
 
   return (
     <Wrapper>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 py-5">
         <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
           <div className="flex flex-col items-center md:items-start">
-            <h1 className="Font-Axiforma lg:text-[34px] text-2xl w-[300px] lg:w-[600px] text-center md:text-start font-bold">
+            <h1 className="Font-Axiforma lg:text-[34px] text-xl  lg:w-[600px] text-center md:text-start font-bold">
               Supporting our Wellness Journey
             </h1>
             <p className="text-[16px] lg:w-[500px] md:w-[380px] text-center md:text-start w-[300px] pt-4">
               Our comprehensive health resources, reports, advice, and supportive community are here to guide you every time of the day.
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-start md:pt-10">
+          <div className="flex flex-col md:pt-10 px-5 md:px-0">
             <div className="lg:w-[500px] w-full">
               <div className="flex justify-center items-center rounded-md h-[43px] relative">
                 <input

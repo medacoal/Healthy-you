@@ -1,5 +1,16 @@
+/* TailwindCSS */
 @import "tailwindcss";
 
+/* Slick Carousel */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.swiper-pagination-bullet {
+  background-color: black; /* Change the color of pagination bullets */
+}
+
+
+/* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
 }

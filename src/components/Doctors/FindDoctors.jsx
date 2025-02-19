@@ -4,7 +4,7 @@ import Jumbotron from '../../components/reasurable/jumbotrun';
 const FindDoctors = () => {
   return (
     <div>
-      <Jumbotron 
+      <Jumbotron
         title={<>Find <em>Doctors</em></>} 
         description="Welcome to Healthy You, a blog dedicated to helping you embrace a lifestyle filled with wellness and vitality."
         showSearch={true}  // Show search bar on this page
