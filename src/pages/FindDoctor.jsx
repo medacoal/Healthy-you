@@ -5,7 +5,7 @@ import FindDoctors from '../components/Doctors/FindDoctors';
 
 const TalkToDoctor = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto pt-16'>
       <FindDoctors/>
       <Doctorcard/>
       <Wellness/>

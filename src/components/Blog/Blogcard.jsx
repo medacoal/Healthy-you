@@ -10,7 +10,7 @@ const Blogcard = () => {
         {blogCardDb.map((item, index) => (
           <div
             key={index}
-            className="justify-between rounded-2xl hover:border border-[#147C84] p-1 hover:shadow-lg"
+            className="justify-between rounded-2xl"
           >
             {/* Image - Only the first one is clickable */}
             <div>

@@ -5,7 +5,7 @@ const Consult = () => {
   return (
     <Wrapper>
       <section className="px-2 font-[Axiforma]">
-  <div className=" grid md:grid-cols-2 items-center gap-5 lg:gap-0">
+  <div className=" grid md:grid-cols-2 items-center gap-5 lg:gap-0 text-center md:text-start">
     {/* Image Section */}
     <div className="justify-center">
       <img
@@ -16,9 +16,9 @@ const Consult = () => {
     </div>
 
     {/* Text Section */}
-    <div className="space-y-5 pt-5 md:pt-0">
-      <div className='lg:w-[650px] text-center lg:text-start'>
-      <h1 className="lg:text-6xl text-3xl font-bold">
+    <div className="lg:space-y-5 pt-5 md:pt-0">
+      <div className='lg:w-[650px] text-center md:text-start'>
+      <h1 className="lg:text-6xl text-2xl font-bold">
       Consult with our Expert and 
         <span className="italic font-[600] text-[#174949]"> Professional Doctors</span>
       </h1>
@@ -31,7 +31,7 @@ const Consult = () => {
       Experience compassionate and confidential care tailored to your needs, all from the comfort of your home.
       </p>
 </div>
-<div className="bg-[#147C84] w-[199px] h-[54px] text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84] border-2">
+<div className="bg-[#147C84] mx-auto md:mx-0 w-[199px] h-[54px] text-white px-6 py-3 rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84] border-2">
     Book an Appointment
   </div>
     </div>
