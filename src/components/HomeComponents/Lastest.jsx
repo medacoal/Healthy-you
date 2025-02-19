@@ -40,7 +40,7 @@ const Lastest = () => {
               slidesPerView: 3,
             },
           }}
-          className="md:mt-10 h-[400px]"
+          className="md:mt-10 h-[400px] w-[1410px] "
         >
           <SwiperSlide>
             <div className="rounded-lg md:w-[300px] lg:w-[400px] cursor-pointer">

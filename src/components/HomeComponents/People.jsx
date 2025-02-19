@@ -42,7 +42,7 @@ const People = () => {
     <Wrapper>
       <div className="px-2 text-[#000000] font-[Axiforma] ">
         {/* Header Section */}
-        <div className=" md:text-5xl text-2xl pb-8 text-center">
+        <div className=" md:text-5xl text-2xl text-center py-10">
           <h1 className="font-semibold">
             What People{' '}
             <span className="font-serif italic text-[#5a8385] font-medium">
