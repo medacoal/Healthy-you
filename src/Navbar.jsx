@@ -4,11 +4,17 @@ import logo from "../src/assets/icons/Vector 1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("user")); // Set initial state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
+    // Check login status on mount
+    setIsLoggedIn(!!localStorage.getItem("user"));
+  }, []);
+
+  useEffect(() => {
+    // Scroll to top when navigating
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location]);
 
@@ -33,13 +39,13 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("user"); // Remove user from storage
-    setIsLoggedIn(false); // Update state
+    setIsLoggedIn(false);
     navigate("/");
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md text-[#000000] font-[Axiforma]">
-      <div className="container mx-auto">
+    <nav className="fixed top-0 left-0 w-full z-50 text-[#000000] font-[Axiforma]">
+      <div className="container mx-auto  bg-white shadow-md">
         <div className="flex justify-between items-center h-16 px-4">
           <div className="flex-shrink-0">
             <button onClick={handleLogoClick}>
@@ -74,7 +80,7 @@ const Navbar = () => {
             {isLoggedIn ? (
               <button
                 onClick={handleLogout}
-                className="hover:bg-red-600 text-red-600 hover:text-white px-4 py-2 rounded"
+                className="hover:bg-[#174949] text-[#174949] hover:text-white px-4 py-2 rounded"
               >
                 Logout
               </button>
@@ -91,7 +97,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden px-4">
+          <div className="md:hidden px-">
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-gray-800 focus:outline-none">
               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
