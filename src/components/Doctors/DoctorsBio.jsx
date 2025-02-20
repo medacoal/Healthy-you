@@ -4,11 +4,11 @@ import simple from "../../assets/icons/Frame 1171278931.png";
 
 const DoctorBio = () => {
   return (
-    <div className="px-4 sm:px-8 md:px-20">
+    <div className="px-4 sm:px-8 md:px-20 font-[Axiforma]">
       {/* Buttons Section */}
-      <div className="flex flex-col md:flex-row gap-2 justify-between md:justify-start sm:gap-4 mb-6 sm:mb-8">
+      <div className="flex-1 md:flex-row space-x-5 space-y-2 justify-between md:justify-start sm:gap-4 mb-6 sm:mb-8">
         <button className="bg-[#E8F2F3] text-[#147C84] font-semibold py-1 px-3 rounded-lg text-sm sm:text-base">
-          Doctor
+          Doctor Bio
         </button>
         <button className="border-[#767680] border-2 text-[#767680] font-semibold py-1 px-3 rounded-lg text-sm sm:text-base cursor-pointer">
           Experience
@@ -27,7 +27,7 @@ const DoctorBio = () => {
         </button>
       </div>
 
-      <hr className="border-[#767680] border-0.5 mb-6 sm:mb-8" />
+      <hr className="border-[#767680] border-0.5 mb-6 sm:mb-8 hidden md:block"/>
 
       {/* Doctor Bio Section */}
       <div className="mb-8 sm:mb-10">
@@ -108,7 +108,7 @@ const DoctorBio = () => {
         <h1 className="font-semibold text-lg sm:text-[14px] mb-4">
           Speciality
         </h1>
-        <div className="flex flex-wrap flex-col md:flex-row gap-3 justify-center md:justify-start lg:justify-between md:gap-4 mb-8">
+        <div className="gird grid-cols-2 space-y-4 space-x-1 lg:space-x-7  md:flex-row  md:justify-start lg:justify-between">
           {[
             "Diagnosis",
             "Collaboration",
@@ -136,7 +136,7 @@ const DoctorBio = () => {
         <h1 className="font-semibold text-lg sm:text-[24px] mb-4">
           Availability
         </h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
           {[
             { day: "Every Monday", time: "09:00 - 4:00 PM" },
             { day: "Every Tuesday", time: "09:00 - 4:00 PM" },

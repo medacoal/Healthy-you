@@ -6,7 +6,7 @@ import right from "../../assets/icons/arrow-right.png"
 const Pagination = () => {
   return (
     <Wrapper>
-        <div className='py-10'>
+        <div className=''>
             <div className='flex md:gap-6 justify-center'>
                 <img src={left} alt='' className='w-10 p-3 cursor-pointer'/>
                 <div className='flex gap-4'>

@@ -101,10 +101,10 @@ const Feedback = () => {
   return (
     <Wrapper>
       <div className="text-[#000000] font-[Axiforma]  px-2 container mx-auto py-10">
-        <div className=" md:text-5xl text-4xl  text-center md:text-start">
+        <div className=" md:text-5xl text-2xl  text-center md:text-start">
           <h1 className="font-semibold">
             Our Patients
-            <span className="font-serif italic font-medium"> Feedback</span>
+            <span className="font-serif italic font-medium text-[#174949]"> Feedback</span>
           </h1>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../assets/icons/Frame 1171278601.png"
+import logo from "../assets/icons/Vector 1.png"
 import face from "../assets/facebook.png"
 import ig from "../assets/instagram.png"
 import x from "../assets/twitter.png"
@@ -13,10 +13,10 @@ const Footer = () => {
            <Wrapper>
            <div className=' grid md:grid-cols-2 justify-center font-[Axiforma] px-2'>
               <div className=''>
-              <div className='gap-3 pb-3'>
-                <img src={logo} alt=''/>
-               {/* <h1 className='font-bold text-xl font-Roboto'>HealthyYou</h1> */}
-               </div>
+              <div className="flex gap-3">
+                           <img src={logo} alt="Logo" className=" cursor-pointer "/>
+                           <h1 className="text-[#232323] text-2xl font-bold">HealthyYou</h1>
+                           </div>
                <h1 className=' font-medium lg:w-[429px]'>Health care refers to the efforts that medical professionals make to restore our physical and mental well-being.</h1>
                <div className='flex gap-2 pt-3'>
                 <img src={face} alt='' className='cursor-pointer'/>

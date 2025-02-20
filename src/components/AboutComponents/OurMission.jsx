@@ -5,7 +5,7 @@ import Wrapper from '../reasurable/Wrapper'
 const OurMission = () => {
   return (
    <Wrapper>
-     <section className="w-full container mx-auto px-2 font-[Axiforma]">
+     <section className="w-full container mx-auto px-2 font-[Axiforma] pt-10">
   <div className="grid md:grid-cols-2 items-center gap-5 pb-14">
     {/* Image Section */}
     <div className="">
@@ -18,7 +18,7 @@ const OurMission = () => {
 
     {/* Text Section */}
     <div className=" justify-center lg:pt-0">
-      <h1 className="text-5xl font-bold">
+      <h1 className="md:text-5xl text-2xl font-bold">
      Our Mission
       </h1>
 

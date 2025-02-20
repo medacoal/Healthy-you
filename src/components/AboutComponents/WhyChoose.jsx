@@ -10,7 +10,7 @@ import Wrapper from '../reasurable/Wrapper';
 const WhyChoose = () => {
   return (
     <Wrapper>
-      <section className=" container mx-auto px-2 py-10">
+      <section className=" container mx-auto px-2 py-10 ">
   <div className="flex flex-col md:flex-row items-center justify-between">
   <div className="mb-6 md:hidden">
   <img
