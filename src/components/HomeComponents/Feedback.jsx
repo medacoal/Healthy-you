@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import Wrapper from "../reasurable/Wrapper";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import john from "../../assets/images/Ellipse 1 (1).png";

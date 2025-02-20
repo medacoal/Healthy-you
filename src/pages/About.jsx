@@ -1,3 +1,4 @@
+import React from 'react'
 import HeroAbout from '../components/AboutComponents/HeroAbout';
 import WhyChoose from '../components/AboutComponents/WhyChoose';
 import Trustedby from "../components/AboutComponents/Trustedby"
