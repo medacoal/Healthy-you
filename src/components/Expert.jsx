@@ -1,34 +1,43 @@
 import React from "react";
 import image from "../assets/images/2149856264 1.png"
+import Wrapper from "./reasurable/Wrapper";
+import arrow from "../assets/icons/Arrow up-right.png"
 // import Wrapper from "./reasurable/Wrapper";
 
 const Expert = () => {
   return (
-   
-     <section className="py-10  text-[#000000] font-[Axiforma]">
-      <div className="flex flex-col-reverse md:flex-row items-center ">
+   <Wrapper>
+    <section className="pt-24 px-2 text-[#000000] font-[Axiforma]">
+      <div className="flex flex-col-reverse md:flex-row items-center">
+      <div className="mt-6 md:hidden">
+          <img
+            src={image}
+            alt="image"
+            className="max-w-full h-auto rounded-2xl"
+          />
+        </div>
         {/* Text  */}
-        <div className=" space-y-4 mt-10">
-        <h1 className="lg:text-6xl lg:w-[600px] text-4xl font-bold">
+        <div className="  text-center md:text-start">
+        <h1 className="lg:text-6xl lg:w-[600px] text-3xl font-bold">
   Expert Healthcare, Just a{" "}
   <span className="italic font-[600] text-[#174949] ">Click Away</span> 
 </h1>
 
-          <p className="text-lg font py-6 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
-          <div className="flex items-center space-x-8">
+<p className="text-lg font py-4 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
+          <div className="flex items-center lg:space-x-8 space-x-6">
   {/* Book an Appointment */}
-  <div className="bg-[#174949] text-white px-6 py-3 rounded-lg shadow-md">
+  <div className="bg-[#174949] text-white hover:text-[#174949] hover:bg-white px-2 py-3 rounded-lg shadow-md cursor-pointer">
     Book an Appointment
   </div>
 
   {/* How it Works */}
-  <div className="flex items-center space-x-2">
+  <div className="flex items-center space-x-1">
     <div className=" text-[#174949] font-normal text-lg">How it Works</div>
-    
+    <img src={arrow} alt=""/>
   </div>
 </div>
 
-<div className="flex items-center space-x-4 pt-7">
+<div className="flex items-center space-x-4 pt-7 justify-center md:justify-start">
 
   <div className="text-4xl font-bold">
   12<span className="text-[#174949]">+</span>
@@ -43,19 +52,19 @@ const Expert = () => {
     Years helping patients online
   </div>
 </div>
-
         </div>
 
         {/* Image Section */}
-        <div className="md:w-2/3 flex justify-center md:justify-end">
+        <div className="md:w-2/3 lg:flex justify-center md:justify-end hidden md:block">
           <img
             src={image}
             alt="image"
-            className="max-w-full h-auto rounded-md shadow-md"
+            className="max-w-full h-auto rounded-2xl"
           />
         </div>
       </div>
     </section>
+   </Wrapper>
    
   );
 };

@@ -1,3 +1,4 @@
+import React from 'react'
 import Get from '../components/contact/Get';
 import Footer from "../components/reasurable/Footer";
 // import Map from '../components/contact/Map';
@@ -7,7 +8,7 @@ import LocationMap from '../components/contact/LocationMap';
 
 const Contact = () => {
   return (
-    <div className=''>
+    <div className='pt-16 mx-auto container'>
       <Jumbotron 
         title={<>Contact <em>Us</em></>} 
         description="Have questions or need assistance? Reach out to us anytime. At Healthy You, we’re here to provide support and ensure you get the care you deserve."

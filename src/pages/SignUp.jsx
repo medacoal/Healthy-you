@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";
@@ -9,6 +9,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Wrapper from "../components/reasurable/Wrapper";
 
 const Register = () => {
   const { signup } = useAuth();
@@ -21,30 +22,42 @@ const Register = () => {
   } = useForm();
   const password = watch("password");
   const [showPassword, setShowPassword] = useState(false);
-  const onSubmit = async (data) => {
-    try {
-      const res = await signup(data);
-      console.log(res);
-      
-      // Show success toast
-      toast.success("Registration Successful! Redirecting...");
-  
-      // Redirect after a short delay
-      setTimeout(() => {
-        navigate("/login");
-      }, 2000);
-    } catch (err) {
-      console.error(err);
-      toast.error(err.message || "Registration failed. Please try again.");
-    }
-  };
+  const [loading, setLoading] = useState(false); // Loading state
+
+const onSubmit = async (data) => {
+  try {
+    setLoading(true); // Start loading
+    const res = await signup(data);
+    console.log(res);
+    
+    // Show success toast
+    toast.success("Registration Successful! Redirecting...");
+
+    // Redirect after a short delay
+    setTimeout(() => {
+      navigate("/login");
+      setLoading(false); // Stop loading after redirection
+    }, 2000);
+  } catch (err) {
+    console.error(err);
+    toast.error(err.message || "Registration failed. Please try again.");
+    setLoading(false); // Stop loading on error
+  }
+};
+
 
   return (
-    <div className="flex flex-col lg:flex-row  md:px-8 lg:container mx-auto">
-      {/* Left Section - Form */}
-      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start">
-        <div className="w-full max-w-md">
-          <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center lg:text-left">
+    <div className="grid lg:grid-cols-2 container mx-auto  items-center">
+      <Wrapper>
+        <div className="py-5 px-3 lg:hidden">
+                  <Link to="/" className="flex items-center gap-3">
+                    <img src={logo} alt="Logo" className="w-10" />
+                    <h1 className="font-bold text-lg">Healthy You</h1>
+                  </Link>
+                </div>
+      <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start px-3">
+        <div className="w-full max-w-lg">
+          <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center">
             Register Now
           </h1>
           <p className="mb-6 text-[18px] text-center lg:text-left">
@@ -54,7 +67,6 @@ const Register = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-4 md:space-y-5"
           >
-            {/* Full Name */}
             <div>
               <label className="block text-base md:text-lg font-semibold">
                 Full Name
@@ -177,11 +189,12 @@ const Register = () => {
 
             {/* Submit Button */}
             <button
-              type="submit"
-              className="w-full bg-[#147C84] hover:bg-lime-950 text-white py-3 rounded-lg text-base md:text-lg cursor-pointer"
-            >
-              Sign up
-            </button>
+  type="submit"
+  className="w-full bg-[#147C84] hover:bg-lime-950 text-white py-3 rounded-lg text-base md:text-lg cursor-pointer disabled:opacity-50"
+  disabled={loading} // Disable button while signing up
+>
+  {loading ? "Signing up..." : "Sign up"}
+</button>
 
             {/* OR Divider */}
             <div className="flex items-center gap-3">
@@ -207,20 +220,21 @@ const Register = () => {
           </form>
         </div>
       </div>
+      </Wrapper>
 
-      {/* Right Section - Image */}
-      <div className="hidden lg:block flex-1 relative min-h-[50vh] lg:min-h-[unset]">
-        <div className="absolute top-6 left-6 ">
-        <Link to='/' className="flex items-center gap-3">
+      <div className="hidden lg:block relative h-screen">
+      <div className="absolute top-6 left-6">
+        <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Logo" className="w-10" />
-          <h1 className="font-bold text-lg">Healthy You</h1></Link>
-        </div>
-        <img
-          src={bgy}
-          alt="Background"
-          className="w-full h-full object-cover rounded-lg"
-        />
+          <h1 className="font-bold text-lg">Healthy You</h1>
+        </Link>
       </div>
+      <img
+        src={bgy}
+        alt="Background"
+        className="w-full h-full object-cover rounded-l-2xl"
+      />
+    </div>
     </div>
   );
 };

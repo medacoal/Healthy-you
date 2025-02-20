@@ -40,9 +40,9 @@ const People = () => {
 
   return (
     <Wrapper>
-      <div className="py-10 px-2 text-[#000000] font-[Axiforma]">
+      <div className="px-2 text-[#000000] font-[Axiforma] ">
         {/* Header Section */}
-        <div className=" md:text-5xl text-4xl pb-8 text-center">
+        <div className=" md:text-5xl text-2xl text-center py-10">
           <h1 className="font-semibold">
             What People{' '}
             <span className="font-serif italic text-[#5a8385] font-medium">
@@ -52,11 +52,11 @@ const People = () => {
         </div>
 
         {/* Questions Section */}
-        <div className=" md:w-[650px] mx-auto">
+        <div className="md:w-[650px] mx-auto">
           {questions.map((item, index) => (
             <div
               key={index}
-              className="rounded-2xl border py-3 px-3 flex justify-between items-start mb-4"
+              className="rounded-2xl border py-3 px-3 flex justify-between gap-2 items-start mb-4"
             >
               {/* Question and Answer */}
               <div>

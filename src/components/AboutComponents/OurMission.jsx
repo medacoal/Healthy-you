@@ -1,30 +1,32 @@
 import React from 'react'
 import Mission from '../../assets/images/mission.png'
 import staricon from '../../assets/icons/Vector (21).png'
+import Wrapper from '../reasurable/Wrapper'
 const OurMission = () => {
   return (
-    <section className="w-full container mx-auto px-4 sm:px-6 lg:px-8  py-8 ">
-  <div className="flex flex-col md:flex-row items-center md:items-start">
+   <Wrapper>
+     <section className="w-full container mx-auto px-2 font-[Axiforma] pt-10">
+  <div className="grid md:grid-cols-2 items-center gap-5 pb-14">
     {/* Image Section */}
-    <div className="md:w-1/2 flex justify-center md:justify-start">
+    <div className="">
       <img
         src={Mission}
         alt="image"
-        className="max-w-full h-auto rounded-md shadow-md"
+        className="max-w-full  rounded-md"
       />
     </div>
 
     {/* Text Section */}
-    <div className="md:w-1/2 text-left space-y-4 mt-10 md:mt-0">
-      <h1 className="text-5xl font-bold">
+    <div className=" justify-center lg:pt-0">
+      <h1 className="md:text-5xl text-2xl font-bold">
      Our Mission
       </h1>
 
-      <p className="text-lg font py-6 mr-6">
+      <p className="text-xl py-6">
       Our mission is to revolutionize healthcare access by connecting patients with expert medical professionals through a seamless and user-friendly platform.
       </p>
 
-      <div className='space-y-5'>
+      <div className='lg:space-y-6 space-y-3'>
       <div className="flex items-center space-x-2">
   <img
     src={staricon}
@@ -55,17 +57,12 @@ const OurMission = () => {
   Empowering our users with the knowledge and tools to grow their businesses and expand their reach.
   </p>
 </div>
-
     </div>
     </div>
 
-    <div>
-    
-        
-    </div>
-  
   </div>
 </section>
+   </Wrapper>
 
   )
 }

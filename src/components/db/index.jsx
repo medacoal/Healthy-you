@@ -1,3 +1,5 @@
+import React from 'react';
+
 import icon21 from "../../assets/icons/Vector (42).png"
 import icon22 from "../../assets/icons/Vector (41).png"
 import icon9 from "../../assets/icons/Vector (43).png"
@@ -253,6 +255,37 @@ export const DoctorcardDb=[
         sub:"Neurologist",
         description:"Expert in diagnosis and treatment of disorders affecting the nervous system.",
         image: img27,
+    },
+   
+]
+
+export const RelatedDb=[
+    {
+        _id: 4,
+        heading:"Caring for Your Skin : A Guide to Healthy and Radiant skin.",
+        description:"Healthy, radiant skin is often seen as a reflection of overall health and well-being. This guide wil",
+        image: img4,
+        icon:icon21,
+        icon2:icon22,
+        icon9:icon9,
+    },
+    {
+        _id: 5,
+        heading:"Allergies : Causes, Symptoms and Treatment Options.",
+        description:"Allergies are over reaction of immune system to substance that are typically harmless to most",
+        image: img5,
+        icon:icon21,
+        icon2:icon22,
+        icon9:icon9,
+    },
+    {
+        _id: 6,
+        heading:"Sharpen Your Thinking Skills: Meditation",
+        description:"This is a focused practice designed to enhance mental clarity, improve cognitive function and fo",
+        image: img6,
+        icon:icon21,
+        icon2:icon22,
+        icon9:icon9,
     },
    
 ]
