@@ -1,3 +1,4 @@
+import React from 'react'
 import Get from '../components/contact/Get';
 import Footer from "../components/reasurable/Footer";
 // import Map from '../components/contact/Map';

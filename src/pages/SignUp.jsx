@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";

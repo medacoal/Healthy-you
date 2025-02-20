@@ -1,3 +1,5 @@
+import React from 'react';
+
 import icon21 from "../../assets/icons/Vector (42).png"
 import icon22 from "../../assets/icons/Vector (41).png"
 import icon9 from "../../assets/icons/Vector (43).png"
