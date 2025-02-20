@@ -24,9 +24,9 @@ const Expert = () => {
 </h1>
 
 <p className="text-lg font py-4 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center lg:space-x-8 space-x-6">
   {/* Book an Appointment */}
-  <div className="bg-[#174949] text-white px-5 py-3 rounded-lg shadow-md cursor-pointer">
+  <div className="bg-[#174949] text-white hover:text-[#174949] hover:bg-white px-2 py-3 rounded-lg shadow-md cursor-pointer">
     Book an Appointment
   </div>
 

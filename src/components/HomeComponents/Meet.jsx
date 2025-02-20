@@ -57,7 +57,7 @@ const Meet = () => {
                   <h6 className="text-sm font-medium mb-2">{doctor.title}</h6>
                   <p className="text-[#aab8ba] leading-relaxed mb-4">{doctor.description}</p>
                   <div className="flex justify-center">
-                    <button className="flex items-center text-[#6ca59e] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#6ca59e] hover:text-white">
+                    <button className="flex items-center text-[#6ca59e] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#6ca59e] hover:text-white cursor-pointer">
                       Book Now
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

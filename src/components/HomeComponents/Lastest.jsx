@@ -40,13 +40,13 @@ const Lastest = () => {
               slidesPerView: 3,
             },
           }}
-          className="md:mt-10 h-[400px]"
+          className="md:mt-10 h-[400px] mx-auto"
         >
           <SwiperSlide>
-            <div className="rounded-lg md:w-[300px] lg:w-[400px] cursor-pointer">
+            <div className="rounded-lg md:w-[350px] cursor-pointer">
               <div className="w-full">
                 <img src={workout} alt="" className="w-[400px]" />
-                <h1 className="font-medium text-xl lg:w-[383.12px] text-[#2E2E2E] pt-3">
+                <h1 className="font-medium text-xl lg:w-[350.12px] text-[#2E2E2E] pt-3">
                   The Benefits of Mindfulness Meditation for Stress and Anxiety
                 </h1>
               </div>
@@ -64,10 +64,10 @@ const Lastest = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="rounded-lg md:w-[300px] lg:w-[400px] cursor-pointer">
+            <div className="rounded-lg md:w-[350px]  cursor-pointer">
               <div className="w-full">
-                <img src={eating} alt="" className="w-[400px]" />
-                <h1 className="font-medium text-xl lg:w-[383.12px] text-[#2E2E2E] pt-3">
+                <img src={eating} alt="" className=""/>
+                <h1 className="font-medium text-xl lg:w-[350.12px] text-[#2E2E2E] pt-3">
                   Healthy Eating on a Budget: Tips and Strategies
                 </h1>
               </div>
@@ -85,10 +85,10 @@ const Lastest = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="rounded-lg md:w-[300px] lg:w-[400px] cursor-pointer">
+            <div className="rounded-lg md:w-[350px]  cursor-pointer">
               <div className="w-full">
                 <img src={chest} alt="" className="w-[400px]" />
-                <h1 className="font-medium text-xl lg:w-[383.12px] text-[#2E2E2E] pt-3">
+                <h1 className="font-medium text-xl lg:w-[350.12px] text-[#2E2E2E] pt-3">
                   The Importance of Regular Cancer Screenings and Early Detection
                 </h1>
               </div>
