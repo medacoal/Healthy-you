@@ -143,9 +143,9 @@ const Get = () => {
             </div>
             {errors.phone && <p className='text-red-500 text-sm'>{errors.phone}</p>}
           </div>
-          <div>
+          <div className='mt-5'>
             <label>Message</label>
-            <textarea name='message' value={formData.message} onChange={handleChange} className='w-full bg-white text-[#2632388F] p-2 rounded max-h-24' placeholder='Type your message'></textarea>
+            <textarea name='message' value={formData.message} onChange={handleChange} className='w-full bg-white text-[#2632388F] p-2 rounded max-h-24 ' placeholder='Type your message'></textarea>
             {errors.message && <p className='text-red-500 text-sm'>{errors.message}</p>}
           </div>
           <button type='submit' className='bg-[#147d84dc] hover:bg-[#147C84] border cursor-pointer rounded-md mt-4 w-full py-2 text-[#FFFFFF]'>Submit</button>

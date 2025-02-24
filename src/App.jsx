@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
-import HealthyEating from "./components/Blog/HealthyEating";
+import BlogDetails from "./components/Blog/BlogDetails";
 import About from "./pages/About";
 import FindDoctor from "./pages/FindDoctor";
 import DoctorProfile from "./components/Doctors/DoctorProfile";

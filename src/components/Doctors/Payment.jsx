@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import paypal from "../../assets/icons/logos_paypal.png";
 import paystack from "../../assets/icons/Vector (52).png"
