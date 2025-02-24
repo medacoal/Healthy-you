@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './pages/Home';
-import HealthyEating from "../src/components/Blog/HealthyEating";
+// import HealthyEating from "../src/components/Blog/HealthyEating";
 import About from './pages/About';
 import FindDoctor from './pages/FindDoctor';
 import DoctorProfile from './components/Doctors/DoctorProfile';
@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
+import BlogDetails from './components/Blog/BlogDetails';
 
 const LayoutWithNavandFooter = () => (
   <div className="">
@@ -31,7 +32,8 @@ const App = () => {
           <Route path="/finddoctor" element={<FindDoctor />} />
           <Route path="/Doctor-Profile/:id" element={<DoctorProfile />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/healthy-eating" element={<HealthyEating />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+          {/* <Route path="/healthy-eating" element={<HealthyEating />} /> */}
           <Route path="/contact" element={<Contact />} />
           </Route>
           <Route path="/login" element={<Login />} />
