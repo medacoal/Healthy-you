@@ -15,6 +15,8 @@ import message from "../../assets/icons/Group 1000002443.png";
 import phone from "../../assets/icons/Group 1000002444.png";
 import video from "../../assets/icons/Group 1000002445.png";
 import Wrapper from "../reasurable/Wrapper";
+import { Link } from "react-router-dom";
+
 
 const DoctorDetails = () => {
   return (
@@ -148,11 +150,12 @@ const DoctorDetails = () => {
         <hr className="border-[#767680] border-0.5 hidden md:block"/>
 
         {/* Book Now Button */}
-        <div className="hidden md:block">
-          <button className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer">
-            Book Now
-          </button>
-        </div>
+        <Link to="/book">
+  <button className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer">
+    Book Now
+  </button>
+</Link>
+
       </div>
     </div>
     </Wrapper>

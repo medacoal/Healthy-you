@@ -2,8 +2,7 @@ import React from "react";
 import image from "../assets/images/2149856264 1.png"
 import Wrapper from "./reasurable/Wrapper";
 import arrow from "../assets/icons/Arrow up-right.png"
-// import Wrapper from "./reasurable/Wrapper";
-
+import { Link } from "react-router-dom";
 const Expert = () => {
   return (
    <Wrapper>
@@ -26,9 +25,9 @@ const Expert = () => {
 <p className="text-lg font py-4 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
           <div className="flex items-center lg:space-x-8 space-x-6">
   {/* Book an Appointment */}
-  <div className="bg-[#174949] text-white hover:text-[#174949] hover:bg-white px-2 py-3 rounded-lg shadow-md cursor-pointer">
+  <Link to="/finddoctor" className="bg-[#147C84] w-[190px] text-white py-3  text-center rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84]">
     Book an Appointment
-  </div>
+  </Link>
 
   {/* How it Works */}
   <div className="flex items-center space-x-1">
