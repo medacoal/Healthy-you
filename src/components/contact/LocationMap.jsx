@@ -50,7 +50,7 @@ const LocationMap = () => {
   };
 
   return (
-    <div className='py-10'>
+    <div className='py-10 px-2'>
       <div className='flex'>
         <input
           type="text"
