@@ -100,8 +100,8 @@ const Feedback = () => {
 
   return (
     <Wrapper>
-      <div className="text-[#000000] font-[Axiforma]  px-2 container mx-auto py-10">
-        <div className=" md:text-5xl text-2xl  text-center md:text-start">
+      <div className="text-[#000000] font-[Axiforma]  px-2 py-10">
+        <div className=" md:text-5xl text-2xl  text-center">
           <h1 className="font-semibold">
             Our Patients
             <span className="font-serif italic font-medium text-[#174949]"> Feedback</span>
@@ -140,22 +140,22 @@ const Feedback = () => {
             <button
               onClick={handlePrevious}
               disabled={isPrevDisabled}
-              className="border rounded-full p-4 bg-gray-300 hover:cursor-pointer"
+              className="border border-[#E9E9E9] rounded-full p-2 bg-[#E9E9E9] hover:cursor-pointer"
             >
               <FaArrowLeft
                 className={`text-2xl ${
-                  clickedButton === "previous" ? "text-white" : "text-black"
+                  clickedButton === "previous" ? "text-white" : "text-[#147C84]"
                 }`}
               />
             </button>
             <button
               onClick={handleNext}
               disabled={isNextDisabled}
-              className="border rounded-full p-4 bg-gray-300 hover:cursor-pointer"
+              className="border border-[#E9E9E9] rounded-full p-2 bg-[#E9E9E9] hover:cursor-pointer"
             >
               <FaArrowRight
                 className={`text-2xl ${
-                  clickedButton === "next" ? "text-white" : "text-black"
+                  clickedButton === "next" ? "text-white" : "text-[#147C84]"
                 }`}
               />
             </button>

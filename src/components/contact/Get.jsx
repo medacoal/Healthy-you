@@ -62,7 +62,7 @@ const Get = () => {
   return (
     <Wrapper>
       <div className='grid md:grid-cols-2 gap-8 pt-16 px-2 container mx-auto'>
-        <div>
+        <div className='w-full'>
           <div>
           <h1 className='md:text-[52px] text-3xl pb-3 font-semibold text-[#157c86]'>
             Get In Touch
@@ -72,7 +72,7 @@ const Get = () => {
 
           <div className='flex gap-10 pt-3 pb-5'>
           <div className='font-[Axiforma] flex gap-2'>
-            <div className='bg-[#0E575C] w-10 h-10 rounded-lg mt-2'>
+            <div className='bg-[#0E575C] md:w-10 w-8 md:h-10 h-8 rounded-lg mt-2'>
             <img src={phoneIcon} alt='' className='p-2'/>
             </div>
             <div >
@@ -81,7 +81,7 @@ const Get = () => {
             </div>
           </div>
           <div className='font-[Axiforma] flex gap-2'>
-            <div className='bg-[#0E575C] w-10 h-10 rounded-lg mt-2'>
+            <div className='bg-[#0E575C] md:w-10 w-8 md:h-10 h-8 rounded-lg mt-2'>
             <img src={emailIcon} alt='' className='p-2'/>
             </div>
             <div >
@@ -93,7 +93,7 @@ const Get = () => {
 
         <div className='flex gap-10 '>
           <div className='font-[Axiforma] flex gap-2'>
-            <div className='bg-[#0E575C] w-10 h-10 rounded-lg mt-2'>
+            <div className='bg-[#0E575C] md:w-10 w-8 md:h-10 h-8 rounded-lg mt-2'>
             <img src={igIcon} alt='' className='p-2'/>
             </div>
             <div >
@@ -102,7 +102,7 @@ const Get = () => {
             </div>
           </div>
           <div className='font-[Axiforma] flex gap-2'>
-            <div className='bg-[#0E575C] w-10 h-10 rounded-lg mt-2'>
+            <div className='bg-[#0E575C] md:w-10 w-8 md:h-10 h-8 rounded-lg mt-2'>
             <img src={addressIcon} alt='' className='p-2'/>
             </div>
             <div >
@@ -123,7 +123,7 @@ const Get = () => {
           </div>
        </div>
         
-        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-5 p-3 lg:w-[600px] rounded-md text-[#0E575C]'>
+        <form onSubmit={handleSubmit} className='bg-[#E8F2F3] md:p-5 p-3 space-y-2 lg:w-[600px] sm:w-full rounded-md text-[#0E575C]'>
           <div className='flex justify-between pb-3 gap-2 '>
             <div>
               <label>Full Name</label> 

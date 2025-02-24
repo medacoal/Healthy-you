@@ -19,37 +19,8 @@ const Doctorcard = () => {
   return (
     <Wrapper>
       {/* Filter Buttons */}
-      <div className="py-8 px-2 font-[Axiforma] flex md:flex-row justify-between flex-col gap-5">
-        <div className="flex-1 space-y-2 md:flex-row space-x-1 md:gap-5">
-          <button className="bg-[#147C84] text-[#FFFFFF] rounded-lg border w-[52px] h-[35px]">
-            All
-          </button>
-          <button className="border-[#147C84] border text-[#000000] rounded-lg font-medium w-[117px] h-[35px] cursor-pointer">
-            Cardiology
-          </button>
-          <button className="border-[#147C84] border text-[#000000] rounded-lg font-medium w-[117px] h-[35px] cursor-pointer">
-            Emergency
-          </button>
-          <button className="border-[#147C84] border text-[#000000] rounded-lg font-medium w-[117px] h-[35px] cursor-pointer">
-            Neurology
-          </button>
-          <button className="border-[#147C84] border text-[#000000] rounded-lg font-medium w-[117px] h-[35px] cursor-pointer">
-            Pediatric
-          </button>
-          <button className="border-[#147C84] border text-[#000000] rounded-lg font-medium w-[117px] h-[35px] cursor-pointer">
-            Psychiatry
-          </button>
-        </div>
-        <div className="flex gap-5">
-          <h1 className="text-[#147C84] py-1">
-            Showing {displayedDoctors.length} items
-          </h1>
-          <img src={element} alt="" className="w-8 h-8" />
-        </div>
-      </div>
-
       {/* Doctor Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-10 gap-8 px-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-8 px-2">
         {displayedDoctors.map((item, index) => (
           <div key={index} className="border-[#147C84] cursor-pointer">
             {/* Doctor Image */}

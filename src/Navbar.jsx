@@ -44,9 +44,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 text-[#000000] font-[Axiforma]">
-      <div className="container mx-auto  bg-white shadow-md">
-        <div className="flex justify-between items-center h-16 px-4">
+   <div className="mx-auto container">
+     <nav className="fixed top-0 left-0 w-full z-50 text-[#000000] font-[Axiforma]">
+      <div className="bg-white shadow-md">
+        <div className="flex justify-between items-center h-16 px-4 ">
           <div className="flex-shrink-0">
             <button onClick={handleLogoClick}>
               <div className="flex gap-3">
@@ -158,6 +159,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+   </div>
   );
 };
 
