@@ -9,7 +9,7 @@ import People from '../components/HomeComponents/People';
 import Testimonials from '../components/HomeComponents/Feedback';
 const About = () => {
   return (
-    <div className='mx-auto container pt-16'>
+    <div className='lg:mx-auto lg:container pt-16'>
      <HeroAbout/>
      <WhyChoose/>
      <Trustedby/>
@@ -18,7 +18,6 @@ const About = () => {
      <Testimonials/>
      <People/>
      <Wellness/>
-   
     </div>
   );
 };
