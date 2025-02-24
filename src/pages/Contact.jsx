@@ -7,7 +7,7 @@ import LocationMap from '../components/contact/LocationMap';
 
 const Contact = () => {
   return (
-    <div className='pt-16 mx-auto container'>
+    <div className='pt-16 lg:mx-auto lg:container'>
       <Jumbotron 
         title={<>Contact <em>Us</em></>} 
         description="Have questions or need assistance? Reach out to us anytime. At Healthy You, we’re here to provide support and ensure you get the care you deserve."
@@ -15,7 +15,6 @@ const Contact = () => {
       <Get />
       <LocationMap/>
       <Wellness />
-      
     </div>
   );
 };

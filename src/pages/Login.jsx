@@ -121,21 +121,7 @@ const Login = () => {
                 {loading ? "Logging in..." : "Continue"}
               </button>
 
-              <div className="flex items-center gap-3">
-                <hr className="border-[#147C84] w-full" />
-                <span className="text-gray-500">or</span>
-                <hr className="border-[#147C84] w-full" />
-              </div>
-
-              {/* Google Login Button */}
-              <button
-                type="button"
-                className="w-full flex items-center justify-center gap-3 border border-gray-300 py-3 rounded-lg hover:bg-gray-200 transition duration-300 cursor-pointer"
-              >
-                <img src={google} alt="Google" className="w-6" />
-                Continue with Google
-              </button>
-
+             
               <span className="text-sm flex justify-center text-[16px] text-center">
                 Don&apos;t have an account?{" "}
                 <Link to="/SignUp" className="text-[#147C84]"> Sign up</Link>

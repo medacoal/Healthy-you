@@ -10,7 +10,7 @@ import Feedback from '../components/HomeComponents/Feedback';
 
 const Home = () => {
   return (
-    <div className='container mx-auto space-y-20'>
+    <div className='lg:container lg:mx-auto space-y-20'>
      <Expert/>
     <Trusted/>
     <Meet/>

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className=''>
+    <div className='lg:mx-auto lg:container'>
       <div className='bg-[#E8F2F3] py-10'>
            <Wrapper>
            <div className=' grid md:grid-cols-2 justify-center font-[Axiforma] px-2'>
