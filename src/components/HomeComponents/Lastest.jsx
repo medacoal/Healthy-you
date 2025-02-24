@@ -22,7 +22,6 @@ const Lastest = () => {
           </h1>
         </div>
 
-        {/* Swiper component with Pagination and Autoplay */}
         <Swiper
           modules={[Pagination, Autoplay]} 
           spaceBetween={20}
@@ -31,7 +30,6 @@ const Lastest = () => {
             delay: 3000, 
             disableOnInteraction: false, 
           }}
-          pagination={{ clickable: true }} 
           breakpoints={{
             768: {
               slidesPerView: 2,
@@ -40,7 +38,7 @@ const Lastest = () => {
               slidesPerView: 3,
             },
           }}
-          className="md:mt-10 h-[400px] mx-auto"
+          className=" mx-auto"
         >
           <SwiperSlide>
             <div className="rounded-lg md:w-[350px] cursor-pointer">

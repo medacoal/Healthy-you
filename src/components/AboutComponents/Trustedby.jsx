@@ -32,6 +32,7 @@ const Trustedby = () => {
           loop={true} 
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           modules={[Autoplay]}
+          className=""
         >
           {logos.map((logo, index) => (
             <SwiperSlide key={index} className="flex justify-center">

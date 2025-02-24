@@ -28,7 +28,6 @@ const Meet = () => {
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
-          pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             768: {
@@ -55,9 +54,9 @@ const Meet = () => {
                 <div className="p-6 text-center">
                   <h1 className="text-2xl font-bold mb-2">{doctor.name}</h1>
                   <h6 className="text-sm font-medium mb-2">{doctor.title}</h6>
-                  <p className="text-[#aab8ba] leading-relaxed mb-4">{doctor.description}</p>
+                  <p className="text-[#527C88] leading-relaxed mb-4">{doctor.description}</p>
                   <div className="flex justify-center">
-                    <button className="flex items-center text-[#6ca59e] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#6ca59e] hover:text-white cursor-pointer">
+                    <button className="flex items-center text-[#147C84] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#147C84] hover:text-white cursor-pointer">
                       Book Now
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
