@@ -22,7 +22,7 @@ const Trusted = () => {
           Trusted By:
         </h1>
         <Swiper
-          spaceBetween={50}
+          spaceBetween={40}
           slidesPerView={2} // Number of logos visible at once
           breakpoints={{
             640: { slidesPerView: 2 },

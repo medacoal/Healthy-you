@@ -6,13 +6,18 @@ import Wrapper from '../reasurable/Wrapper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useNavigate } from "react-router-dom";
+
+
 
 const Meet = () => {
+  const navigate = useNavigate(); // Added useNavigate for navigation
+
   const doctors = [
-    { img: rated1, name: 'Dr. Naomi jr.MD', title: 'Head of Psychiatrist', description: 'Expert in diagnose, treat, and prevent mental health disorders, provide therapy.' },
-    { img: rated2, name: 'Dr. Jim Beglinei', title: 'Head of Neurologist', description: 'Expert in diagnosis and treatment of disorders affecting the nervous system.' },
-    { img: rated3, name: 'Dr. Lisa Chen', title: 'Head of Emergency Medical Specialist', description: 'Expert in emergency airway procedures, ensures patient safety and respiratory.' },
-    { img: rated1, name: 'Dr. Guru Maraji', title: 'Emergency Medicine Specialist', description: 'Expert in emergency airway procedures, ensuring patient safety.' },
+    { img: rated1, name: "Dr. Naomi Jr. MD", title: "Head of Psychiatrist", description: "Expert in diagnose, treat, and prevent mental health disorders, provide therapy." },
+    { img: rated2, name: "Dr. Jim Beglinei", title: "Head of Neurologist", description: "Expert in diagnosis and treatment of disorders affecting the nervous system." },
+    { img: rated3, name: "Dr. Lisa Chen", title: "Head of Emergency Medical Specialist", description: "Expert in emergency airway procedures, ensures patient safety and respiratory." },
+    { img: rated1, name: "Dr. Guru Maraji", title: "Emergency Medicine Specialist", description: "Expert in emergency airway procedures, ensuring patient safety." },
   ];
 
   return (
@@ -56,19 +61,22 @@ const Meet = () => {
                   <h6 className="text-sm font-medium mb-2">{doctor.title}</h6>
                   <p className="text-[#527C88] leading-relaxed mb-4">{doctor.description}</p>
                   <div className="flex justify-center">
-                    <button className="flex items-center text-[#147C84] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#147C84] hover:text-white cursor-pointer">
-                      Book Now
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        className="w-5 ml-2"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
+                  <button
+      onClick={() => navigate("/Book")} // Change "/book" to your actual booking page route
+      className="flex items-center text-[#147C84] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#147C84] hover:text-white cursor-pointer"
+    >
+      Book Now
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="2"
+        stroke="currentColor"
+        className="w-5 ml-2"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
                   </div>
                 </div>
               </div>
