@@ -1,6 +1,7 @@
 import React from 'react'
 import ConsultImg from '../../assets/images/2151696299 1.png'
 import Wrapper from '../reasurable/Wrapper'
+import { Link } from 'react-router-dom'
 const Consult = () => {
   return (
     <Wrapper>
@@ -16,14 +17,14 @@ const Consult = () => {
     </div>
 
     {/* Text Section */}
-    <div className="lg:space-y-5 pt-5 md:pt-0">
+    <div className="lg:space-y-5 ">
       <div className='lg:w-[650px] text-center md:text-start'>
       <h1 className="lg:text-6xl text-2xl font-bold">
       Consult with our Expert and 
         <span className="italic font-[600] text-[#174949]"> Professional Doctors</span>
       </h1>
       </div>
-<div className='text-xl lg:w-[590px] text-[#474747]'>  
+<div className='text-xl lg:w-[590px] text-[#474747] pb-10'>  
 <p className=" font py-5">
       Get personalized medical advice from highly skilled and experienced doctors across various specialties. Whether you need a quick consultation, a detailed diagnosis, or ongoing care.
       </p>
@@ -31,9 +32,9 @@ const Consult = () => {
       Experience compassionate and confidential care tailored to your needs, all from the comfort of your home.
       </p>
 </div>
-<div className="bg-[#147C84] mx-auto md:mx-0 w-[199px] h-[50px] text-white p-3 text-center rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84] border-2">
+<Link to="/finddoctor" className="bg-[#147C84] px-10 text-white py-4 text-center rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84]">
     Book an Appointment
-  </div>
+  </Link>
     </div>
   </div>
 </section>

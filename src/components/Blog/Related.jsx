@@ -28,7 +28,6 @@ const Related = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }}
           breakpoints={{
             640: {
               slidesPerView: 1,
