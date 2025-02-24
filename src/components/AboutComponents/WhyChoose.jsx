@@ -21,12 +21,13 @@ const WhyChoose = () => {
 </div>
 
     
-    <div className="text-left items-center">
+    <div className="">
       {/* Title */}
-      <h1 className="text-4xl font-bold leading-tight ">
-        Why 
-        <span className="italic font-[600] text-[#174949] ml-2">Choose Us</span>
-      </h1>
+      <h1 className="text-4xl font-bold leading-tight text-center md:text-center lg:text-start">
+  Why 
+  <span className="italic font-[600] text-[#174949] ml-2">Choose Us</span>
+</h1>
+
 
       <section className=" mx-auto  py-10 lg:w-[752px] lg:h-[527.99px] lg:pt-24 ">
   <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-5">
