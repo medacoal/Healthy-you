@@ -74,7 +74,7 @@ const Book = () => {
               {...register("phone", {
                 required: "Phone Number is required",
                 pattern: {
-                  value: /^[0-9]{10}$/,
+                  // value: /^[0-9]{10}$/,
                   message: "Invalid phone number",
                 },
               })}
