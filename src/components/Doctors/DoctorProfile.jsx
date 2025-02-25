@@ -3,7 +3,7 @@ import Jumbotron from "../../components/reasurable/jumbotrun"
 import DoctorDetails from '../../components/Doctors/DoctorDetail'
 import DoctorBio from "../../components/Doctors/DoctorsBio"
 import DoctorsAward from "../../components/Doctors/DoctorsAward"
-import DoctorsReview from '../../components/Doctors/DoctorsReview'
+// import DoctorsReview from '../../components/Doctors/DoctorsReview'
 import DoctorsPagination from "../../components/Doctors/DoctorsPagination"
 import Wellness from '../HomeComponents/Wellness'
 
@@ -17,7 +17,7 @@ const DoctorProfile = () => {
        <DoctorDetails/>
       <DoctorBio />
       <DoctorsAward />
-      <DoctorsReview /> 
+      {/* <DoctorsReview />  */}
       <DoctorsPagination />
       <Wellness/>
     </div>
