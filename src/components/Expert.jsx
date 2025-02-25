@@ -30,10 +30,11 @@ const Expert = () => {
   </Link>
 
   {/* How it Works */}
-  <div className="flex items-center space-x-1">
-    <div className=" text-[#174949] font-normal text-lg">How it Works</div>
-    <img src={arrow} alt=""/>
-  </div>
+  <a href="/about" className="flex items-center space-x-1">
+  <div className="text-[#174949] font-normal text-lg">Get to Know Us</div>
+  <img src={arrow} alt="Arrow Icon"/>
+</a>
+
 </div>
 
 <div className="flex items-center space-x-4 pt-7 justify-center md:justify-start">
