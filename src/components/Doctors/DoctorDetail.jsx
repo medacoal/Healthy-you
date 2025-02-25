@@ -47,9 +47,10 @@ const DoctorDetails = () => {
     <Wrapper>
       <div className="lg:px-10 md:py-10 lg:border-[#767680] lg:border-1 my-6 px-2 md:my-10 rounded-lg font-[Axiforma]">
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row justify-between gap-6 mb-6 sm:mb-8 md:mb-10">
+        <div className="flex flex-col md:flex-row  justify-between gap-3 mb-6 sm:mb-8 md:mb-10">
+          
           {/* Doctor Image and Details */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <div className="flex flex-col lg:flex-row gap-4 s">
             <div className="flex gap-4">
               
             <div>
@@ -106,8 +107,8 @@ const DoctorDetails = () => {
             </div>
           </div>
 
-             {/* Doctor Availability and Ratings */}
-             <div className="flex flex-col gap-2 text-[#000000] md:space-y-4">
+          {/* Doctor Availability and Ratings */}
+          <div className="flex flex-col  gap-2 text-[#000000] md:space-y-4">
             <button className="flex flex-row gap-2">
               <img src={clock} alt="Clock" className="w-5 h-5" /> Full Time, Online Therapy
               Available
