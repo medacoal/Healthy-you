@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Consult = () => {
   return (
     <Wrapper>
-      <section className="px-2 font-[Axiforma]">
+      <section className="px-2 font-[Axiforma] container mx-auto">
   <div className=" grid md:grid-cols-2 items-center gap-5 lg:gap-0 text-center md:text-start">
     {/* Image Section */}
     <div className="justify-center">

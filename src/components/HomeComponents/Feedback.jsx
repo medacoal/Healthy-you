@@ -100,7 +100,7 @@ const Feedback = () => {
 
   return (
     <Wrapper>
-      <div className="text-[#000000] font-[Axiforma]  px-2 py-10">
+      <div className="text-[#000000] font-[Axiforma]  px-2 py-10 container mx-auto" >
         <div className=" md:text-5xl text-2xl  text-center">
           <h1 className="font-semibold">
             Our Patients

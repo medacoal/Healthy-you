@@ -22,7 +22,7 @@ const Meet = () => {
 
   return (
     <Wrapper>
-      <div className=" px-2 font-[Axiforma]">
+      <div className=" px-2 font-[Axiforma] lg:container lg:mx-auto">
         <h1 className="md:text-5xl text-2xl font-bold text-center mb-10">
           Meet Our Top
           <span className="italic font-[600] text-[#174949] "> Rated Doctors</span>
