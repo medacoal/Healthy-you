@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Expert = () => {
   return (
    <Wrapper>
-    <section className="pt-24 px-2 text-[#000000] font-[Axiforma]">
+    <section className="pt-24 px-2 text-[#000000] font-[Axiforma] lg:container lg:mx-auto">
       <div className="flex flex-col-reverse md:flex-row items-center">
       <div className="mt-6 md:hidden">
           <img

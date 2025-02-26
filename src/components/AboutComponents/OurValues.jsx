@@ -7,7 +7,7 @@ const OurValues = () => {
     return (
 <Wrapper>
   
-<section className="px-2 py-20 font-[Axiforma] ">
+<section className="px-2 py-20 font-[Axiforma] lg:container lg:mx-auto ">
   <h1 className="text-4xl font-bold text-center mb-12">
         Our
         <span className="italic font-[600] text-[#174949] ml-2">Values</span>

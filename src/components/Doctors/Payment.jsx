@@ -14,7 +14,7 @@ const Payment = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);
 
   return (
-    <div className="max-w-xl mx-auto p-8 bg-white rounded-lg shadow-md">
+    <div className="md:w-[100%]  mx-auto p-8 bg-white rounded-lg shadow-md ">
       <h2 className="text-3xl font-semibold mb-4">Payment Gateway</h2>
       <RadioGroup value={selectedMethod} onChange={setSelectedMethod}>
         <div className="space-y-7">

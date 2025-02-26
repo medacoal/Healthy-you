@@ -15,7 +15,7 @@ const Jumbotron = ({ title = "Default Title", description = "This is Default Des
 
   return (
     <div className="h-[300px] bg-[#0E575C] w-full md:bg-cover md:bg-no-repeat relative" style={{ backgroundImage: `url(${line})` }}>
-      <div className="w-full h-full flex flex-col justify-center items-center">
+      <div className="w-full h-full flex flex-col justify-center items-center container mx-auto">
         <div className="text-center w-full md:max-w-[45%] mx-auto font-[Axiforma] text-[#FFFFFFF2]">
           <h1 className="text-3xl md:text-4xl font-bold">
             {title}
