@@ -137,11 +137,18 @@ const Get = () => {
             </div>
           </div>
           <div>
-            <label>Phone Number</label>
-            <div className='flex  bg-white w-full items-center p-2 text-[#2632388F] rounded'>
-              <input type={showPhone ? 'text' : 'password'} name='phone' value={formData.phone} onChange={handleChange} className='w-full outline-none' placeholder='Enter your Phone number' />
-            </div>
-            {errors.phone && <p className='text-red-500 text-sm'>{errors.phone}</p>}
+          <label>Phone Number</label>
+<div className='flex bg-white w-full items-center p-2 text-[#2632388F] rounded'>
+  <input 
+    type='text'  // Always visible
+    name='phone' 
+    value={formData.phone} 
+    onChange={handleChange} 
+    className='w-full outline-none' 
+    placeholder='Enter your Phone number' 
+  />
+</div>
+       {errors.phone && <p className='text-red-500 text-sm'>{errors.phone}</p>}
           </div>
           <div className='mt-5'>
             <label>Message</label>

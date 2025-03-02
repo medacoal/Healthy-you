@@ -70,13 +70,14 @@ const People = () => {
 
               {/* Toggle Icon */}
               <img
-                src={up}
-                alt="Toggle"
-                className={`rounded-full border p-2 h-8 hover:cursor-pointer ${
-                  openStates[index] ? 'rotate-0' : 'rotate-180'
-                } transition-transform`}
-                onClick={() => handleToggle(index)}
-              />
+  src={up}
+  alt="Toggle"
+  className={`rounded-full border border-[#2c717f] p-2 h-8 hover:cursor-pointer ${
+    openStates[index] ? 'rotate-0' : 'rotate-180'
+  } transition-transform`}
+  onClick={() => handleToggle(index)}
+/>
+
             </div>
           ))}
         </div>
