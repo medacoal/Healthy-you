@@ -31,7 +31,7 @@ const onSubmit = async (data) => {
     console.log(res);
     
     // Show success toast
-    toast.success("Registration Successful! Redirecting...");
+    // toast.success("Registration Successful! Redirecting...");
 
     // Redirect after a short delay
     setTimeout(() => {
