@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 import logo from "../src/assets/icons/Vector 1.png";
+import LogoutModal from "./components/Modals/Logout"; // Importing the Logout Modal
 
 const Navbar = () => {
   const { auth, logout } = useAuth();
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
 
   const userFullName = auth?.user?.fullName || "";
   const userInitials = userFullName
@@ -17,6 +19,12 @@ const Navbar = () => {
         .join("")
         .toUpperCase()
     : "U"; // Default to "U" if name is missing
+
+  const handleLogout = () => {
+    logout();
+    setIsModalOpen(false);
+    navigate("/");
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md text-[#000000] font-[Axiforma]">
@@ -60,11 +68,7 @@ const Navbar = () => {
                   <div className="absolute right-0 mt-2 w-48 bg-white text-[#174949] rounded-lg shadow-lg py-2">
                     <div className="px-4 py-2 text-sm font-medium border-b">{userFullName}</div>
                     <button
-                      onClick={() => {
-                        logout();
-                        setDropdownOpen(false);
-                        navigate("/");
-                      }}
+                      onClick={() => setIsModalOpen(true)} // Open logout modal
                       className="w-full text-left px-4 py-2 text-sm hover:bg-[#174949] hover:text-white rounded-lg"
                     >
                       Logout
@@ -108,11 +112,7 @@ const Navbar = () => {
                   <span className="text-[#174949] font-medium">{userFullName}</span>
                 </div>
                 <button
-                  onClick={() => {
-                    logout();
-                    setMobileOpen(false);
-                    navigate("/");
-                  }}
+                  onClick={() => setIsModalOpen(true)} // Open logout modal
                   className="w-full text-left px-4 py-2 text-[#174949] hover:bg-[#174949] hover:text-white rounded-lg"
                 >
                   Logout
@@ -127,6 +127,9 @@ const Navbar = () => {
           </div>
         )}
       </div>
+
+      {/* Logout Modal */}
+      {isModalOpen && <LogoutModal onClose={() => setIsModalOpen(false)} onLogout={handleLogout} />}
     </nav>
   );
 };

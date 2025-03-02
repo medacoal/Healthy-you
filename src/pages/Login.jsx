@@ -27,7 +27,7 @@ const Login = () => {
       
       if (res) {
         localStorage.setItem("user", JSON.stringify(res)); // Store user in localStorage
-        toast.success("Login Successful!");
+        // toast.success("Login Successful!");
         
         setTimeout(() => {
           navigate("/"); // Redirect to home page after login
