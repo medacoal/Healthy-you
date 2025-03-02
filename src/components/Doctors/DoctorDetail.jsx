@@ -16,13 +16,14 @@ import deepgood from "../../assets/icons/Frame 1171278901 (3).png";
 import message from "../../assets/icons/Group 1000002443.png";
 import phone from "../../assets/icons/Group 1000002444.png";
 import video from "../../assets/icons/Group 1000002445.png";
-import { Link } from "react-router-dom";
+import BookingModal from "../../components/Modals/Book";
 
 const DoctorDetails = () => {
   const { id } = useParams(); // Get doctor ID from URL
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showModal, setShowModal] = useState(false); 
 
   useEffect(() => {
     const fetchDoctor = async () => {
@@ -76,9 +77,6 @@ const DoctorDetails = () => {
                   <p className="text-xs font-semibold">Price: $100 - $200 per session</p>
                 </div>
                 <div className="">
-                  <button className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-8 text-white rounded-md cursor-pointer">
-                    Book Now
-                  </button>
                 </div>
               </div>
             </div>
@@ -89,7 +87,7 @@ const DoctorDetails = () => {
               </button>
               <div className="flex md:flex-col gap-3 md:gap-0">
                 <p className="font-semibold flex flex-row gap-2 text-base sm:text-lg md:text-[20px]">
-                  Dr. {doctor.name} <img src={checkbox} alt="Verified" className="w-5 h-5" />
+                  {doctor.name} <img src={checkbox} alt="Verified" className="w-5 h-5" />
                 </p>
                 <p className="text-[#0C4C51] font-semibold border md:border-none md:px-0 px-2 rounded-md">
                   {doctor.title}
@@ -155,11 +153,6 @@ const DoctorDetails = () => {
                 Price: $100 - $200 for a session
               </p>
             </div>
-            <div className="md:hidden">
-            <button className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer">
-            Book Now
-          </button>
-            </div>
           </div>
         </div>
 
@@ -167,11 +160,21 @@ const DoctorDetails = () => {
         <hr className="border-[#767680] border-0.5 hidden md:block"/>
 
         {/* Book Now Button */}
-        <Link to="/book">
-          <button className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer">
-            Book Now
-          </button>
-        </Link>
+        <button
+          onClick={() => setShowModal(true)}
+          className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer"
+        >
+          Book Now
+        </button>
+
+        {/* Booking Modal */}
+        {showModal && (
+          <BookingModal
+            doctorId={doctor.id} // Pass the doctor id to the modal
+            onClose={() => setShowModal(false)} // Close function
+          />
+        )}
+
       </div>
     </Wrapper>
   );

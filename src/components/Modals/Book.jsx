@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import Dat from "../assets/icons/Vector (50).png";
-import Clock from "../assets/icons/Vector (51).png";
-import x from "../assets/icons/Stockholm-icons.png";
+import Dat from "../../assets/icons/Vector (50).png";
+import Clock from "../../assets/icons/Vector (51).png";
+import x from "../../assets/icons/Stockholm-icons.png";
 
-const Book = () => {
-  const navigate = useNavigate();
+const Book = ({ doctorId, onClose }) => {
+  const navigate = useNavigate(); // Use navigate to programmatically move around
   const {
     register,
     handleSubmit,
@@ -24,20 +24,20 @@ const Book = () => {
 
     setTimeout(() => {
       console.log(data);
-      navigate("/booking"); // Navigate after "loading"
+      navigate(`/doctor/${doctorId}`); // Navigate back to the specific doctor's profile using the doctorId prop
     }, 2000); // Simulate loading delay
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-300 p-4">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+    <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
         <div className="flex justify-between">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Book Doctor</h2>
           <img
-            src={x}
+            src={x} // Replace with your close icon path
             alt="Close"
             className="w-8 h-8 cursor-pointer"
-            onClick={() => navigate("/finddoctor")}
+            onClick={() => navigate(`/doctor/${doctorId}`)} // Ensure it navigates correctly to the correct doctor's profile page
           />
         </div>
 
@@ -71,13 +71,7 @@ const Book = () => {
           <div>
             <label className="block text-gray-700 font-semibold">Phone Number</label>
             <input
-              {...register("phone", {
-                required: "Phone Number is required",
-                pattern: {
-                  // value: /^[0-9]{10}$/,
-                  message: "Invalid phone number",
-                },
-              })}
+              {...register("phone", { required: "Phone Number is required" })}
               className="w-full border border-gray-300 p-2 rounded mt-1"
               placeholder="123-456-7890"
             />
@@ -87,9 +81,7 @@ const Book = () => {
           <div>
             <label className="block text-gray-700 font-semibold">Appointment Type</label>
             <select
-              {...register("appointmentType", {
-                required: "Appointment Type is required",
-              })}
+              {...register("appointmentType", { required: "Appointment Type is required" })}
               className="w-full border border-gray-300 py-2 px-1 rounded mt-1"
             >
               <option value="">Select Type</option>
@@ -105,15 +97,13 @@ const Book = () => {
               <div className="relative">
                 <input
                   type="text"
-                  {...register("preferredDate", {
-                    required: "Preferred Date is required",
-                  })}
+                  {...register("preferredDate", { required: "Preferred Date is required" })}
                   className="w-full border border-gray-300 p-2 rounded mt-1 pr-10"
                   placeholder="August 24, 2024"
                   onFocus={(e) => (e.target.type = "date")}
                   onBlur={(e) => (e.target.type = "text")}
                 />
-                <img src={Dat} className="absolute right-3 top-4 text-gray-500" alt="Date Icon" />
+                {/* <img src={Dat} className="absolute right-3 top-4 text-gray-500" alt="Date Icon" /> */}
               </div>
               {errors.preferredDate && <p className="text-red-500 text-sm">{errors.preferredDate.message}</p>}
             </div>
@@ -123,15 +113,13 @@ const Book = () => {
               <div className="relative">
                 <input
                   type="text"
-                  {...register("preferredTime", {
-                    required: "Preferred Time is required",
-                  })}
+                  {...register("preferredTime", { required: "Preferred Time is required" })}
                   className="w-full border border-gray-300 p-2 rounded mt-1 pr-10"
                   placeholder="10:00 AM"
                   onFocus={(e) => (e.target.type = "time")}
                   onBlur={(e) => (e.target.type = "text")}
                 />
-                <img src={Clock} className="absolute right-3 top-4 text-gray-500" alt="Clock Icon" />
+                {/* <img src={Clock} className="absolute right-3 top-4 text-gray-500" alt="Clock Icon" /> */}
               </div>
               {errors.preferredTime && <p className="text-red-500 text-sm">{errors.preferredTime.message}</p>}
             </div>
@@ -140,21 +128,16 @@ const Book = () => {
           <div>
             <label className="block text-gray-700 font-semibold">Reason for Appointment</label>
             <textarea
-              {...register("reason", {
-                required: "Reason for Appointment is required",
-              })}
+              {...register("reason", { required: "Reason for Appointment is required" })}
               className="w-full border border-gray-300 p-3 rounded mt-1 max-h-[300px]"
             ></textarea>
             {errors.reason && <p className="text-red-500 text-sm">{errors.reason.message}</p>}
           </div>
 
-          {/* Submit button with static "Loading..." text when clicked */}
           <button
             type="submit"
-            className={`w-full text-white font-semibold border-gray-300 p-2 rounded ${
-              loading ? "bg-[#147C84] cursor-not-allowed" : "bg-[#147C84] hover:bg-[#147d84dc]"
-            }`}
-            disabled={loading} // Disable button when loading
+            className={`w-full text-white font-semibold border-gray-300 p-2 rounded ${loading ? "bg-[#147C84] cursor-not-allowed" : "bg-[#147C84] hover:bg-[#147d84dc]"}`}
+            disabled={loading}
           >
             {loading ? "Loading..." : "Book Appointment"}
           </button>

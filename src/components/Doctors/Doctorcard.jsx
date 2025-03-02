@@ -10,6 +10,7 @@ const Doctorcard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const doctorsPerPage = 9;
 
+  // Fetch doctor data (useEffect)
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
@@ -31,7 +32,7 @@ const Doctorcard = () => {
     };
 
     fetchDoctors();
-  }, []);
+  }, []); // This runs only once when the component mounts
 
   // Pagination logic
   const totalPages = Math.ceil(doctors.length / doctorsPerPage);
@@ -39,6 +40,12 @@ const Doctorcard = () => {
   const endIndex = startIndex + doctorsPerPage;
   const displayedDoctors = doctors.slice(startIndex, endIndex);
 
+  // Scroll to top on page change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]); // This is always called when currentPage changes
+
+  // Error and loading states
   if (loading) return <p className="text-center py-10">Loading doctors...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
@@ -49,10 +56,9 @@ const Doctorcard = () => {
           displayedDoctors.map((item) => (
             <div key={item._id} className="border-[#147C84] cursor-pointer">
               {/* Doctor Image */}
-              
-                <div>
-              <img src={item.images[0].url} alt="blog" className='w-full' />
-            </div>
+              <div>
+                <img src={item.images[0].url} alt="doctor" className="w-full" />
+              </div>
 
               {/* Doctor Details */}
               <div className="pt-2 px-5 shadow-xl hover:shadow-2xl rounded-lg pb-4">
@@ -86,7 +92,7 @@ const Doctorcard = () => {
           className={`px-4 py-2 border rounded-lg ${
             currentPage === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
           }`}
-          onClick={() => setCurrentPage(currentPage - 1)}
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
         >
           Back
@@ -95,7 +101,7 @@ const Doctorcard = () => {
           className={`px-4 py-2 border rounded-lg ${
             currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
           }`}
-          onClick={() => setCurrentPage(currentPage + 1)}
+          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
         >
           Next
