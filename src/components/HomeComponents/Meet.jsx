@@ -16,7 +16,7 @@ const Meet = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/doctor/all"); // Replace with your API endpoint
+        const response = await axios.get("/doctor/all"); // Replace with your API endpoint
         console.log("Doctors data:", response.data);
         setDoctors(response.data.doctors.slice(0, 4)); // Limit to 4 doctors
       } catch (err) {
