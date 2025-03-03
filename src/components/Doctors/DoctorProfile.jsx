@@ -5,7 +5,7 @@ import DoctorDetails from '../../components/Doctors/DoctorDetail';
 import DoctorBio from "../../components/Doctors/DoctorsBio";
 import DoctorsAward from "../../components/Doctors/DoctorsAward";
 // import DoctorsReview from '../../components/Doctors/DoctorsReview';
-import DoctorsPagination from "../../components/Doctors/DoctorsPagination";
+// import DoctorsPagination from "../../components/Doctors/DoctorsPagination";
 import Wellness from '../HomeComponents/Wellness';
 
 const DoctorProfile = () => {
@@ -29,7 +29,7 @@ const DoctorProfile = () => {
       <DoctorBio />
       <DoctorsAward />
       {/* <DoctorsReview /> */}
-      <DoctorsPagination />
+      {/* <DoctorsPagination /> */}
       <Wellness />
     </div>
   );

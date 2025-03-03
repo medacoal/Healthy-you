@@ -5,27 +5,27 @@ import Dat from "../../assets/icons/Vector (50).png";
 import Clock from "../../assets/icons/Vector (51).png";
 import x from "../../assets/icons/Stockholm-icons.png";
 
-const Book = ({ doctorId, onClose }) => {
-  const navigate = useNavigate(); // Use navigate to programmatically move around
+const Book = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
-  const [loading, setLoading] = useState(false); // Loading state
+
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = (data) => {
     if (Object.keys(errors).length > 0) {
-      return; // Stop submission if there are errors
+      return;
     }
 
-    setLoading(true); // Start loading
+    setLoading(true);
 
     setTimeout(() => {
       console.log(data);
-      navigate(`/doctor/${doctorId}`); // Navigate back to the specific doctor's profile using the doctorId prop
-    }, 2000); // Simulate loading delay
+      navigate("/booking"); // Navigate to Booking component
+    }, 2000);
   };
 
   return (
@@ -34,10 +34,10 @@ const Book = ({ doctorId, onClose }) => {
         <div className="flex justify-between">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Book Doctor</h2>
           <img
-            src={x} // Replace with your close icon path
+            src={x}
             alt="Close"
             className="w-8 h-8 cursor-pointer"
-            onClick={() => navigate(`/doctor/${doctorId}`)} // Ensure it navigates correctly to the correct doctor's profile page
+            onClick={() => navigate("/finddoctor")} // Navigate to Find Doctor page
           />
         </div>
 
@@ -103,7 +103,6 @@ const Book = ({ doctorId, onClose }) => {
                   onFocus={(e) => (e.target.type = "date")}
                   onBlur={(e) => (e.target.type = "text")}
                 />
-                {/* <img src={Dat} className="absolute right-3 top-4 text-gray-500" alt="Date Icon" /> */}
               </div>
               {errors.preferredDate && <p className="text-red-500 text-sm">{errors.preferredDate.message}</p>}
             </div>
@@ -119,7 +118,6 @@ const Book = ({ doctorId, onClose }) => {
                   onFocus={(e) => (e.target.type = "time")}
                   onBlur={(e) => (e.target.type = "text")}
                 />
-                {/* <img src={Clock} className="absolute right-3 top-4 text-gray-500" alt="Clock Icon" /> */}
               </div>
               {errors.preferredTime && <p className="text-red-500 text-sm">{errors.preferredTime.message}</p>}
             </div>
