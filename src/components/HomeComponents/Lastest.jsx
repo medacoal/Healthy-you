@@ -12,7 +12,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const Lastest = () => {
   return (
     <Wrapper>
-      <div className='px-2 text-[#000000] font-[Axiforma]'>
+      <div className='px-2 text-[#000000] font-[Axiforma] container mx-auto'>
         <div className="md:text-5xl text-2xl pb-8 text-center">
           <h1 className="font-semibold">
             Latest Health{' '}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Wrapper from "../reasurable/Wrapper";
-import axios from "axios"; // Import axios
+import axios from "axios";
+import SubscribeModal from "../Modals/Subscribed"; // Import the Subscribe Modal
 
 axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_API_URL;
 
@@ -38,10 +39,10 @@ const Wellness = () => {
 
   return (
     <Wrapper>
-      <div className="container mx-auto px-2 py-5">
-        <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3">
+      <div className="relative container mx-auto px-2 py-5"> {/* Ensure position is relative */}
+        <div className="bg-[#0C4C51] font-[Axiforma] text-[#FFFFFFF2] rounded-md py-10 my-5 grid md:grid-cols-2 gap-14 lg:px-10 md:px-3 relative">
           <div className="flex flex-col items-center md:items-start">
-            <h1 className="Font-Axiforma lg:text-[34px] text-xl  lg:w-[600px] text-center md:text-start font-bold">
+            <h1 className="Font-Axiforma lg:text-[34px] text-xl lg:w-[600px] text-center md:text-start font-bold">
               Supporting our Wellness Journey
             </h1>
             <p className="text-[16px] lg:w-[500px] md:w-[380px] text-center md:text-start w-[300px] pt-4">
@@ -68,11 +69,17 @@ const Wellness = () => {
               </div>
               <div className="mt-2">
                 {error && <p className="text-red-500 text-sm px-3">{error}</p>}
-                {success && <p className="text-green-500 text-sm">Email submitted successfully!</p>}
               </div>
             </div>
           </div>
         </div>
+
+        {/* Modal appears inside the Wellness section */}
+        {success && (
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <SubscribeModal onClose={() => setSuccess(false)} />
+          </div>
+        )}
       </div>
     </Wrapper>
   );

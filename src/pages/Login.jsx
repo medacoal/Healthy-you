@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";
@@ -27,7 +27,7 @@ const Login = () => {
       
       if (res) {
         localStorage.setItem("user", JSON.stringify(res)); // Store user in localStorage
-        toast.success("Login Successful!");
+        // toast.success("Login Successful!");
         
         setTimeout(() => {
           navigate("/"); // Redirect to home page after login

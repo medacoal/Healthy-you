@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Expert = () => {
   return (
    <Wrapper>
-    <section className="pt-24 px-2 text-[#000000] font-[Axiforma]">
+    <section className="pt-24 px-2 text-[#000000] font-[Axiforma] lg:container lg:mx-auto">
       <div className="flex flex-col-reverse md:flex-row items-center">
       <div className="mt-6 md:hidden">
           <img
@@ -25,15 +25,16 @@ const Expert = () => {
 <p className="text-lg font py-4 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
           <div className="flex items-center lg:space-x-8 space-x-6">
   {/* Book an Appointment */}
-  <Link to="/finddoctor" className="bg-[#147C84] w-[190px] text-white py-3  text-center rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84]">
+  <Link to="/finddoctor" className="bg-[#147C84] w-[190px] text-white py-3  text-center rounded-lg cursor-pointer ">
     Book an Appointment
   </Link>
 
   {/* How it Works */}
-  <div className="flex items-center space-x-1">
-    <div className=" text-[#174949] font-normal text-lg">How it Works</div>
-    <img src={arrow} alt=""/>
-  </div>
+  <a href="/about" className="flex items-center space-x-1">
+  <div className="text-[#174949] font-normal text-lg">Get to Know Us</div>
+  <img src={arrow} alt="Arrow Icon"/>
+</a>
+
 </div>
 
 <div className="flex items-center space-x-4 pt-7 justify-center md:justify-start">

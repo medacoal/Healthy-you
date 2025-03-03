@@ -1,50 +1,49 @@
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import Wrapper from "../reasurable/Wrapper";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import iconleft from '../../assets/icons/back bttn (1).png';
+import iconright from '../../assets/icons/back bttn.png';
 import john from "../../assets/images/Ellipse 1 (1).png";
 import alex from "../../assets/images/Ellipse 2.png";
 import emily from "../../assets/images/Ellipse 3 (1).png";
 import micheal from "../../assets/images/Ellipse 1.png";
-import elijah from  "../../assets/images/Ellipse 4 (3).png"
+import elijah from  "../../assets/images/Ellipse 4 (3).png";
 import david from "../../assets/images/Ellipse 3.png";
 
 const Feedback = () => {
   const testimonials = [
-    
     {
       id: 2,
-      text: "i’ve tried several wellness websites, but this one stands out for it’s user friendly interface and excerllent customer.",
+      text: "i’ve tried several wellness websites, but this one stands out for it’s user friendly interface and excellent customer.",
       name: "Opeyemi Olatimehin",
       image: alex,
     },
     {
-        id: 1,
-        text: "HealthyYou service is outstanding! I had an appointment and they responded quickly and help with prescriptions.",
-        name: "Anthonia Ruben",
-        image: john,
-      },
+      id: 1,
+      text: "HealthyYou service is outstanding! I had an appointment and they responded quickly and helped with prescriptions.",
+      name: "Anthonia Ruben",
+      image: john,
+    },
     {
       id: 3,
-      text: "Security is my top, and I feel safe using this exchange. Their two-factor authentication gives me peace.",
-      name: "Udeogu Stella.",
+      text: "Security is my top priority, and I feel safe using this exchange. Their two-factor authentication gives me peace.",
+      name: "Udeogu Stella",
       image: emily,
     },
-   
     {
       id: 5,
-      text: "I appreciate the transport fee structure. No hidden charges, just straightforwardpayments.",
+      text: "I appreciate the transport fee structure. No hidden charges, just straightforward payments.",
       name: "Adeleke Davido",
       image: david,
     },
     {
-        id: 4,
-        text: "I’ve used many wellness websites, but none compare to this one. It’s intuitive exceeds my expectations.",
-        name: "Joy Samson",
-        image: micheal,
-      },
+      id: 4,
+      text: "I’ve used many wellness websites, but none compare to this one. It’s intuitive and exceeds my expectations.",
+      name: "Joy Samson",
+      image: micheal,
+    },
     {
       id: 6,
-      text: "i’ve tried several wellness websites, but this one stands out for it’s user friendly interface and excerllent customer.",
+      text: "I’ve tried several wellness websites, but this one stands out for its user-friendly interface and excellent customer service.",
       name: "Joshua Paul",
       image: elijah,
     },
@@ -54,7 +53,6 @@ const Feedback = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const [isNextDisabled, setIsNextDisabled] = useState(false);
   const [isPrevDisabled, setIsPrevDisabled] = useState(true);
-  const [clickedButton, setClickedButton] = useState(""); // Track the last clicked button
 
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -78,33 +76,30 @@ const Feedback = () => {
   const handleNext = () => {
     if (!isNextDisabled) {
       setCurrentIndex((prevIndex) => prevIndex + visibleCount);
-      setClickedButton("next");
     }
   };
 
   const handlePrevious = () => {
     if (!isPrevDisabled) {
       setCurrentIndex((prevIndex) => prevIndex - visibleCount);
-      setClickedButton("previous");
     }
   };
 
   const getVisibleTestimonials = () => {
-    return testimonials.slice(
-      currentIndex,
-      currentIndex + visibleCount
-    );
+    return testimonials.slice(currentIndex, currentIndex + visibleCount);
   };
 
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
     <Wrapper>
-      <div className="text-[#000000] font-[Axiforma]  px-2 py-10">
-        <div className=" md:text-5xl text-2xl  text-center">
+      <div className="text-[#000000] font-[Axiforma] px-2 py-10 container mx-auto">
+        <div className="md:text-5xl text-2xl text-center">
           <h1 className="font-semibold">
-            Our Patients
-            <span className="font-serif italic font-medium text-[#174949]"> Feedback</span>
+            Our Patients{" "}
+            <span className="font-serif italic font-medium text-[#174949]">
+              Feedback
+            </span>
           </h1>
         </div>
 
@@ -140,24 +135,16 @@ const Feedback = () => {
             <button
               onClick={handlePrevious}
               disabled={isPrevDisabled}
-              className="border border-[#E9E9E9] rounded-full p-2 bg-[#E9E9E9] hover:cursor-pointer"
+              className=" hover:cursor-pointer disabled:opacity-50"
             >
-              <FaArrowLeft
-                className={`text-2xl ${
-                  clickedButton === "previous" ? "text-white" : "text-[#147C84]"
-                }`}
-              />
+              <img src={iconleft} alt="Previous" className="w-12 h-12" />
             </button>
             <button
               onClick={handleNext}
               disabled={isNextDisabled}
-              className="border border-[#E9E9E9] rounded-full p-2 bg-[#E9E9E9] hover:cursor-pointer"
+              className=" hover:cursor-pointer disabled:opacity-50"
             >
-              <FaArrowRight
-                className={`text-2xl ${
-                  clickedButton === "next" ? "text-white" : "text-[#147C84]"
-                }`}
-              />
+              <img src={iconright} alt="Next" className="w-12 h-12" />
             </button>
           </div>
         </div>

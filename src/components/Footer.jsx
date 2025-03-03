@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='lg:mx-auto lg:container'>
+    <div className=''>
       <div className='bg-[#E8F2F3] py-10'>
-           <Wrapper>
-           <div className=' grid md:grid-cols-2 justify-center font-[Axiforma] px-2'>
+          
+           <div className=' grid md:grid-cols-2 justify-center font-[Axiforma] px-2 lg:mx-auto lg:container'>
               <div className=''>
               <div className="flex gap-3">
                            <img src={logo} alt="Logo" className=" cursor-pointer "/>
@@ -63,7 +63,7 @@ const Footer = () => {
                </div>
               </div>
             </div>
-           </Wrapper>
+          
            <div className='pt-5'>
             <img src={line} alt='' className='w-full'/>
             <h1 className='text-[#000000] text-center pt-4'>Copyright @ MSFT Pro 2023</h1>

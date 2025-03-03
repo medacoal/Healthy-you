@@ -52,7 +52,7 @@ const LocationMap = () => {
   return (
     <div className='py-10 px-2'>
       <div className='flex'>
-        <input
+        {/* <input
           type="text"
           placeholder="Search for a location..."
           className="p-2 border rounded md:w-[300px] w-full mb-2 mt-2"
@@ -63,13 +63,13 @@ const LocationMap = () => {
               handleSearch();
             }
           }}
-        />
-        <button
+        /> */}
+        {/* <button
           onClick={handleSearch}
           className="p-2 mt-2 mb-2 ml-2 bg-[#147C84] cursor-pointer hover:bg-[#0C4C51] text-white rounded"
         >
           Search
-        </button>
+        </button> */}
       </div>
 
       {/* Map */}

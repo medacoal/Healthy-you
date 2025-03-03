@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import paypal from "../../assets/icons/logos_paypal.png";
 import paystack from "../../assets/icons/Vector (52).png"
@@ -14,7 +14,7 @@ const Payment = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);
 
   return (
-    <div className=" mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="lg:w-[100%] max-w-5xl  mx-auto p-8 bg-white rounded-lg shadow-md ">
       <h2 className="text-3xl font-semibold mb-4">Payment Gateway</h2>
       <RadioGroup value={selectedMethod} onChange={setSelectedMethod}>
         <div className="space-y-7">

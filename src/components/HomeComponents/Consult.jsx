@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Consult = () => {
   return (
     <Wrapper>
-      <section className="px-2 font-[Axiforma]">
+      <section className="px-2 font-[Axiforma] container mx-auto">
   <div className=" grid md:grid-cols-2 items-center gap-5 lg:gap-0 text-center md:text-start">
     {/* Image Section */}
     <div className="justify-center">
@@ -32,7 +32,7 @@ const Consult = () => {
       Experience compassionate and confidential care tailored to your needs, all from the comfort of your home.
       </p>
 </div>
-<Link to="/finddoctor" className="bg-[#147C84] px-10 text-white py-4 text-center rounded-lg cursor-pointer hover:bg-transparent hover:text-[#147C84]">
+<Link to="/finddoctor" className="bg-[#147C84] px-10 text-white py-4 text-center rounded-lg  ">
     Book an Appointment
   </Link>
     </div>

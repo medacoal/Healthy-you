@@ -1,3 +1,4 @@
+import React from 'react'
 import Expert from '../components/Expert'
 import Consult from '../components/HomeComponents/Consult';
 import Services from '../components/HomeComponents/Services';
@@ -10,7 +11,7 @@ import Feedback from '../components/HomeComponents/Feedback';
 
 const Home = () => {
   return (
-    <div className='lg:container lg:mx-auto space-y-20'>
+    <div className=' space-y-20'>
      <Expert/>
     <Trusted/>
     <Meet/>

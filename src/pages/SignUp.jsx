@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";
@@ -31,7 +31,7 @@ const onSubmit = async (data) => {
     console.log(res);
     
     // Show success toast
-    toast.success("Registration Successful! Redirecting...");
+    // toast.success("Registration Successful! Redirecting...");
 
     // Redirect after a short delay
     setTimeout(() => {
