@@ -5,8 +5,12 @@ import right from "../../assets/icons/Stockholm-icons (1).png";
 import Profile from "./Profile";
 import Payment from "./Payment";
 import Info from "./Info";
+import { useParams } from "react-router-dom";
 
 const Booking = () => {
+    const { doctorId } = useParams(); 
+    console.log(doctorId);
+    
   const navigate = useNavigate(); 
 
   return (
@@ -18,7 +22,7 @@ const Booking = () => {
         </div>
         <div className="bg-[#F9F9F9] rounded-2xl p-6 mb-10 w-full lg:w-[1100px] justify-center mx-auto">
           <div className="space-y-10 w-full mx-auto">
-            <Profile />
+            <Profile doctorId={`${doctorId}`} />
             <div className="md:flex flex-col md:flex-row mx-auto  w-full md:gap-40 lg:gap-96 pb-10 hidden">
               <Payment />
               <Info />
@@ -35,3 +39,5 @@ const Booking = () => {
 };
 
 export default Booking;
+
+

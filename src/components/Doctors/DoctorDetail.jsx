@@ -25,6 +25,8 @@ const DoctorDetails = () => {
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false); 
 
+  // console.log(doctor)
+
   useEffect(() => {
     const fetchDoctor = async () => {
       try {
@@ -170,7 +172,7 @@ const DoctorDetails = () => {
         {/* Booking Modal */}
         {showModal && (
           <BookingModal
-            doctorId={doctor.id} // Pass the doctor id to the modal
+            doctorId={doctor._id} // Pass the doctor id to the modal
             onClose={() => setShowModal(false)} // Close function
           />
         )}

@@ -8,9 +8,11 @@ import clock from "../../assets/icons/Frame 1171278901 (4).png";
 import good from "../../assets/icons/Frame 1171278901 (5).png";
 import house from "../../assets/icons/Frame 1171278901 (2).png";
 import star from "../../assets/icons/Frame 1171278906.png";
+import PropTypes from "prop-types"
 
-const Profile = () => {
-  const { doctorId } = useParams(); // Get doctor ID from URL params
+const Profile = ({doctorId}) => {
+  console.log(doctorId);
+  
   const navigate = useNavigate(); // For redirection if doctorId is invalid
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -98,3 +100,8 @@ const Profile = () => {
 };
 
 export default Profile;
+
+Profile.propTypes = {
+  doctorId: PropTypes.string.isRequired, 
+};
+
