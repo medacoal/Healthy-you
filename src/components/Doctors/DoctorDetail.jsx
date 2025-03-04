@@ -25,6 +25,8 @@ const DoctorDetails = () => {
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false); 
 
+  // console.log(doctor)
+
   useEffect(() => {
     const fetchDoctor = async () => {
       try {
@@ -55,7 +57,7 @@ const DoctorDetails = () => {
             <div className="flex gap-4">
               
             <div>
-              <img src={doctor.images[0].url} alt="blog" className='w-40 h-44 rounded-lg' />
+              <img src={doctor.images[0].url} alt="blog" className='w-40 h-full rounded-lg' />
             </div>
               <div className="flex flex-col gap-3 md:hidden">
                 <div className="flex flex-row gap-2 ">
@@ -76,8 +78,12 @@ const DoctorDetails = () => {
                 <div>
                   <p className="text-xs font-semibold">Price: $100 - $200 per session</p>
                 </div>
-                <div className="">
-                </div>
+                <button
+          onClick={() => setShowModal(true)}
+          className="w-full hover:bg-[#147d84d0] bg-[#147C84] py-3.5 px-6 text-white rounded-lg mt-2 cursor-pointer"
+        >
+          Book Now
+        </button>
               </div>
             </div>
 
@@ -153,6 +159,8 @@ const DoctorDetails = () => {
                 Price: $100 - $200 for a session
               </p>
             </div>
+
+            
           </div>
         </div>
 
@@ -162,7 +170,7 @@ const DoctorDetails = () => {
         {/* Book Now Button */}
         <button
           onClick={() => setShowModal(true)}
-          className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer"
+          className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer hidden md:block"
         >
           Book Now
         </button>
@@ -170,7 +178,7 @@ const DoctorDetails = () => {
         {/* Booking Modal */}
         {showModal && (
           <BookingModal
-            doctorId={doctor.id} // Pass the doctor id to the modal
+            doctorId={doctor._id} // Pass the doctor id to the modal
             onClose={() => setShowModal(false)} // Close function
           />
         )}

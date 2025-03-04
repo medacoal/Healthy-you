@@ -2,7 +2,7 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='bg-white p-6 rounded-lg md:w-[80%] flex flex-col space-y-9'>
+    <div className='bg-white p-6 rounded-lg md:w-[45%] flex flex-col space-y-9'>
         <div><h1 className='text-3xl font-semibold'>Booking Info</h1></div>
         <div>
             <h1 className='font-semibold ' >Date & Time</h1>

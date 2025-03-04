@@ -60,7 +60,7 @@ const onSubmit = async (data) => {
           <h1 className="font-bold text-[34px] md:text-4xl mb-4">
             Register Now
           </h1>
-          <p className="mb-6 text-[18px] text-center lg:text-left">
+          <p className="mb-6 text-[18px] text-left lg:text-left">
             Join us now by filling in your details below
           </p>
           <form
@@ -190,7 +190,7 @@ const onSubmit = async (data) => {
             {/* Submit Button */}
             <button
   type="submit"
-  className="w-full bg-[#147C84] hover:bg-lime-950 text-white py-3 rounded-lg text-base md:text-lg cursor-pointer disabled:opacity-50"
+  className="w-full bg-[#147C84] hover:bg-[#147C84] text-white py-3 rounded-lg text-base md:text-lg cursor-pointer disabled:opacity-50"
   disabled={loading} // Disable button while signing up
 >
   {loading ? "Signing up..." : "Sign up"}

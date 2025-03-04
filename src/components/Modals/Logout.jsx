@@ -1,5 +1,5 @@
 import React from 'react';
-import Success from "../../assets/icons/Frame 1321316926.png"; // Ensure the path is correct for your icon
+import Success from "../../assets/icons/Success Icon (1).png"; // Ensure the path is correct for your icon
 
 const LogoutModal = ({ onClose, onLogout }) => {
   return (

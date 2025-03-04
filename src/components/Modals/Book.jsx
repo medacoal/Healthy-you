@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Dat from "../../assets/icons/Vector (50).png";
 import Clock from "../../assets/icons/Vector (51).png";
 import x from "../../assets/icons/Stockholm-icons.png";
+import PropTypes from "prop-types"
 
-const Book = () => {
+const Book = ({doctorId}) => {
+  console.log(doctorId)
   const navigate = useNavigate();
   const {
     register,
@@ -24,7 +26,7 @@ const Book = () => {
 
     setTimeout(() => {
       console.log(data);
-      navigate("/booking"); // Navigate to Booking component
+      navigate(`/booking/${doctorId}`); // Navigate to Booking component
     }, 2000);
   };
 
@@ -146,3 +148,7 @@ const Book = () => {
 };
 
 export default Book;
+
+Book.propTypes = {
+  doctorId: PropTypes.string.isRequired, 
+};
