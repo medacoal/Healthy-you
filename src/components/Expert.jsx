@@ -25,7 +25,7 @@ const Expert = () => {
 <p className="text-lg font py-4 lg:w-[574.92px]">Connect with certified doctors for personalized consulatations from the comfort of your home </p>
           <div className="flex items-center lg:space-x-8 space-x-6">
   {/* Book an Appointment */}
-  <Link to="/finddoctor" className="bg-[#147C84] w-[190px] text-white py-3  text-center rounded-lg cursor-pointer ">
+  <Link to="/finddoctor" className="bg-[#0C4C51] hover:bg-[#147C84] w-[190px] text-white py-3  text-center rounded-lg cursor-pointer ">
     Book an Appointment
   </Link>
 

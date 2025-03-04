@@ -16,14 +16,14 @@ const Booking = () => {
           <img src={right} alt="Go Back" className="w-7 h-8 py-1" />
           <h1 className="text-[#0E0A2D] text-xl">Go Back</h1>
         </div>
-        <div className="bg-[#F9F9F9] rounded-2xl p-6 mb-10 lg:w-[1000px] lg:mx-auto">
-          <div className="space-y-10 lg:w-[900px] mx-auto">
+        <div className="bg-[#F9F9F9] rounded-2xl p-6 mb-10 w-full lg:w-[1100px] justify-center mx-auto">
+          <div className="space-y-10 w-full mx-auto">
             <Profile />
-            <div className="md:flex flex-col md:flex-row lg:mx-auto lg:w-[900px] w-full lg:gap-72 pb-10 hidden">
+            <div className="md:flex flex-col md:flex-row mx-auto  w-full md:gap-40 lg:gap-96 pb-10 hidden">
               <Payment />
               <Info />
             </div>
-            <div className="flex flex-col md:flex-row lg:mx-auto lg:w-[900px] w-full gap-16 pb-10 md:hidden">
+            <div className="flex flex-col  w-full gap-16 pb-10 md:hidden">
               <Info />
               <Payment />
             </div>

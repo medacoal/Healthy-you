@@ -13,7 +13,7 @@ const Footer = () => {
       <div className='bg-[#E8F2F3] py-10'>
           
            <div className=' grid md:grid-cols-2 justify-center font-[Axiforma] px-2 lg:mx-auto lg:container'>
-              <div className=''>
+              <div className='lg:px-16'>
               <div className="flex gap-3">
                            <img src={logo} alt="Logo" className=" cursor-pointer "/>
                            <h1 className="text-[#232323] text-2xl font-bold">HealthyYou</h1>

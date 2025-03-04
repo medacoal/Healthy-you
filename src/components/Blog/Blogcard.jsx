@@ -14,20 +14,21 @@ const Blogcard = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('/blogs/all'); // Adjust API URL
-        setBlogs(response.data.blogs); // Assuming API response is { blogs: [...] }
+        const response = await axios.get('/blogs/all');
+        console.log("API Response:", response.data); // Debugging
+        setBlogs(response.data.blogs || []); // Ensure it's always an array
       } catch (err) {
         setError(err.response?.data?.message || "Failed to fetch blogs");
       } finally {
-        setLoading(false); // Correct placement
+        setLoading(false);
       }
     };
-
     fetchBlogs();
   }, []);
 
   if (loading) return <p className="text-center py-10">Loading blogs...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
+  if (!blogs.length) return <p className="text-center py-10">No blogs available.</p>;
 
   return (
     <Wrapper>
@@ -36,7 +37,13 @@ const Blogcard = () => {
           <div key={item._id} className="justify-between rounded-2xl">
             {/* Image */}
             <div>
-              <img src={item.images[0].url} alt="blog" className='w-full' />
+              {item.images && item.images.length > 0 ? (
+                <img src={item.images[0].url} alt="blog" className='w-full' />
+              ) : (
+                <div className='w-full h-40 bg-gray-200 flex items-center justify-center'>
+                  <p className='text-gray-500'>No Image</p>
+                </div>
+              )}
             </div>
 
             {/* Card Content */}
@@ -50,27 +57,26 @@ const Blogcard = () => {
                 </div>
               </div>
 
-             <h1 
-  className="text-xl font-bold text-[#000000] pb-2 font-[Axiforma] overflow-hidden mb-2"
-  style={{ 
-    display: "-webkit-box", 
-    WebkitBoxOrient: "vertical", 
-    WebkitLineClamp: 2, 
-    overflow: "hidden",
-    maxHeight: "3.2rem", 
-    lineHeight: "1.6rem",
-    wordBreak: "break-word"
-  }}
->
-  {item.title}
-</h1>
+              <h1 
+                className="text-xl font-bold text-[#000000] pb-2 font-[Axiforma] overflow-hidden mb-2"
+                style={{
+                  display: "-webkit-box",
+                  WebkitBoxOrient: "vertical",
+                  WebkitLineClamp: 2,
+                  overflow: "hidden",
+                  maxHeight: "3.2rem",
+                  lineHeight: "1.6rem",
+                  wordBreak: "break-word"
+                }}
+              >
+                {item.title}
+              </h1>
 
+              <p className='text-1xl text-[#00000078] font-[Axiforma] '>
+                {item.description ? item.description.slice(0, 80) + '...' : 'No description available'}
+              </p>
 
-
-
-              <p className='text-1xl text-[#00000078] font-[Axiforma] '>{item.description.slice(0, 80)}.......</p>
-
-              {/* ✅ Fixed "Learn More" button - Removed extra .map() */}
+              {/* Learn More Button */}
               <Link to={`/blog/${item._id}`}>
                 <div className='py-2 gap-1 text-[#147C84] hover:bg-[#147C84] hover:text-white hover:border w-24 text-center rounded-xl text-sm cursor-pointer'>
                   Learn More

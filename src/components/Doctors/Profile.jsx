@@ -50,12 +50,12 @@ const Profile = () => {
           <div className="w-40 sm:w-48 md:w-60 flex-shrink-0">
             <img src={doctor.image} alt={doctor.name} className="w-full h-auto rounded-lg object-cover" />
           </div>
-          <div className="flex flex-col gap-3 w-full">
+          <div className="flex flex-col space-y-3.5 w-full">
             <button className="flex items-center bg-[#D5FAF1] gap-2 py-1 px-3 w-fit rounded-lg">
               <img src={dot} alt="Available" className="w-2 h-2" />
               <p className="text-sm sm:text-base">Available</p>
             </button>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <div className=" ">
               <p className="font-semibold flex items-center gap-2 text-lg sm:text-xl">
                 {doctor.name}
                 <img src={checkbox} alt="Verified" className="w-5 h-5" />
@@ -74,17 +74,17 @@ const Profile = () => {
         </div>
 
         {/* Doctor Availability and Ratings */}
-        <div className="flex flex-col gap-4 text-[#000000] w-full lg:w-1/3 text-sm sm:text-base">
+        <div className="flex flex-col space-y-3.5 text-[#000000] w-full text-sm sm:text-base">
           <button className="flex items-center gap-2 font-semibold">
-            <img src={clock} alt="Clock" className="w-6 h-6 sm:w-8 sm:h-8" />
+            <img src={clock} alt="Clock" className="w-6 h-6 sm:w-8 sm:h-8"/>
             <span>Full Time, Online Therapy Available</span>
           </button>
           <button className="flex items-center gap-2 font-semibold">
-            <img src={good} alt="Good" className="w-6 h-6 sm:w-8 sm:h-8" />
+            <img src={good} alt="Good" className="w-6 h-6 sm:w-8 sm:h-8"/>
             <span>94% Recommended</span>
           </button>
           <button className="flex items-center gap-2 font-semibold">
-            <img src={house} alt="Hospital" className="w-6 h-6 sm:w-8 sm:h-8" />
+            <img src={house} alt="Hospital" className="w-6 h-6 sm:w-8 sm:h-8"/>
             <span>Royal Prince Alfred Hospital</span>
           </button>
           <button className="flex items-center gap-2">

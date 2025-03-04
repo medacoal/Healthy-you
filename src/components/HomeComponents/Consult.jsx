@@ -32,7 +32,7 @@ const Consult = () => {
       Experience compassionate and confidential care tailored to your needs, all from the comfort of your home.
       </p>
 </div>
-<Link to="/finddoctor" className="bg-[#147C84] px-10 text-white py-4 text-center rounded-lg  ">
+<Link to="/finddoctor" className="bg-[#0C4C51] hover:bg-[#147C84] px-10 text-white py-4 text-center rounded-lg  ">
     Book an Appointment
   </Link>
     </div>
