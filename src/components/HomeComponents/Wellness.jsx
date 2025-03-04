@@ -61,7 +61,7 @@ const Wellness = () => {
                   style={{ outline: "none" }}
                 />
                 <button
-                  className="rounded-md w-[100px] text-center text-white bg-[#147C84] cursor-pointer hover:bg-[#0C4C51] lg:px-7 py-2 absolute right-0"
+                  className="rounded-md w-[100px] text-center text-white bg-[#0C4C51] cursor-pointer hover:bg-[#147C84] lg:px-7 py-2 absolute right-0"
                   onClick={handleSubmit}
                 >
                   Submit

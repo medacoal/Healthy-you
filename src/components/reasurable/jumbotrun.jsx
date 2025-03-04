@@ -20,7 +20,7 @@ const Jumbotron = ({ title = "Default Title", description = "This is Default Des
           <h1 className="text-3xl md:text-4xl font-bold">
             {title}
           </h1>
-          <p className="text-lg font-semibold bg-transparent pt-4 md:mt-0">
+          <p className="text-lg font-semibold bg-transparent pt-4 md:mt-0 w-full px-4">
             {description}
           </p>
 

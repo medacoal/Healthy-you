@@ -57,7 +57,7 @@ const onSubmit = async (data) => {
                 </div>
       <div className="flex-1 flex flex-col justify-center items-center bg-white lg:items-start px-3">
         <div className="w-full max-w-lg">
-          <h1 className="font-bold text-[34px] md:text-4xl mb-4 text-center">
+          <h1 className="font-bold text-[34px] md:text-4xl mb-4">
             Register Now
           </h1>
           <p className="mb-6 text-[18px] text-center lg:text-left">
