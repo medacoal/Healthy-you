@@ -58,7 +58,7 @@ const Login = () => {
             <h1 className="font-bold text-3xl md:text-4xl mb-4">
               Welcome Back
             </h1>
-            <p className="mb-6 text-center lg:text-left">
+            <p className="mb-6 text-left lg:text-left">
               Join us now by filling in your details below
             </p>
 

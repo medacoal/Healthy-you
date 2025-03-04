@@ -181,7 +181,7 @@ const Get = () => {
             </div>
             <button
               type="submit"
-              className="bg-[#147d84dc] hover:bg-[#147C84] border cursor-pointer rounded-md mt-4 w-full py-2 text-[#FFFFFF]"
+              className="bg-[#147C84] hover:bg-[#147C84] border cursor-pointer rounded-md mt-4 w-full py-2 text-[#FFFFFF]"
             >
               Submit
             </button>

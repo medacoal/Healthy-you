@@ -9,37 +9,34 @@ import good from "../../assets/icons/Frame 1171278901 (5).png";
 import house from "../../assets/icons/Frame 1171278901 (2).png";
 import star from "../../assets/icons/Frame 1171278906.png";
 import PropTypes from "prop-types"
+// import { useParams } from "react-router-dom";
 
-const Profile = ({doctorId}) => {
-  console.log(doctorId);
+const Profile = ({}) => {
+  // console.log(doctorId);
   
-  const navigate = useNavigate(); // For redirection if doctorId is invalid
+  const { id } = useParams(); // Get doctor ID from URL
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showModal, setShowModal] = useState(false); 
+
 
   useEffect(() => {
-    if (!doctorId) {
-      console.error("Doctor ID is undefined");
-      setError("Invalid doctor ID.");
-      setLoading(false);
-      return;
-    }
-
     const fetchDoctor = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/doctors/${doctorId}`);
-        setDoctor(response.data);
-      } catch (error) {
-        console.error("Error fetching doctor data", error);
-        setError("Doctor not found.");
+        const response = await axios.get(`/doctor/${id}`);
+        setDoctor(response.data.doctor);
+        console.log(response.data.doctor);
+      } catch (err) {
+        console.error("Error fetching doctor details:", err);
+        setError("Failed to load doctor details");
       } finally {
         setLoading(false);
       }
     };
 
     fetchDoctor();
-  }, [doctorId]);
+  }, [id]);
 
   if (loading) return <p>Loading doctor details...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
@@ -50,7 +47,7 @@ const Profile = ({doctorId}) => {
         <div className="flex flex-col sm:flex-row gap-6 items-start w-full lg:w-2/3">
           {/* Doctor's Image */}
           <div className="w-40 sm:w-48 md:w-60 flex-shrink-0">
-            <img src={doctor.image} alt={doctor.name} className="w-full h-auto rounded-lg object-cover" />
+            <img src={doctor?.images[0].url} alt={doctor.name} className="w-full h-auto rounded-lg object-cover" />
           </div>
           <div className="flex flex-col space-y-3.5 w-full">
             <button className="flex items-center bg-[#D5FAF1] gap-2 py-1 px-3 w-fit rounded-lg">
@@ -101,7 +98,7 @@ const Profile = ({doctorId}) => {
 
 export default Profile;
 
-Profile.propTypes = {
-  doctorId: PropTypes.string.isRequired, 
-};
+// Profile.propTypes = {
+//   doctorId: PropTypes.string.isRequired, 
+// };
 
