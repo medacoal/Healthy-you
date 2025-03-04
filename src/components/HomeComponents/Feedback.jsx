@@ -137,14 +137,14 @@ const Feedback = () => {
               disabled={isPrevDisabled}
               className=" hover:cursor-pointer disabled:opacity-50"
             >
-              <img src={iconleft} alt="Previous" className="w-12 h-12" />
+              <img src={iconleft} alt="Previous" className="w-12 h-10" />
             </button>
             <button
               onClick={handleNext}
               disabled={isNextDisabled}
               className=" hover:cursor-pointer disabled:opacity-50"
             >
-              <img src={iconright} alt="Next" className="w-12 h-12" />
+              <img src={iconright} alt="Next" className="w-12 h-10" />
             </button>
           </div>
         </div>

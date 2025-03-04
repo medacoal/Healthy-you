@@ -10,7 +10,7 @@ const Footer = () => {
    <div className='mx-auto container'>
      <div className='bg-[#E8F2F3] font-[Axiforma]  py-10 mt-10 px-2'>
         <Wrapper>
-            <div className='grid md:grid-cols-2  '>
+            <div className='grid md:grid-cols-2'>
               <div>
               <div className='flex gap-3 pb-3'>
                 <img src={logo} alt=''/>

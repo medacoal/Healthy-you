@@ -16,7 +16,7 @@ const Lastest = () => {
         <div className="md:text-5xl text-2xl pb-8 text-center">
           <h1 className="font-semibold">
             Latest Health{' '}
-            <span className="font-serif italic text-[#5a8385] font-medium">
+            <span className="font-serif italic text-`[#0C4C51] font-medium">
               News and Tips
             </span>
           </h1>
