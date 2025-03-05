@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../../context/AuthContext";
 import Wrapper from "../reasurable/Wrapper";
 import dot from "../../assets/icons/Ellipse 4 (3).png";
 import checkbox from "../../assets/icons/Vector (47).png";
@@ -20,12 +21,12 @@ import BookingModal from "../../components/Modals/Book";
 
 const DoctorDetails = () => {
   const { id } = useParams(); // Get doctor ID from URL
+  const navigate = useNavigate();
+  const { auth } = useAuth(); // Get authentication state
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false); 
-
-  // console.log(doctor)
 
   useEffect(() => {
     const fetchDoctor = async () => {
@@ -42,6 +43,14 @@ const DoctorDetails = () => {
 
     fetchDoctor();
   }, [id]);
+  const handleBookNow = () => {
+    if (auth?.user) {
+      setShowModal(true);
+    } else {
+      navigate("/login");
+    }
+  };
+
 
   if (loading) return <p className="text-center py-10">Loading doctor profile...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
@@ -79,7 +88,7 @@ const DoctorDetails = () => {
                   <p className="text-xs font-semibold">Price: $100 - $200 per session</p>
                 </div>
                 <button
-          onClick={() => setShowModal(true)}
+          onClick={handleBookNow}
           className="w-full hover:bg-[#147d84d0] bg-[#147C84] py-3.5 px-6 text-white rounded-lg mt-2 cursor-pointer"
         >
           Book Now
@@ -159,8 +168,6 @@ const DoctorDetails = () => {
                 Price: $100 - $200 for a session
               </p>
             </div>
-
-            
           </div>
         </div>
 
@@ -169,7 +176,7 @@ const DoctorDetails = () => {
 
         {/* Book Now Button */}
         <button
-          onClick={() => setShowModal(true)}
+          onClick={handleBookNow}
           className="w-full hover:bg-[#147d84d0] bg-[#147C84] h-14 text-white rounded-lg mt-6 sm:mt-8 md:mt-10 cursor-pointer hidden md:block"
         >
           Book Now

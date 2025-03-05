@@ -75,7 +75,7 @@ const Meet = () => {
                   <div className="flex justify-center">
                     <button
                       onClick={() => navigate(`/doctor-profile/${doctor._id}`)} // Redirect to doctor's profile
-                      className="flex items-center text-[#147C84] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#147C84] hover:text-white cursor-pointer"
+                      className="flex items-center text-[#147C84] px-4 py-2 rounded-md border border-[#6ca59e] hover:bg-[#147C84] hover:text-white cursor-pointer mb-2"
                     >
                       Book Now
                       <svg
