@@ -69,7 +69,7 @@ const Navbar = () => {
                     <div className="px-4 py-2 text-sm font-medium border-b">{userFullName}</div>
                     <button
                       onClick={() => setIsModalOpen(true)} // Open logout modal
-                      className="w-full text-left px-4 py-2 text-sm hover:bg-[#174949] hover:text-white rounded-lg"
+                      className="w-full text-left px-4 py-2 text-sm text-[#DB3E3E] hover:bg-[#174949] hover:text-white rounded-lg"
                     >
                       Logout
                     </button>
@@ -113,7 +113,7 @@ const Navbar = () => {
                 </div>
                 <button
                   onClick={() => setIsModalOpen(true)} // Open logout modal
-                  className="w-full text-left px-4 py-2 text-[#174949] hover:bg-[#174949] hover:text-white rounded-lg"
+                  className="w-full text-left px-4 py-2 text-[#DB3E3E] hover:bg-[#DB3E3E] hover:text-white rounded-lg"
                 >
                   Logout
                 </button>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import { usePaystackPayment } from "react-paystack";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import paypal from "../../assets/icons/logos_paypal.png";
 import paystack from "../../assets/icons/Vector (52).png";
 import credit from "../../assets/icons/Group (3).png";
@@ -20,6 +21,8 @@ const Payment = () => {
   const exchangeRate = 800;
   const amountInNGN = amountInUSD ? amountInUSD * exchangeRate : 0;
   const amountInKobo = amountInNGN * 100;
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const config = {
     reference: new Date().getTime().toString(),
@@ -47,8 +50,8 @@ const Payment = () => {
         (response) => {
           console.log("Payment successful:", response);
 
-          // Immediately redirect to the homepage after payment success
-          window.location.replace("/"); // Use replace for a clean redirect
+          // Redirect to the homepage after payment success
+          navigate("/"); // Use navigate for routing
         },
         (error) => {
           console.log("Payment closed:", error);

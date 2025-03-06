@@ -196,12 +196,13 @@ const onSubmit = async (data) => {
   {loading ? "Signing up..." : "Sign up"}
 </button>
 
-            <span className="text-sm flex justify-center text-[16px] text-center">
-              Already have an account?{" "}
-              <a href="/login" className="text-[#147C84]">
-                Login
-              </a>
-            </span>
+<span className="text-sm flex justify-center text-[16px] text-center">
+  Already have an account?{" "}
+  <a href="/login" className="text-[#147C84] ml-2">
+    Login
+  </a>
+</span>
+
           </form>
         </div>
       </div>

@@ -53,13 +53,16 @@ const Services = () => {
               {services.map((service, index) => (
                 <SwiperSlide key={index}>
                   <div className="md:bg-white bg-[#E8F2F3] py-8 mt-4 rounded-lg shadow-md flex flex-col items-center h-[200px] justify-between">
-  <div className="text-[#6ca59e] pb-5">
-    <img src={service.img} alt={service.title} className="w-full h-full object-cover" />
-  </div>
-  <h4 className="text-lg font-normal">{service.title}</h4>
-  <h4 className="text-lg font-normal pb-3">Services</h4>
-</div>
-
+                    <div className="text-[#6ca59e] pb-5">
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        className={`w-full h-full object-cover ${service.title === 'Cardiology' ? '' : ''}`} // Adjust for cardiology image
+                      />
+                    </div>
+                    <h4 className={`text-lg font-normal ${service.title === 'Cardiology' ? 'mt-5' : ''}`}>{service.title}</h4> {/* Adjust title for cardiology */}
+                    <h4 className={`text-lg font-normal ${service.title === 'Cardiology' ? '' : ''}`}>Services</h4> {/* Adjust "Services" for cardiology */}
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -69,10 +72,14 @@ const Services = () => {
               {services.map((service, index) => (
                 <div key={index} className="lg:bg-white bg-[#E8F2F3] p-6 rounded-lg shadow-md flex flex-col items-center">
                   <div className="text-[#6ca59e] mb-6">
-                    <img src={service.img} alt={service.title} className="w-full h-full object-cover" />
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className={`w-full h-full object-cover ${service.title === 'Cardiology' ? '' : ''}`} // Adjust for cardiology image
+                    />
                   </div>
-                  <h4 className="text-lg font-normal">{service.title}</h4>
-                  <h4 className="text-lg font-normal">Services</h4>
+                  <h4 className={`text-lg font-normal ${service.title === 'Cardiology' ? 'mt-5' : ''} ${service.title === 'Neurology' || service.title === 'Psychiatry' ? 'mt-1' : ''}`}>{service.title}</h4> {/* Adjust title for Cardiology, Neurology, and Psychiatry */}
+                  <h4 className={`text-lg font-normal ${service.title === 'Cardiology' ? '' : ''}`}>Services</h4> {/* Adjust "Services" for cardiology */}
                 </div>
               ))}
             </div>

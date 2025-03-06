@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
 import Wrapper from "../reasurable/Wrapper";
@@ -27,6 +27,7 @@ const DoctorDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false); 
+  const location = useLocation(); // Get current location
 
   useEffect(() => {
     const fetchDoctor = async () => {
@@ -47,7 +48,7 @@ const DoctorDetails = () => {
     if (auth?.user) {
       setShowModal(true);
     } else {
-      navigate("/login");
+      navigate("/login", { state: { from: location } });
     }
   };
 

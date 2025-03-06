@@ -57,9 +57,9 @@ const Meet = () => {
         >
           {doctors.map((doctor) => (
             <SwiperSlide key={doctor._id}>
-              <div className="max-w-sm mx-auto border border-gray-300 rounded-lg overflow-hidden shadow-lg h-[570px]">
+              <div className="max-w-sm mx-auto border border-gray-300 rounded-lg overflow-hidden shadow-lg h-[500px]"> {/* Reduced height */}
                 {/* Image */}
-                <div className="w-full h-[50%]">
+                <div className="w-full h-[60%]"> {/* Reduced the height of the image container */}
                   <img
                     src={doctor.images?.[0]?.url || "https://via.placeholder.com/150"} // Fallback image
                     alt={doctor.name}
@@ -68,10 +68,10 @@ const Meet = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 text-center">
-                  <h1 className="text-2xl font-bold mb-2">{doctor.name}</h1>
+                <div className="p-4 text-center"> {/* Reduced padding */}
+                  <h1 className="text-xl font-bold mb-1">{doctor.name}</h1> {/* Reduced title size */}
                   <h6 className="text-sm font-medium mb-2">{doctor.title}</h6>
-                  <p className="text-[#527C88] leading-relaxed mb-4">{doctor.description}</p>
+                  <p className="text-[#527C88] leading-relaxed mb-4 text-sm">{doctor.description}</p> {/* Reduced font size for description */}
                   <div className="flex justify-center">
                     <button
                       onClick={() => navigate(`/doctor-profile/${doctor._id}`)} // Redirect to doctor's profile

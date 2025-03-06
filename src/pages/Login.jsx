@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import logo from "../assets/logo.svg";
 import bgy from "../assets/images/2149856264 1.png";
 import google from "../assets/google.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation  } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { toast } from "react-toastify";
@@ -13,10 +13,13 @@ import Wrapper from "../components/reasurable/Wrapper";
 const Login = () => {
   const { login } = useAuth(); // Get login function from AuthContext
   const navigate = useNavigate();
+  const location = useLocation(); // Get current location
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState("");
   const [loading, setLoading] = useState(false); // Loading state
+
+  const from = location.state?.from?.pathname || "/"; // Get the redirect path or default to home
 
   const onSubmit = async (data) => {
     try {
@@ -29,8 +32,8 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify(res)); // Store user in localStorage
         // toast.success("Login Successful!");
         
-        setTimeout(() => {
-          navigate("/"); // Redirect to home page after login
+       setTimeout(() => {
+          navigate(from, { replace: true }); // Redirect to the original page or home
           setLoading(false); // Stop loading
         }, 2000);
       }
@@ -124,7 +127,7 @@ const Login = () => {
              
               <span className="text-sm flex justify-center text-[16px] text-center">
                 Don&apos;t have an account?{" "}
-                <Link to="/SignUp" className="text-[#147C84]"> Sign up</Link>
+                <Link to="/SignUp" className="text-[#147C84]  ml-2"> Sign up</Link>
               </span>
             </form>
           </div>
