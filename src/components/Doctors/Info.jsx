@@ -16,12 +16,12 @@ const Info = () => {
             <h2 className='font-semibold '>Payment Info</h2>
             <div className='flex flex-row justify-between'>
                 <p className='text-[#5F5F5F]'>Booking fee</p>
-                <p className='font-semibold '>$2000</p>
+                <p className='font-semibold '>$200</p>
             </div>
         </div>
         <div className='flex flex-row justify-between'>
             <h2 className='font-semibold text-[20px]'>Total</h2>
-            <h2 className='font-semibold  text-[20px]'>$2000</h2>
+            <h2 className='font-semibold  text-[20px]'>$200</h2>
         </div>
     </div>
 
